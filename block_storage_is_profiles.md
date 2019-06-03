@@ -2,7 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-28"
+lastupdated: "2019-05-31"
+
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, profile, volume profile, data storage, storage profile, VSI, virtual server instance, instance
 
 subcollection: vpc-on-classic-block-storage
 
@@ -31,9 +33,9 @@ Block storage provides three predefined IOPS tiers you can select to specify opt
 | IOPS Tier | Workload | Volume size | Max IOPS |
 |-----------|----------|-------------|----------|
 | 3 IOPS/GB | General-purpose workloads - Workloads that host small databases for web applications or store virtual machine disk images for a hypervisor | 10 GB to 1 TB | Up to 3,000 IOPS |
-| | | Above 1 TB to 2 TB | 3 IOPS/GB up to 6,000 IOPS |  
-| 5 IOPS/GB | High I/O intensity workloads - Workloads characterized by a large percentage of active data, such as transactional and other performance-sensitive databases| 10 GB to 600 GB | Up to 3,000 IOPS | 
-| | | Above 600 GB to 2 TB | 5 IOPS/GB up to 10,000 IOPS|  
+| | | Above 1 TB to 2 TB | 3 IOPS/GB up to 6,000 IOPS |
+| 5 IOPS/GB | High I/O intensity workloads - Workloads characterized by a large percentage of active data, such as transactional and other performance-sensitive databases| 10 GB to 600 GB | Up to 3,000 IOPS |
+| | | Above 600 GB to 2 TB | 5 IOPS/GB up to 10,000 IOPS|
 | 10 IOPS/GB | Demanding storage workloads - Data intensive workloads created by NoSQL databases, data processing for video, machine learning, and analytics | 10 GB to 300 GB | Up to 3,000 IOPS |
 | | | Above 300 GB to 2 TB | 10 IOPS/GB up to 20,000 IOPS |
 {: caption="Table 1. IOPS tiers and performance" caption-side="top"}

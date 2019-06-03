@@ -2,7 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-17"
+lastupdated: "2019-05-31"
+
+keywords: block storage, IBM Cloud, VPC, block storage volume, volume, volume attachment, VSI, virtual server instance, instance
 
 subcollection: vpc-on-classic-block-storage
 
@@ -54,9 +56,9 @@ You can also manually attach block storage volumes using the CLI. For informatio
 
 ## What happens next
 
- Perform any OS-specific steps to use the Block Storage on the VSI, for example, partition and mount on Linux or Partition/format on Windows. You can now begin writing data to your block storage volume.
+Perform any OS-specific steps to use the Block Storage on the VSI, for example, partition and mount on Linux or Partition/format on Windows. You can now begin writing data to your block storage volume.
 
-You can also create additional volumes and manage existing ones.  See the following information.
+You can also create additional volumes and manage existing ones. See the following information.
 
 * [Creating block storage volumes in IBM Cloud console](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage)
 * [Managing block storage volumes using the UI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage)

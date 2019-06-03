@@ -2,7 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-29"
+lastupdated: "2019-05-31"
+
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, IBM CLoud, volume, data storage, IBM Cloud, classic, VSI, virtual server
 
 subcollection: vpc-on-classic-block-storage
 

@@ -2,7 +2,9 @@
 
 Copyright:
   years: 2019
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-02"
+
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, Key Protect, encryption, key management, Hyper Protect Crypto Services, HPCS, volume, data storage, VSI, virtual server instance, instance
 
 subcollection: vpc-on-classic-block-storage
 

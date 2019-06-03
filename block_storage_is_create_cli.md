@@ -2,7 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-29"
+lastupdated: "2019-05-31"
+
+keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
 
 subcollection: vpc-on-classic-block-storage
 
@@ -55,7 +57,7 @@ Encryption Key                          -
 Encryption                              provider_managed
 Status                                  pending
 Resource Group                          Default(dbb12715c2a22f2bb60df4ffd4a543f2)
-Created                                 2019-04-15 10:09:28
+Created                                 2019-05-15 10:09:28
 Zone                                    us-south-1
 Volume Attachment Instance Reference    none
 ```

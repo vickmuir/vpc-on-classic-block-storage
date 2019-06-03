@@ -2,9 +2,11 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-21"
+lastupdated: "2019-06-03"
 
 keywords: storage, capacity, billing, volume
+
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, data storage
 
 subcollection: vpc-on-classic
 

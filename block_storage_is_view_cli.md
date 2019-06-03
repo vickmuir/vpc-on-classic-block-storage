@@ -2,7 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-29"
+lastupdated: "2019-06-03"
+
+Keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
 
 subcollection: vpc-on-classic-block-storage
 
@@ -51,13 +53,14 @@ ID                                      933c8781-f7f5-4a8f-8a2d-3bfc711788ee
 Name                                    demo_volume
 Capacity                                100
 IOPS                                    1000
-Auto delete                             false
-Encryption                              provider managed
+Profile                                 custom
+Encryption Key                          -
+Encryption                              provider_managed
 Profile                                 custom
 Status                                  available
-Created                                 2019-03-15 10:09:28
-Zone                                    us-south-1
 Resource Group                          Default(c16d1edde3fd4a71a0130aed371405a0)
+Created                                 2019-05-15 10:09:28
+Zone                                    us-south-1
 Volume Attachment Instance Reference    none
 ```
 {:screen}
@@ -82,8 +85,8 @@ $ ibmcloud is volumes
 Listing volumes under account MyAccount 01 as user user1@mycompany.com...
 ID                                     Name              Capacity   IOPS   Auto Delete   Encryption        Profile         Created               Status      Zone         Resource Group
 a3f4d60a-c9cf-4666-9a2a-0b1d85f92c19   demo_volume1      50         10     Manual        provider managed  generalpurpose   2018-08-30 11:04:46  pending     us-south-1   (c16d1edd-.)
-3aaa0beb-83ac-4b2f-b4f5-eab382d1a5aa   demo_volume2      50         100    Manual        provider managed  custom           2018-08-30 10:26:34   available   us-south-1   (c16d1edd-.)
-6d9713cf-9688-486d-b8c9-d9f1c6e7876c   demo_volume3      50         100    Manual        provider managed  custom           2018-08-30 10:39:24   available   us-south-1   (c16d1edd-.)
+3aaa0beb-83ac-4b2f-b4f5-eab382d1a5aa   demo_volume2      50         100    Manual        provider managed  custom           2018-08-30 10:26:34  available   us-south-1   (c16d1edd-.)
+6d9713cf-9688-486d-b8c9-d9f1c6e7876c   demo_volume3      50         100    Manual        provider managed  custom           2018-08-30 10:39:24  available   us-south-1   (c16d1edd-.)
 ```
 {: screen}
 

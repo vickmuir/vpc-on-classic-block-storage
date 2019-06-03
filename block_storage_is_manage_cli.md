@@ -2,7 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-29"
+lastupdated: "2019-05-31"
+
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, volume attachment, data storage, VSI, virtual server instance, instance
 
 subcollection: vpc-on-classic-block-storage
 
@@ -50,12 +52,13 @@ ID                                      933c8781-f7f5-4a8f-8a2d-3bfc711788ee
 Name                                    demo-volume-update
 Capacity                                100
 IOPS                                    1000
-Auto delete                             false
+Profile                                 5iops-tier
+Encryption                              -
 Encryption                              provider managed
-Profile                                 custom
 Status                                  available
-Created                                 2018-09-20 10:09:28
-Zone                                    us-south-1
+Created                                 2019-05-20 10:09:28
+Resource Group                          Default(c16d1edde3fd4a71a0130aed371405a0)
+Zone                                    us-south-2
 Resource Group                          Default(c16d1edde3fd4a71a0130aed371405a0)
 Volume Attachment Instance Reference    none
 ```
@@ -73,6 +76,14 @@ ibmcloud is instance-volume-attachment-update INSTANCE_ID VOLUME_ATTACHMENT_ID [
 Use the `--name` parameter and specify a new name for the volume attachment.
 
 Specify`--auto-delete true` to automatically delete the volume when you delete the VSI to which it's attached.
+
+Example showing details for `Volume Attachment Instance Reference`:
+
+```
+Vdisk Name    Vdisk ID                               Vdisk Type   Auto Delete   Instance Name   Instance ID
+Vdisk-data1   fd146b1f-e1bb-4eab-ba78-3109e6bc3a2d   data         true          vsi-test1       8b56da93-7990-4ccf-9dc5-5aee6a5f08f9
+```
+{: screen}
 
 ## Detach a volume using the CLI
 {: #detach-vol-attachment-cli}

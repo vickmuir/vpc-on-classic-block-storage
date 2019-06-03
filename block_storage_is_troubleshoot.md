@@ -2,7 +2,10 @@
 
 copyright:
   years: 2019
-lastupdated: "2018-05-22"
+lastupdated: "2018-05-31"
+
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, data storage, troubleshooting, troubleshoot
+
 
 subcollection: vpc-on-classic-block-storage
 
