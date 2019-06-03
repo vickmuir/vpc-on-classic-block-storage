@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-03"
 
 keywords: block storage, IBM Cloud, VPC, block storage volume, volume, volume attachment, VSI, virtual server instance, instance
 
@@ -38,7 +38,7 @@ Although you can attach only one block storage volume to a virtual server instan
 
 From the list of all block storage volumes, follow these steps.
 
-1. Navigate to the list of all block storage volumes by selecting **Storage > Block Storage Volumes**.
+1. In the  [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.cloud.ibm.com/vpc) for the Virtual Private Cloud, navigate to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Storage > Block storage volumes for VPC**.
 1. In the list of volumes, click the elipsis at the end of a row for an available, unattached volume.  A context-specific action menu displays.
 1. Select **Attach to instance**.
 1. Select a compute resource (virtual server instance) from the list of available resources, and then click **Attach**.
@@ -46,7 +46,7 @@ From the list of all block storage volumes, follow these steps.
 
 You can also attach a block storage volume from the virtual server instance details page.
 
-1. Navigate to the instance details page by selecting **Compute > Virtual server instances**.
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.cloud.ibm.com/vpc) for the Virtual Private Cloud, navigate to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Compute > Virtual server instances for VPC.**.
 1. Select an instance from the list of all virtual server instances. If there are any block storage volumes attached, you'll see them listed under **Attached block storage volumes**.
 1. Select **Attach volume**.
 1. Select a volume from the list of available resources and click **Attach**. Messages display on the instance details page indicating that the volume is being attached.  When it completes, the **Attached block storage volumes** list is updated to include the new volume.

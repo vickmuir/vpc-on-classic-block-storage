@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2018-05-31"
+lastupdated: "2018-06-03"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, data storage, troubleshooting, troubleshoot
 
@@ -43,7 +43,8 @@ Any of the following causes might apply:
 
 Verify that the volume has not been detached from a virtual server instance and deleted. Search for the instance to which you last attached the volume from the list of all virtual server instances:
 
-1. In {{site.data.keyword.cloud_notm}} console, navigate to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Virtual Private Cloud > Compute > Virtual server instances**.
+1. In [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.cloud.ibm.com/vpc), navigate to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Compute > Virtual server instances**.
+
 1. Select a virtual server instance from the list of all virtual servers.
 
 If the volume is not attached as expected and does not appear in the list of volumes, it has likely been deleted.  Because deleting a volume completely removes its data, it cannot be restored.  

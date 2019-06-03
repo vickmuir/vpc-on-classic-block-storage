@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-03"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, VSI, virtual server instance, instance, IOPS
 
@@ -32,7 +32,7 @@ Before you get started, make sure you have [created an IBM Cloud VPC](/docs/vpc-
 ## Create and attach a block storage volume when you create a new instance
 {: #create-from-vsi}
 
-1. Create an instance. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.cloud.ibm.com/vpc) for the Virtual Private Cloud, navigate to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Compute > Virtual server instances > New instance**.
+1. Create an instance. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.cloud.ibm.com/vpc) for the Virtual Private Cloud, navigate to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Compute > Virtual server instances for VPC > New instance**.
 1. [Configure your virtual server instance](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-virtual-servers). Under **Attached block storage volumes**, select **New block storage volume**.
 1. Enter the information described in the following table.  When finished, click **Create volume**.
 
@@ -55,7 +55,7 @@ A block storage volume can be attached to only one virtual server at a time. On 
 
 You can create a block storage volume independent of virtual server provisioning and attach the volume to an instance later.
 
-1. Create an instance. In the  [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.cloud.ibm.com/vpc) for the Virtual Private Cloud, navigate to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Storage > Block storage volumes** and select **New volume**.
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.cloud.ibm.com/vpc) for the Virtual Private Cloud, navigate to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Storage > Block storage volumes for VPC** and select **New volume**.
 1. Enter the information in the table below to define your new block storage volume.
 1. When finished, click **Create volume**. You're returned to the Block storage volumes page, where a message indicates that the volume is being created. A second message displays when the volume is created.
 1. To see details of the new volume, select the **View resource** link in the second message to navigate to the Volume details page.
