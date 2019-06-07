@@ -14,7 +14,6 @@ subcollection: vpc-on-classic-block-storage
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
@@ -26,6 +25,7 @@ You can create {{site.data.keyword.block_storage_is_full}} volumes by using the 
 {:shortdesc}
 
 ## Before you begin
+{: #before-creating-block-storage-cli}
 
 Ensure you have downloaded, installed, and initialized the following CLI plug-ins:
 
@@ -71,5 +71,6 @@ Do you prefer to create block storage volumes from the {{site.data.keyword.cloud
 {: tip}
 
 ## What happens next
+{: #next-step-creating-block-storage-cli}
 
 [Attach a block storage volume (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage-cli).

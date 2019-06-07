@@ -14,12 +14,10 @@ subcollection: vpc-on-classic
 
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
-{:new_window: target="_blank"}
 {:screen: .screen}
 {:pre: .pre}
 {:tip: .tip}
 {:important: .important}
-{:table: .aria-labeledby="caption"}
 
 # Pricing for Block Storage for VPC
 {: #block-storage-pricing}

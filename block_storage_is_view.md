@@ -14,10 +14,12 @@ subcollection: vpc-on-classic-block-storage
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:pre: .pre}
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
+{:DomainName: data-hd-keyref="APPDomain"}
+{:DomainName: data-hd-keyref="DomainName"}
 
 # Viewing block storage volume details
 {: #viewing-block-storage}
@@ -27,7 +29,7 @@ View details about a block storage volume or summary information about all volum
 ## View information about all block storage volumes
 {: #viewvols}
 
-Navigate to the list of block storage volumes. In [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.cloud.ibm.com/vpc) for the Virtual Private Cloud, go to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Storage > Block storage volumes for VPC**.
+Navigate to the list of block storage volumes. In [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc){: external} for the Virtual Private Cloud, go to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Storage > Block storage volumes for VPC**.
 
 By default, block storage volumes display for all resource groups in your region.  In the list of all **Block storage volumes**, you'll see the following information.
 
@@ -74,13 +76,14 @@ For a volume attached to a VSI, you can also navigate to information about the i
 
 You can view information about an attached block storage volume from the **Virtual server instance details** page:
 
-1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.cloud.ibm.com/vpc), go to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Compute > Virtual server instances for VPC** and select an instance.
+1. In the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc){: external}, go to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Compute > Virtual server instances for VPC** and select an instance.
 1. Under **Attached block storage volumes**, click on the name of a volume to go to the volume details page.
 
 Do you prefer to viewing block storage volumes using the CLI? For information, see [Viewing block storage volumes (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage-cli).
 {: tip}
 
 ## What happens next
+{: #next-step-viewing-block-storage}
 
 Create more volumes or manage your existing block storage volumes.
 

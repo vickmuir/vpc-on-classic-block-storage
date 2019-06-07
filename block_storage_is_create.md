@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-07"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, VSI, virtual server instance, instance, IOPS
 
@@ -14,25 +14,28 @@ subcollection: vpc-on-classic-block-storage
 {:shortdesc: .Shortdesc}
 {: codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:pre: .pre}
 {:tip: .tip}
 {:important: .important}
 {:table: .Aria-labeledby="caption"}
+{:DomainName: data-hd-keyref="APPDomain"}
+{:DomainName: data-hd-keyref="DomainName"}
 
 # Creating block storage volumes in {{site.data.keyword.cloud_notm}} console
 {: #creating-block-storage}
+[comment]: # (linked help topic)
 
 You can create a block storage volume when you create a virtual server instance, or create a standalone volume to later attach to an instance.
 {:shortdesc}
 
-Before you get started, make sure you have [created an IBM Cloud VPC](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
+Before you get started, make sure you have [created an {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 {:important}
 
 ## Create and attach a block storage volume when you create a new instance
 {: #create-from-vsi}
 
-1. Create an instance. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.cloud.ibm.com/vpc) for the Virtual Private Cloud, navigate to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Compute > Virtual server instances for VPC > New instance**.
+1. Create an instance. In the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc){: external} for the Virtual Private Cloud, navigate to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Compute > Virtual server instances for VPC > New instance**.
 1. [Configure your virtual server instance](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-virtual-servers). Under **Attached block storage volumes**, select **New block storage volume**.
 1. Enter the information described in the following table.  When finished, click **Create volume**.
 
@@ -55,7 +58,7 @@ A block storage volume can be attached to only one virtual server at a time. On 
 
 You can create a block storage volume independent of virtual server provisioning and attach the volume to an instance later.
 
-1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.cloud.ibm.com/vpc) for the Virtual Private Cloud, navigate to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Storage > Block storage volumes for VPC** and select **New volume**.
+1. In the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc){: external} for the Virtual Private Cloud, navigate to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Storage > Block storage volumes for VPC** and select **New volume**.
 1. Enter the information in the table below to define your new block storage volume.
 1. When finished, click **Create volume**. You're returned to the Block storage volumes page, where a message indicates that the volume is being created. A second message displays when the volume is created.
 1. To see details of the new volume, select the **View resource** link in the second message to navigate to the Volume details page.
@@ -76,6 +79,7 @@ Do you prefer to create block storage volumes using the CLI? For information, se
 {: tip}
 
 ## What happens next
+{: #next-step-creating-block-storage}
 
 When you refresh the Block storage volumes page, the new volume appears at the top of the list of volumes. If the volume was created successfully, it shows a status of Available. For standalone volumes, the Attachment Type column is blank (-). The Action menu (...) at the end of a table row provides a link for [attaching a block storage volume to an instance](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage).
 
@@ -83,4 +87,4 @@ You can continue creating more block storage volumes or manage existing volumes.
 
 * [View details about a block storage volume](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage)
 * [Detach a volume from a virtual server instance](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage#detach)
-* [Delete a block storage volume](docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage#delete)
+* [Delete a block storage volume](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage#delete)

@@ -14,10 +14,12 @@ subcollection: vpc-on-classic-block-storage
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:pre: .pre}
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
+{:DomainName: data-hd-keyref="APPDomain"}
+{:DomainName: data-hd-keyref="DomainName"}
 
 # Viewing block storage volumes using the CLI
 {: #viewing-block-storage-cli}
@@ -25,13 +27,14 @@ subcollection: vpc-on-classic-block-storage
 View details about a block storage volume or summary information about all volumes from the CLI.
 
 ## Before you begin
+{: #before-viewing-block-storage-cli}
 
 Make sure that you downloaded, installed, and initialized the following CLI plug-ins:
 
 * {{site.data.keyword.cloud_notm}} CLI
 * {{site.data.keyword.cloud_notm}} Regional API CLI
 
-For more information, see the prerequisites in the [IBM Cloud CLI for VPC Reference](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+For more information, see the prerequisites in the [{{site.data.keyword.cloud_notm}} CLI for VPC Reference](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
 
 ## View details about a block storage volume using the CLI
 {: #viewvol-cli}
@@ -161,6 +164,7 @@ Do you prefer using the {{site.data.keyword.cloud}} console to view your block s
 {: tip}
 
 ## What happens next
+{: #next-step-viewing-block-storage-cli}
 
 Create more volumes or manage your existing block storage volumes.
 

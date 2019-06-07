@@ -11,7 +11,6 @@ subcollection: vpc-on-classic-block-storage
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:important: .important}
@@ -20,10 +19,11 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 {:note: .note}
 
+
 # Profiles
 {: #block-storage-profiles}
 
-When you provision {{site.data.keyword.block_storage_is_short}} secondary volumes using the {{site.data.keyword.Bluemix_notm}} console, CLI, or API, you specify an IOPS profile that best meets your storage requirements. Profiles are available as three predefined IOPS tiers or as custom IOPS.  IOPS tiers provide guaranteed IOPS/GB performance for volumes up to 2 TB capacity. You can also specify a custom IOPS profile and define volume capacity and IOPS within a range.
+When you provision {{site.data.keyword.block_storage_is_short}} secondary volumes using the {{site.data.keyword.cloud_notm}} console, CLI, or API, you specify an IOPS profile that best meets your storage requirements. Profiles are available as three predefined IOPS tiers or as custom IOPS.  IOPS tiers provide guaranteed IOPS/GB performance for volumes up to 2 TB capacity. You can also specify a custom IOPS profile and define volume capacity and IOPS within a range.
 
 ## Tiered IOPs profiles
 {: #tiers}
@@ -62,7 +62,7 @@ The following table shows the available IOPS ranges based on volume size.
 ## How virtual server profiles relate to storage profiles
 {: #vsi-profiles-relate-to-storage}
 
-Virtual server profiles are a combination of vCPU and RAM that can be instantiated quickly to start a virtual server instance.  You select from [three families of profiles](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles) 
+Virtual server profiles are a combination of vCPU and RAM that can be instantiated quickly to start a virtual server instance.  You select from [three families of profiles](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles)
 based on your workload requirements.  These requirements can range from common workloads to CPU-intensive or memory-intensive workloads.  
 
 Similarly, storage profiles (IOPS tiers or custom) provide a range of capacity and performance for secondary volumes.  By default, a
@@ -79,12 +79,12 @@ requirements for your compute workloads. In general, as your compute requirement
 ## Viewing IOPS profiles
 {: #view-iops-profiles}
 
-You can view available IOPS profiles the {{site.data.keyword.Bluemix_notm}} console, CLI, or API.
+You can view available IOPS profiles the {{site.data.keyword.cloud_notm}} console, CLI, or API.
 
 ### Using the IBM Cloud console
 {: using-console-iops-profile}
 
- When you [create a block storage volume from the {{site.data.keyword.Bluemix_notm}} console](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage), select **Tiers** from the drop down menu.
+ When you [create a block storage volume from the {{site.data.keyword.cloud_notm}} console](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage), select **Tiers** from the drop down menu.
 
  Alternately, select **Custom** and then select an IOPS value within the range for that volume size. Click the storage size link to see a table of size and IOPS ranges.
 

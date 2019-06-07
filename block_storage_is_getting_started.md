@@ -14,12 +14,14 @@ subcollection: vpc-on-classic-block-storage
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:pre: .pre}
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 {:important: .important}
 {:note: .note}
+{:DomainName: data-hd-keyref="APPDomain"}
+{:DomainName: data-hd-keyref="DomainName"}
 
 # Getting started tutorial
 {: #block-storage-getting-started}
@@ -27,9 +29,9 @@ subcollection: vpc-on-classic-block-storage
 {{site.data.keyword.block_storage_is_full}} (VPC) provides hypervisor-mounted, high-performance data storage for your virtual server instances (VSIs). You can create block storage volumes when you provision a virtual server instance in a VPC network or create new volumes independent of the VSI lifecycle.
 {:shortdesc}
 
-{{site.data.keyword.block_storage_is_short}} is available from the [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/vpc) for quick and easy access. You can also provision your block storage volumes by using the [IBM Cloud command-line interface](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference) or by using the [Regional Infrastructure API Service (RIAS)](https://{DomainName}/apidocs/vpc-on-classic).
+{{site.data.keyword.block_storage_is_short}} is available from the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc){: external} for quick and easy access. You can also provision your block storage volumes by using the [IBM Cloud command-line interface](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference) or by using the [Regional Infrastructure API Service (RIAS)](https://{DomainName}/apidocs/vpc-on-classic){: external}.
 
-{{site.data.keyword.block_storage_is_short}} provides features unique to the VPC and is not compatible with the classic infrastructure storage. If you're interested in {{site.data.keyword.blockstoragefull}} on the classic infrastructure, see [Block Storage for IBM Cloud](/docs/infrastructure/BlockStorage?topic=BlockStorage-About).
+{{site.data.keyword.block_storage_is_short}} provides features unique to the VPC and is not compatible with the classic infrastructure storage. If you're interested in {{site.data.keyword.blockstoragefull}} on the classic infrastructure, see [Block Storage for IBM Cloud](/docs/infrastructure/BlockStorage?topic=BlockStorage-About){: external}.
 {:note}
 
 Use the following information to begin creating your block storage volumes.
@@ -47,17 +49,17 @@ Use the following information to begin creating your block storage volumes.
       <td>New to IBM Cloud and Block Storage for VPC? The following sites provide useful information:
         <ul>
           <li>
-            <a href="https://ibm.com/cloud-computing">What is IBM Cloud?</a>
+            <a href="https://www.ibm.com/cloud/">What is IBM Cloud?</a>
           </li>
           <li>
-            <a href="https://ibm.com/cloud/get-started">Get started with IBM Cloud</a>
+            <a href="https://www.ibm.com/cloud/get-started">Get started with IBM Cloud</a>
           </li>
         </ul>
       </td>
     </tr>
     <tr>
       <td>2. Sign up for IBM Cloud.</td>
-      <td>For more information about how to set up your IBM Cloud account, see <a href="https://{DomainName}/docs/account?topic=account-signup#signup">Signing up for IBM Cloud</a>.
+      <td>For more information about how to set up your IBM Cloud account, see <a href="https://cloud.ibm.com/docs/account?topic=account-signup#signup">Signing up for IBM Cloud</a>.
       </td>
     </tr>
     <tr>
@@ -73,16 +75,17 @@ Use the following information to begin creating your block storage volumes.
       <td>Access the Block Storage for VPC Order Form from the <a href="https://{DomainName}/catalog">IBM Cloud catalog</a>. Use your IBMid and password</a>.</td>
     </tr>
     <tr>
-      <td>6. (Optional) Verify access to the IBM Cloud VPC - Important for creating block storage volumes within a VPC</td>
-      <td>To create a block storage volume as part of a VSI provisioning, you must first <a href="/docs/vpc-on-classic?topic=vpc-on-classic-creating-a-vpc-using-the-ibm-cloud-console">create an IBM Cloud VPC</a>. Skip this step if you want to create a standalone volume outside the VPC. You can later request access to IBM Cloud VPC to access a VSI and attach a block storage volume that you independently created. For more information about the IBM Cloud Virtual Private Cloud, see the <a href="/docs/vpc-on-classic?topic=vpc-on-classic-getting-started">getting started tutorial</a>.</td>
+      <td>6. (Optional) Verify access to the {{site.data.keyword.vpc_short}} - Important for creating block storage volumes within a VPC</td>
+      <td>To create a block storage volume as part of a VSI provisioning, you must first <a href="/docs/vpc-on-classic?topic=vpc-on-classic-creating-a-vpc-using-the-ibm-cloud-console">create an {{site.data.keyword.vpc_short}}</a>. Skip this step if you want to create a standalone volume outside the VPC. You can later request access to {{site.data.keyword.vpc_short}} to access a VSI and attach a block storage volume that you independently created. For more information about the IBM Cloud Virtual Private Cloud, see the <a href="/docs/vpc-on-classic?topic=vpc-on-classic-getting-started">getting started tutorial</a>.</td>
     </tr>
       <td>7. Create your block storage!</td>
-      <td>Create block storage volumes by using the <a href="/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage">UI</a>, <a href="/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli">CLI</a>, or <a href="https://cloud.ibm.com/apidocs/vpc-on-classic">API.</a> For more information about using the IBM Cloud Developer tools to install the IBM Cloud CLI, see <a href="/docs/cli?topic=cloud-cli-ibmcloud-cli#overview">Getting started with IBM Cloud Developer tools</a>.</td>
+      <td>Create block storage volumes by using the <a href="/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage">UI</a>, <a href="/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli">CLI</a>, or <a href="https://{DomainName}/apidocs/vpc-on-classic#create-a-volume">API.</a> For more information about using the IBM Cloud Developer tools to install the IBM Cloud CLI, see <a href="/docs/cli?topic=cloud-cli-ibmcloud-cli#overview">Getting started with IBM Cloud Developer tools</a>.</td>
     </tr>
   </tbody>
 </table>
 
 ## What happens next
+{: #next-step-block-storage-getting-started}
 
 After you create block storage, explore more options:
 

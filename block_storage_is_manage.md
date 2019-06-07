@@ -14,10 +14,12 @@ subcollection: vpc-on-classic-block-storage
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:pre: .pre}
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
+{:DomainName: data-hd-keyref="APPDomain"}
+{:DomainName: data-hd-keyref="DomainName"}
 
 # Managing block storage volumes using the UI
 {: #managing-block-storage}
@@ -29,7 +31,7 @@ You can detach a block storage volume that is currently attached to a virtual se
 
 To detach a volume:
 
-1. Navigate to the list of all block storage volumes. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.cloud.ibm.com/vpc) for the Virtual Private Cloud, go to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Storage > Block storage volumes for VPC**.
+1. Navigate to the list of all block storage volumes. In the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc){: external} for the Virtual Private Cloud, go to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Storage > Block storage volumes for VPC**.
 1. Locate the volume and then click the elipsis (...) at the end of the table row. A context menu displays.
 1. From the menu, click **Detach from instance**.
 1. Confirm by clicking **Detach instance** in the popup.
@@ -42,7 +44,7 @@ Alternatively, you can click on an individual volume in the list of all block st
 To transfer a block storage volume to another virtual server instance:
 
 1. [Detach the volume from its virtual server instance](#detach).
-1. Navigate to the virtual server instance to which you want to transfer the volume. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.cloud.ibm.com/vpc) for the Virtual Private Cloud, go to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Compute > Virtual server instances for VPC**.
+1. Navigate to the virtual server instance to which you want to transfer the volume. In the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc){: external} for the Virtual Private Cloud, go to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Compute > Virtual server instances for VPC**.
 1. Select a virtual server from the list.
 1. Under Attached Storage volumes, click the plus sign to add a volume. All block storage volumes are displayed.
 1. From the list of volumes, select the volume you previously detached.
@@ -52,7 +54,7 @@ To transfer a block storage volume to another virtual server instance:
 
 Block storage volumes are attached by default when you create a new virtual server instance.  When you detach a volume from an instance, it exists as an unattached volume and is displayed in the list of [all block storage volumes](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage#viewvols). You can attach it to another image from the list of block storage volumes.
 
-1. Navigate to the list of all block storage volumes. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.cloud.ibm.com/vpc) for the Virtual Private Cloud, navigate to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Storage > Block storage volumes for VPC**.
+1. Navigate to the list of all block storage volumes. In the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc){: external} for the Virtual Private Cloud, navigate to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Storage > Block storage volumes for VPC**.
 1. Locate the volume and then click the elipsis (...) at the end of the table row. A context menu displays.
 1. From the menu, click **Attach to instance**.
 1. Select an available virtual server instance.
@@ -63,7 +65,7 @@ Block storage volumes are attached by default when you create a new virtual serv
 
 You can change the name of an existing volume to make it more meaningful.
 
-1. Navigate to the list of all block storage volumes. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.cloud.ibm.com/vpc) for the Virtual Private Cloud, go to to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Storage > Block storage volumes for VPC**.
+1. Navigate to the list of all block storage volumes. In the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc){: external} for the Virtual Private Cloud, go to to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Storage > Block storage volumes for VPC**.
 1. Locate the volume and then click the name of the volume to go to the Volume Details page.
 1. Click the pencil icon after the name of the volume and edit the volume name.
 1. Confirm your edit.
@@ -75,7 +77,7 @@ Deleting a block storage volume completely removes its data. The volume cannot b
 
 You cannot delete an active block storage volume. To delete a volume, first [detach it](#detach) from the virtual server, then follow these steps:
 
-1. Navigate to the list of all block storage volumes. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.cloud.ibm.com/vpc) for the Virtual Private Cloud, go to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Storage > Block storage volumes for VPC**.
+1. Navigate to the list of all block storage volumes. In the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc){: external} for the Virtual Private Cloud, go to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Storage > Block storage volumes for VPC**.
 1. Locate the volume you want to delete and then click the elipsis at the end of the table row. A context menu displays.
 1. From the menu, click **Delete**.
 1. Confirm the deletion.
@@ -87,7 +89,7 @@ Using the Auto Delete feature, you can specify that a block storage data volume 
 
 To enable Auto Delete for an existing block storage volume attached to a VSI, follow these steps:
 
-1. Locate the virtual server instance to which the volume is attached. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.cloud.ibm.com/vpc) for the Virtual Private Cloud, navigate to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Compute > Virtual server instances for VPC**.
+1. Locate the virtual server instance to which the volume is attached. In the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc){: external} for the Virtual Private Cloud, navigate to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Compute > Virtual server instances for VPC**.
 1. Under **Attached block storage volumes**, select a volume.
 1. On the pop-up menu, click the Auto Delete button to enable.
 1. Confirm your selection.
@@ -133,6 +135,7 @@ Do you prefer to manage block storage volumes using the CLI? For information, se
 {: tip}
 
 ## What happens next
+{: #next-step-managing-block-storage}
 
 You can [create additional volumes](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage).
 

@@ -14,10 +14,10 @@ subcollection: vpc-on-classic-block-storage
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
+
 
 # Managing block storage volumes using the CLI
 {: #managing-block-storage-cli}
@@ -26,6 +26,7 @@ This information applies to {{site.data.keyword.cloud}} Virtual Private Cloud in
 {: important}
 
 ## Before you begin
+{: #before-managing-block-storage-cli}
 
 Make sure that you downloaded, installed, and initialized the following CLI plug-ins:
 
@@ -120,6 +121,7 @@ Do you prefer to manage block storage volumes using the {{site.data.keyword.clou
 {:tip}
 
 ## What happens next
+{: #next-step-managing-block-storage-cli}
 
 [Create more volumes using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli).
 

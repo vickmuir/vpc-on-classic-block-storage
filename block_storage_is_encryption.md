@@ -11,13 +11,13 @@ subcollection: vpc-on-classic-block-storage
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:important: .important}
 {:screen: .screen}
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
+
 
 # Creating block storage volumes with customer managed encryption
 {: #block-storage-encryption}
@@ -44,12 +44,12 @@ The following steps are specific to {{site.data.keyword.keymanagementserviceshor
 {:note}
 
 1. Provision the [{{site.data.keyword.keymanagementserviceshort}}](/docs/services/key-protect?topic=key-protect-provision#provision) service.
-   
+
    Provisioning a new {{site.data.keyword.keymanagementserviceshort}} service instance ensures that it includes the most recent updates that are required for customer managed encryption of block storage volumes. {{site.data.keyword.keymanagementserviceshort}} instances created in 2019 include the extension that is required to support customer managed encryption.
    {: tip}
-   
-2. [Create](/docs/services/key-protect?topic=key-protect-create-root-keys#create-root-keys) or 
-[import](/docs/services/key-protect?topic=key-protect-import-root-keys#import-root-keys) a customer root key (CRK) in 
+
+2. [Create](/docs/services/key-protect?topic=key-protect-create-root-keys#create-root-keys) or
+[import](/docs/services/key-protect?topic=key-protect-import-root-keys#import-root-keys) a customer root key (CRK) in
 {{site.data.keyword.keymanagementservicelong_notm}}.
 3. From IBM {{site.data.keyword.iamshort}} (IAM), [authorize access](/docs/iam?topic=iam-serviceauth#serviceauth) between **Cloud Block Storage** (source service) and **{{site.data.keyword.keymanagementserviceshort}}** (target service).
 

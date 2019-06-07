@@ -14,10 +14,10 @@ subcollection: vpc-on-classic-block-storage
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
+
 
 # Attaching a block storage volume using the CLI
 {: #attaching-block-storage-cli}
@@ -25,6 +25,7 @@ subcollection: vpc-on-classic-block-storage
 A volume attachment connects a block storage volume to a virtual server instance. Each instance can have [many volume attachments](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits), but a single volume attachment connects one volume to one instance.
 
 ## Before you begin
+{: #before-attaching-block-storage-cli}
 
 Make sure that you downloaded, installed, and initialized the following CLI plug-ins:
 
@@ -110,6 +111,7 @@ Here is an example volume attachment JSON file that defines a custom volume:
 {: screen}
 
 ## What happens next
+{: #next-step-attaching-block-storage-cli}
 
 Perform any OS-specific steps to use the Block Storage on the VSI, for example, partition and mount on Linux or Partition/format on Windows. You can now begin writing data to your block storage volume.
 
