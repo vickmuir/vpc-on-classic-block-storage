@@ -38,7 +38,7 @@ IBM Cloud Block Storage for Virtual Private Cloud
 
     {: .navgroup id="reference"}
     {: .topicgroup}
-    [API reference for VPC](https://console.cloud.ibm.com/apidocs/vpc-on-classic)
+    [API reference for VPC](https://cloud.ibm.com/apidocs/vpc-on-classic)
     [Storage CLI Reference for VPC](/vpc-infrastructure-cli-plugin/vpc-infrastructure-cli-plugin-vpc-reference#storage)
     {: .navgroup-end}
 
