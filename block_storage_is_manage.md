@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-14"
 
-keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, VSI, virtual server instance, instance
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance
 
 subcollection: vpc-on-classic-block-storage
 
@@ -60,7 +60,7 @@ Block storage volumes are attached by default when you create a new virtual serv
 1. Select an available virtual server instance.
 1. Confirm your selection.
 
-## Rename a volume
+## Rename a block storage volume
 {: #rename}
 
 You can change the name of an existing volume to make it more meaningful.
@@ -85,9 +85,9 @@ You cannot delete an active block storage volume. To delete a volume, first [det
 ## Automatic deletion of block storage data volumes
 {: #auto-delete}
 
-Using the Auto Delete feature, you can specify that a block storage data volume be automatically deleted when you delete a VSI to which it is attached. This feature does not apply to boot volumes and is disabled by default.
+Using the Auto Delete feature, you can specify that a block storage data volume be automatically deleted when you delete an instance to which it is attached. This feature does not apply to boot volumes and is disabled by default.
 
-To enable Auto Delete for an existing block storage volume attached to a VSI, follow these steps:
+To enable Auto Delete for an existing block storage volume attached to an instance, follow these steps:
 
 1. Locate the virtual server instance to which the volume is attached. In the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc){: external} for the Virtual Private Cloud, navigate to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Compute > Virtual server instances for VPC**.
 1. Under **Attached block storage volumes**, select a volume.
@@ -96,7 +96,7 @@ To enable Auto Delete for an existing block storage volume attached to a VSI, fo
 
 Alternatively, begin by selecting a volume from the list of block storage volumes (**Storage > Block storage volumes for VPC**).
 
-To enable Auto Delete on a new volume when creating a VSI, see [Create and attach a block storage volume when you create a new instance](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage#create-from-vsi).
+To enable Auto Delete on a new volume when creating an instance, see [Create and attach a block storage volume when you create a new instance](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage#create-from-vsi).
 
 ## Assign access to a block storage volume
 {: #assign-volume-access}
@@ -134,9 +134,9 @@ The following table shows statuses you might see when creating, viewing, or mana
 Do you prefer to manage block storage volumes using the CLI? For information, see [Managing block storage volumes (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli).
 {: tip}
 
-## What happens next
+## Next steps
 {: #next-step-managing-block-storage}
 
 You can [create additional volumes](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage).
 
-For issues with existing block storage volumes, you might be able to troubleshoot and fix the problems yourself.  For more information, see [Troubleshooting for block storage](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-troubleshoot).
+For issues with existing block storage volumes, you might be able to troubleshoot and fix the problems yourself. For more information, see [Troubleshooting for block storage](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-troubleshoot).

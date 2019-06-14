@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-14"
 
-keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, VSI, virtual server instance, instance
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance
 
 subcollection: vpc-on-classic-block-storage
 
@@ -41,7 +41,7 @@ By default, block storage volumes display for all resource groups in your region
 | Location | Availability zone in your region, inherited from the VPC (for example, US South 1). |
 | Size | Size of the volume you specified, in GBs. |
 | Max IOPS | Maximum IOPS available on the volume, defined by the general-purpose IOPS tier or custom IOPS value you specified. |
-| Attachment type | Data, for a secondary volume attached to a VSI, boot when attached as a boot volume, or blank for an unattached volume. |
+| Attachment type | Data, for a secondary volume attached to an instance, boot when attached as a boot volume, or blank for an unattached volume. |
 | Encryption | Provider managed or [customer managed](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption). |
 | Actions (...) | Click the ellipsis to display a menu of context-specific actions you can take.  For example, an available, unattached volume would have menu options for attaching to an instance or deleting the volume. |
 {: caption="Table 1. Details about all volumes" caption-side="top"}
@@ -57,7 +57,7 @@ To view details about a block storage volume, navigate to the list of all block 
 |-------|-------------|
 | Name  | Name of the volume you specified when you created the volume. Click the pencil icon to edit the volume name. |
 | Resource group | Resource group defined when you set up your VPC. Resource groups manage access to resources but do not affect billing or monitoring. |
-| Attachment type | Data, for a secondary volume attached to a VSI, boot when attached as a boot volume, or blank for an unattached volume. |
+| Attachment type | Data, for a secondary volume attached to an instance, boot when attached as a boot volume, or blank for an unattached volume. |
 | ID | System-generated volume ID. |
 | Created | System-generated date when the volume was created. |
 | Location | Availability zone in your region. |
@@ -70,9 +70,9 @@ To view details about a block storage volume, navigate to the list of all block 
 
 Volumes attached to a virtual server instance are displayed under **Attached instances** on the **Volume details** page.  You can also [attach a volume to an instance](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage).
 
-For a volume attached to a VSI, you can also navigate to information about the instance and then return to a list of all Block Storage volumes.
+For a volume attached to an instance, you can also navigate to information about the instance and then return to a list of all Block Storage volumes.
 
-## View attached block storage volume details in VSI details
+## View attached block storage volume details in instance details
 
 You can view information about an attached block storage volume from the **Virtual server instance details** page:
 
@@ -82,7 +82,7 @@ You can view information about an attached block storage volume from the **Virtu
 Do you prefer to viewing block storage volumes using the CLI? For information, see [Viewing block storage volumes (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage-cli).
 {: tip}
 
-## What happens next
+## Next steps
 {: #next-step-viewing-block-storage}
 
 Create more volumes or manage your existing block storage volumes.

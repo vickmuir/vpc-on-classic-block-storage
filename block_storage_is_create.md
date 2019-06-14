@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-07"
+lastupdated: "2019-06-13"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, VSI, virtual server instance, instance, IOPS
 
@@ -78,7 +78,7 @@ You can create a block storage volume independent of virtual server provisioning
 Do you prefer to create block storage volumes using the CLI? For information, see [Creating block storage volumes using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli).
 {: tip}
 
-## What happens next
+## Next steps
 {: #next-step-creating-block-storage}
 
 When you refresh the Block storage volumes page, the new volume appears at the top of the list of volumes. If the volume was created successfully, it shows a status of Available. For standalone volumes, the Attachment Type column is blank (-). The Action menu (...) at the end of a table row provides a link for [attaching a block storage volume to an instance](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage).

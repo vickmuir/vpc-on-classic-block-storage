@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-13"
 
 keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
 
@@ -70,7 +70,7 @@ The volume ID in the above example is used when attaching block storage to a vir
 Do you prefer to create block storage volumes from the {{site.data.keyword.cloud}} console? For information, see [Creating block storage volumes](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage).
 {: tip}
 
-## What happens next
+## Next steps
 {: #next-step-creating-block-storage-cli}
 
 [Attach a block storage volume (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage-cli).

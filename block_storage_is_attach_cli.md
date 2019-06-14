@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-14"
 
-keywords: block storage, IBM Cloud, VPC, CLI, block storage volume, volume, volume attachment, VSI, virtual server instance, instance
+keywords: block storage, IBM Cloud, VPC, CLI, block storage volume, volume, volume attachment, virtual server instance, instance
 
 subcollection: vpc-on-classic-block-storage
 
@@ -76,7 +76,7 @@ ibmcloud is instance-volume-attachment INSTANCE_ID VOLUME_ATTACHMENT_ID [--json]
 
 ## List all volume attachments of a server instance
 
-Use the `instance-volume-attachments` command and specify the instance ID to see all volume attachments for a VSI.
+Use the `instance-volume-attachments` command and specify the instance ID to see all volume attachments for an instance.
 
 ```bash
 ibmcloud is instance-volume-attachments INSTANCE_ID [--json]
@@ -110,12 +110,10 @@ Here is an example volume attachment JSON file that defines a custom volume:
 ```
 {: screen}
 
-## What happens next
+## Next steps
 {: #next-step-attaching-block-storage-cli}
 
-Perform any OS-specific steps to use the Block Storage on the VSI, for example, partition and mount on Linux or Partition/format on Windows. You can now begin writing data to your block storage volume.
-
-You can also create additional volumes and manage existing ones.  See the following information.
+Create additional volumes and manage existing ones.  See the following information.
 
 * [Create a block storage volume using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli#create-vol-cli)
 * [Managing block storage volumes using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)

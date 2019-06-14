@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-13"
 
 Keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
 
@@ -163,7 +163,7 @@ Crn      crn:v1:public:globalcatalog::::volume.profile:generalpurpose
 Do you prefer using the {{site.data.keyword.cloud}} console to view your block storage volumes? For information, see [Viewing block storage volumes](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage).
 {: tip}
 
-## What happens next
+## Next steps
 {: #next-step-viewing-block-storage-cli}
 
 Create more volumes or manage your existing block storage volumes.

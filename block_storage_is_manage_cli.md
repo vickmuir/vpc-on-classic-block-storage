@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-14"
 
-keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, volume attachment, data storage, VSI, virtual server instance, instance
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, volume attachment, data storage, virtual server instance, instance
 
 subcollection: vpc-on-classic-block-storage
 
@@ -76,7 +76,7 @@ ibmcloud is instance-volume-attachment-update INSTANCE_ID VOLUME_ATTACHMENT_ID [
 
 Use the `--name` parameter and specify a new name for the volume attachment.
 
-Specify`--auto-delete true` to automatically delete the volume when you delete the VSI to which it's attached.
+Specify`--auto-delete true` to automatically delete the volume when you delete the instance to which it's attached.
 
 Example showing details for `Volume Attachment Instance Reference`:
 
@@ -89,7 +89,7 @@ Vdisk-data1   fd146b1f-e1bb-4eab-ba78-3109e6bc3a2d   data         true          
 ## Detach a volume using the CLI
 {: #detach-vol-attachment-cli}
 
-Use the `instance-volume-attachment-detach` command to detach a volume from a VSI and delete the volume attachment. The block storage volume is not deleted; you can later [attach it to another instance](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage-cli).
+Use the `instance-volume-attachment-detach` command to detach a volume from an instance and delete the volume attachment. The block storage volume is not deleted; you can later [attach it to another instance](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage-cli).
 
 ```bash
 ibmcloud is instance-volume-attachment-detach INSTANCE_ID VOLUME_ATTACHMENT_ID [-f, --force]
@@ -120,7 +120,7 @@ Volume ID 64d85f0f-6c08-4188-9e9a-0057b3aa1b69 is deleted.
 Do you prefer to manage block storage volumes using the {{site.data.keyword.cloud}} console? For more information, see [Managing block storage volumes](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage).
 {:tip}
 
-## What happens next
+## Next steps
 {: #next-step-managing-block-storage-cli}
 
 [Create more volumes using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli).
