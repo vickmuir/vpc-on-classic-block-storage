@@ -35,8 +35,6 @@ block_storage_is_manage.md
 
 block_storage_is_manage_cli.md 
 
-block_storage_is_pricing.md 
-
 block_storage_is_profiles.md 
 
 block_storage_is_troubleshoot.md 
