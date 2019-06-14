@@ -15,7 +15,7 @@ https://cloud.ibm.com/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-blo
 
 ## Files in this repo
 
-block_storage_is_about.md 
+block_storage_vpc_about.md 
 
 block_storage_is_attach.md 
 
@@ -29,7 +29,7 @@ block_storage_is_encryption.md
 
 block_storage_is_faq.md 
 
-block_storage_is_getting_started.md 
+block_storage_vpc_getting_started.md 
 
 block_storage_is_manage.md 
 
@@ -44,5 +44,7 @@ block_storage_is_troubleshoot.md
 block_storage_is_view.md 
 
 block_storage_is_view_cli.md 
+
+block_storage_vpc_capacity_performance.md
 
 toc 
