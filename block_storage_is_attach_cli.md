@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-01"
 
-keywords: block storage, IBM Cloud, VPC, CLI, block storage volume, volume, volume attachment, virtual server instance, instance
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, CLI, block storage volume, volume, volume attachment, virtual server instance, instance
 
 subcollection: vpc-on-classic-block-storage
 
@@ -18,21 +18,25 @@ subcollection: vpc-on-classic-block-storage
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-
 # Attaching a block storage volume using the CLI
 {: #attaching-block-storage-cli}
 
-A volume attachment connects a block storage volume to a virtual server instance. Each instance can have [many volume attachments](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits), but a single volume attachment connects one volume to one instance.
+A volume attachment connects a {{site.data.keyword.block_storage_is_short}} volume to a virtual server instance. Each instance can have [many volume attachments](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits), but a single volume attachment connects one volume to one instance.
+{:shortdesc}
 
 ## Before you begin
 {: #before-attaching-block-storage-cli}
 
-Make sure that you downloaded, installed, and initialized the following CLI plug-ins:
+1. Ensure you have downloaded, installed, and initialized the following CLI plug-ins:
+    * {{site.data.keyword.cloud_notm}} CLI
+    * The infrastructure-service plugin
 
-* {{site.data.keyword.cloud_notm}} CLI
-* {{site.data.keyword.cloud_notm}} Regional API CLI
-
-For more information, see the prerequisites in the [IBM Cloud CLI for VPC Reference](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   For more information, see [{{site.data.keyword.cloud_notm}} CLI for VPC Reference](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   
+   When you install the vpc-infrastructure plugin for the first time, you must set the target generation to gen 1, `ibmcloud is target --gen 1`.
+   {:important}
+   
+2. Make sure you have already [created an {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 
 ## Attach a block storage volume using the CLI
 {: #attach-block-storage-cli}

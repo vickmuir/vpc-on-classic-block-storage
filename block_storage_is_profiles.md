@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-01"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, profile, volume profile, data storage, storage profile, virtual server instance, instance
 
@@ -19,11 +19,11 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 {:note: .note}
 
-
-# Profiles
+# {{site.data.keyword.block_storage_is_short}} profiles
 {: #block-storage-profiles}
 
 When you provision {{site.data.keyword.block_storage_is_short}} secondary volumes using the {{site.data.keyword.cloud_notm}} console, CLI, or API, you specify an IOPS profile that best meets your storage requirements. Profiles are available as three predefined IOPS tiers or as custom IOPS.  IOPS tiers provide guaranteed IOPS/GB performance for volumes up to 2 TB capacity. You can also specify a custom IOPS profile and define volume capacity and IOPS within a range.
+{:shortdesc}
 
 ## Tiered IOPs profiles
 {: #tiers}
@@ -38,7 +38,7 @@ Block storage provides three predefined IOPS tiers you can select to specify opt
 | | | Above 600 GB to 2 TB | 5 IOPS/GB up to 10,000 IOPS|
 | 10 IOPS/GB | Demanding storage workloads - Data intensive workloads created by NoSQL databases, data processing for video, machine learning, and analytics | 10 GB to 300 GB | Up to 3,000 IOPS |
 | | | Above 300 GB to 2 TB | 10 IOPS/GB up to 20,000 IOPS |
-{: caption="Table 1. IOPS tiers and performance" caption-side="top"}
+{: caption="Table 1. IOPS tier profiles and performance levels for each tier" caption-side="top"}
 
 The Maximum throughput for all block storage IOPS tiers is 750 MB/s based on a 16K block size
 
@@ -75,6 +75,7 @@ requirements for your compute workloads. In general, as your compute requirement
 | 3 IOPS/GB       | [Balanced](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles#balanced) for common workloads |
 | 5 IOPS/GB       | [Compute](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles#compute) for intensive CPU demands |
 | 10 IOPS/GB      | [Memory](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles#memory) for memory-intensive workloads |
+{: caption="Table 3. Relationship of block storage profiles to virtual server profiles" caption-side="top"}
 
 ## Viewing IOPS profiles
 {: #view-iops-profiles}
@@ -104,7 +105,7 @@ The following cURL API request retrieves all volume profiles.
 
 ```
 curl -X GET \
-$rias_endpoint/v1/volume/profiles?version=2019-01-01&generation=1 \
+$rias_endpoint/v1/volume/profiles?version=2019-05-31&generation=1 \
 -H "Authorization: $iam_token"
 ```
 {:codeblock}

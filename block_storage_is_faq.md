@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-03"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance, IOPS
 
@@ -13,8 +13,11 @@ subcollection: vpc-on-classic-block-storage
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Block Storage for VPC frequently asked questions
+# {{site.data.keyword.block_storage_is_short}} frequently asked questions
 {: #block-storage-vpc-faq}
+
+Welcome to the FAQ page for {{site.data.keyword.block_storage_is_short}}.  This topic answers many of your questions for creating and managing your block storage volumes.  If you have additional questions you'd like to see addressed in this topic, please provide feedback using the **Issues** or **Edit topic** links.
+{:shortdesc}
 
 ## How do I allocate storage for my instances?
 {: faq}
@@ -71,7 +74,7 @@ For more information about quotas and limits for your {{site.data.keyword.cloud}
 ## After creating a volume, can I increase its capacity later?
 {: faq}
 
-No, you cannot increase the capacity of a volume.  We recommend that you estimate sufficient capacity for projected growth before you provision a block storage volume.
+No, you cannot increase the capacity of a volume. We recommend that you estimate sufficient capacity for projected growth before you provision a block storage volume.
 
 ## Does the volume need to be pre-warmed to achieve expected throughput?
 {: faq}
@@ -81,7 +84,7 @@ You do not have to pre-warm a volume. You can see the specified throughput immed
 ## Can I create encrypted volumes?
 {: faq}
 
-All block storage volumes are encrypted, either by IBM-managed encryption (default) or through the Key Protect service using your own encryption keys.  For information, see [Creating block storage volumes with customer managed encryption](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).
+All block storage volumes are encrypted, either by IBM-managed encryption (default) or through the Key Protect service using your own encryption keys. For information, see [Creating block storage volumes with customer managed encryption](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).
 
 ## How can I tell the type of encryption a volume has?
 {: faq}
@@ -117,7 +120,7 @@ Determine the capacity you need based on anticipated growth. Volume size cannot 
 ## How is the boot disk for a virtual server instance created and how does it relate to the image file?
 {: faq}
 
-The boot disk, also called a boot volume, is created when you provision a virtual server instance. The boot disk of an instance is a cloned image of the virtual machine image. The boot volume is deleted when you delete the VSI to which it's attached.
+The boot disk, also called a boot volume, is created when you provision a virtual server instance. The boot disk of an instance is a cloned image of the virtual machine image. The boot volume is deleted when you delete the instance to which it's attached.
 
 ## Do firewalls or security groups impact performance?
 {: faq}
@@ -127,7 +130,7 @@ As best practice, it is recommended to run storage traffic on a VLAN that bypass
 ## When can I delete a block storage data volume?
 {: faq}
 
-You can delete a block storage data volume only when it's not attached to a virtual server instance. [Detach the volume](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage#detach) before deleting it. Boot volumes are detached and deleted when the VSI is deleted.
+You can delete a block storage data volume only when it's not attached to a virtual server instance. [Detach the volume](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage#detach) before deleting it. Boot volumes are detached and deleted when the instance is deleted.
 
 ## What happens to my data when I delete a block storage data volume?
 {: faq}

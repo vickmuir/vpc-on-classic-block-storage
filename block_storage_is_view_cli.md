@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-13"
+lastupdated: "2019-07-03"
 
 Keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
 
@@ -24,17 +24,22 @@ subcollection: vpc-on-classic-block-storage
 # Viewing block storage volumes using the CLI
 {: #viewing-block-storage-cli}
 
-View details about a block storage volume or summary information about all volumes from the CLI.
+View details about a {{site.data.keyword.block_storage_is_short}} volume or summary information about all volumes from the CLI.
+{:shortdesc}
 
 ## Before you begin
 {: #before-viewing-block-storage-cli}
 
-Make sure that you downloaded, installed, and initialized the following CLI plug-ins:
+1. Ensure you have downloaded, installed, and initialized the following CLI plug-ins:
+    * {{site.data.keyword.cloud_notm}} CLI
+    * The infrastructure-service plugin
 
-* {{site.data.keyword.cloud_notm}} CLI
-* {{site.data.keyword.cloud_notm}} Regional API CLI
-
-For more information, see the prerequisites in the [{{site.data.keyword.cloud_notm}} CLI for VPC Reference](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   For more information, see [{{site.data.keyword.cloud_notm}} CLI for VPC Reference](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   
+   When you install the vpc-infrastructure plugin for the first time, you must set the target generation to gen 1, `ibmcloud is target --gen 1`.
+   {:important}
+   
+2. Make sure you have already [created an {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 
 ## View details about a block storage volume using the CLI
 {: #viewvol-cli}
@@ -87,9 +92,9 @@ The following example shows all volumes for all resource groups in your availabi
 $ ibmcloud is volumes
 Listing volumes under account MyAccount 01 as user user1@mycompany.com...
 ID                                     Name              Capacity   IOPS   Auto Delete   Encryption        Profile         Created               Status      Zone         Resource Group
-a3f4d60a-c9cf-4666-9a2a-0b1d85f92c19   demo_volume1      50         10     Manual        provider managed  generalpurpose   2018-08-30 11:04:46  pending     us-south-1   (c16d1edd-.)
-3aaa0beb-83ac-4b2f-b4f5-eab382d1a5aa   demo_volume2      50         100    Manual        provider managed  custom           2018-08-30 10:26:34  available   us-south-1   (c16d1edd-.)
-6d9713cf-9688-486d-b8c9-d9f1c6e7876c   demo_volume3      50         100    Manual        provider managed  custom           2018-08-30 10:39:24  available   us-south-1   (c16d1edd-.)
+a3f4d60a-c9cf-4666-9a2a-0b1d85f92c19   demo_volume1      50         10     Manual        provider managed  generalpurpose   2019-06-30 11:04:46  pending     us-south-1   (c16d1edd-.)
+3aaa0beb-83ac-4b2f-b4f5-eab382d1a5aa   demo_volume2      50         100    Manual        provider managed  custom           2019-06-30 10:26:34  available   us-south-1   (c16d1edd-.)
+6d9713cf-9688-486d-b8c9-d9f1c6e7876c   demo_volume3      50         100    Manual        provider managed  custom           2019-06-30 10:39:24  available   us-south-1   (c16d1edd-.)
 ```
 {: screen}
 
@@ -168,5 +173,5 @@ Do you prefer using the {{site.data.keyword.cloud}} console to view your block s
 
 Create more volumes or manage your existing block storage volumes.
 
-* [Creating block storage volumes (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli)
-* [Managing block storage volumes (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)
+* [Creating block storage volumes using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli)
+* [Managing block storage volumes using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)

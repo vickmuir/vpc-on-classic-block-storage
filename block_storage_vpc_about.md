@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-28"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance, IOPS, HPCS, Key Protect
 
@@ -17,7 +17,7 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 {:note: .note}
 
-# About Block Storage for VPC
+# About {{site.data.keyword.block_storage_is_short}}
 {: #block-storage-about}
 [comment]: # (linked help topic)
 
@@ -47,7 +47,7 @@ Block storage data volumes can be attached to any available instance within your
 
 Data volumes are encryped by default with IBM-managed encryption. Optionally, you can encrypt data volumes by using [your own encryption key](#about-customer-managed-encrytion).
 
-## Encryption for data-at-rest
+## Block Storage encryption for data-at-rest
 {: #encryption}
 
 {{site.data.keyword.cloud_notm}} takes the need for security seriously and understands the importance of being able to encrypt data to keep it safe. When you create a standalone volume or create a volume as part of instance creation, you can choose to secure your data with IBM provider-managed encryption or use your own encryption keys.  

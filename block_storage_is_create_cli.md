@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-13"
+lastupdated: "2019-07-01"
 
-keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
+keywords: block storage, IBM CLoud, VPC, virtual private cloud, CLI, block storage volume, volume, IOPS
 
 subcollection: vpc-on-classic-block-storage
 
@@ -21,18 +21,22 @@ subcollection: vpc-on-classic-block-storage
 # Creating block storage volumes using the CLI
 {: #creating-block-storage-cli}
 
-You can create {{site.data.keyword.block_storage_is_full}} volumes by using the command line interface (CLI).
+You can create {{site.data.keyword.block_storage_is_short}} volumes by using the command line interface (CLI).
 {:shortdesc}
 
 ## Before you begin
 {: #before-creating-block-storage-cli}
 
-Ensure you have downloaded, installed, and initialized the following CLI plug-ins:
+1. Ensure you have downloaded, installed, and initialized the following CLI plug-ins:
+    * {{site.data.keyword.cloud_notm}} CLI
+    * The infrastructure-service plugin
 
-* {{site.data.keyword.cloud_notm}} CLI
-* The infrastructure-service plugin
-
-For more information, see the prerequisites in the [IBM Cloud CLI for VPC Reference](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   For more information, see [{{site.data.keyword.cloud_notm}} CLI for VPC Reference](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   
+   When you install the vpc-infrastructure plugin for the first time, you must set the target generation to gen 1, `ibmcloud is target --gen 1`.
+   {:important}
+   
+2. Make sure you have already [created an {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 
 ## Create a block storage volume using the CLI
 {: #create-vol-cli}

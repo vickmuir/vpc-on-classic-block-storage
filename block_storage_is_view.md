@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-03"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance
 
@@ -24,20 +24,22 @@ subcollection: vpc-on-classic-block-storage
 # Viewing block storage volume details
 {: #viewing-block-storage}
 
-View details about a block storage volume or summary information about all volumes.
+View details about a {{site.data.keyword.block_storage_is_short}} volume or summary information about all volumes.
+{:shortdesc}
 
 ## View information about all block storage volumes
 {: #viewvols}
 
-Navigate to the list of block storage volumes. In [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc){: external} for the Virtual Private Cloud, go to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Storage > Block storage volumes for VPC**.
+Navigate to the list of block storage volumes. In [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc){: external} for the Virtual Private Cloud, go to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Storage > Block storage**.
 
-By default, block storage volumes display for all resource groups in your region.  In the list of all **Block storage volumes**, you'll see the following information.
+By default, block storage volumes display for all resource groups in your region.  In the list of all **Block storage for VPC volumes**, you'll see the following information.
 
 | Field | Description |
 |-------|-------------|
 | Status | Status of the volume, which functions as the default filter for all rows. For information about volume statuses, see [Block Storage volume statuses](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage#status). |
 | Name | Click the name of the volume to see individual volume details. |
-| Resource Group |  Resource group defined when you set up your VPC. Resource groups manage access to resources but do not affect billing or monitoring.|
+| Resource Group | Resource group defined when you set up your VPC. Resource groups manage access to resources but do not affect billing or monitoring.|
+| Resource Group | Select a resource group for which to associate the volume.  Resource groups help you organize resources for access and billing.  For information, see [Best practices for organizing resources in a resource group](docs/resources?topic=resources-bp_resourcegroups). |
 | Location | Availability zone in your region, inherited from the VPC (for example, US South 1). |
 | Size | Size of the volume you specified, in GBs. |
 | Max IOPS | Maximum IOPS available on the volume, defined by the general-purpose IOPS tier or custom IOPS value you specified. |
@@ -46,7 +48,7 @@ By default, block storage volumes display for all resource groups in your region
 | Actions (...) | Click the ellipsis to display a menu of context-specific actions you can take.  For example, an available, unattached volume would have menu options for attaching to an instance or deleting the volume. |
 {: caption="Table 1. Details about all volumes" caption-side="top"}
 
-By default, 10 volumes are shown in the list of all block storage volumes.  Change this default by clicking the down arrow and increase the list to 20 or 50 volumes.  Use the arrows in the lower-right corner to navigate to the next page and back again.
+By default, 10 volumes are shown in the list of all block storage volumes. Change this default by clicking the down arrow and increase the list to 20 or 50 volumes. Use the arrows in the lower-right corner to navigate to the next page and back again.
 
 ## View details about a block storage volume
 {: #view-vol-details}
@@ -57,6 +59,7 @@ To view details about a block storage volume, navigate to the list of all block 
 |-------|-------------|
 | Name  | Name of the volume you specified when you created the volume. Click the pencil icon to edit the volume name. |
 | Resource group | Resource group defined when you set up your VPC. Resource groups manage access to resources but do not affect billing or monitoring. |
+| Resource Group | Select a resource group for which to associate the volume.  Resource groups help you organize resources for access and billing.  For information, see [Best practices for organizing resources in a resource group](docs/resources?topic=resources-bp_resourcegroups). |
 | Attachment type | Data, for a secondary volume attached to an instance, boot when attached as a boot volume, or blank for an unattached volume. |
 | ID | System-generated volume ID. |
 | Created | System-generated date when the volume was created. |
@@ -76,7 +79,7 @@ For a volume attached to an instance, you can also navigate to information about
 
 You can view information about an attached block storage volume from the **Virtual server instance details** page:
 
-1. In the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc){: external}, go to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Compute > Virtual server instances for VPC** and select an instance.
+1. In the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc){: external}, go to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Compute > Virtual server instances** and select an instance.
 1. Under **Attached block storage volumes**, click on the name of a volume to go to the volume details page.
 
 Do you prefer to viewing block storage volumes using the CLI? For information, see [Viewing block storage volumes (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage-cli).
