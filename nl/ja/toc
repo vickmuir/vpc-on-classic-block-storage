@@ -1,0 +1,49 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="vpc-on-classic-block-storage" category="vpc,storage" audience="service" arm="3662724" href="/docs/vpc-on-classic-block-storage/vpc-on-classic-block-storage-block-storage-getting-started" path="vpc-on-classic-block-storage"}
+IBM Cloud Block Storage for Virtual Private Cloud
+
+    {: .navgroup id="learn"}
+    block_storage_vpc_getting_started.md
+    [IBM Cloud Virtual Private Cloud について](https://www.ibm.com/cloud/vpc){: external}
+    block_storage_vpc_about.md
+    block_storage_vpc_capacity_performance.md
+    block_storage_is_profiles.md
+    
+    {: .topicgroup}
+    関連リンク
+        [Virtual Private Cloud の入門チュートリアル](/vpc-on-classic/vpc-on-classic-getting-started)
+        [IBM Cloud コンソールを使用した IBM Cloud VPC の作成](/vpc-on-classic/vpc-on-classic-creating-a-vpc-using-the-ibm-cloud-console)
+        [Virtual Servers for VPC の入門チュートリアル](/vpc-on-classic-vsi/vpc-on-classic-vsi-getting-started)
+        [仮想サーバー・インスタンスの作成](/vpc-on-classic-vsi/vpc-on-classic-vsi-creating-virtual-servers)
+        [Virtual Private Cloud (VPC) でのネットワーキングの入門チュートリアル](/vpc-on-classic-network/vpc-on-classic-network-getting-started)
+        [Virtual Private Cloud 内のプライベート・サブネットとパブリック・サブネット](/tutorials/solution-tutorials-vpc-public-app-private-backend)
+    {: .navgroup-end}
+    
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    作成
+	    block_storage_is_create.md
+	    block_storage_is_create_cli.md
+        block_storage_is_encryption.md
+	    block_storage_is_attach.md
+	    block_storage_is_attach_cli.md
+
+    {: .topicgroup}
+    管理
+        block_storage_is_manage.md
+        block_storage_is_manage_cli.md
+        block_storage_is_view.md
+        block_storage_is_view_cli.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    {: .topicgroup}
+    [VPC に関する API の参照資料](https://cloud.ibm.com/apidocs/vpc-on-classic) [VPC に関するストレージ CLI の参照資料](/vpc-infrastructure-cli-plugin/vpc-infrastructure-cli-plugin-vpc-reference#storage)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    block_storage_is_faq.md
+    block_storage_is_troubleshoot.md
+    {: .navgroup-end}
