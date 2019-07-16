@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-07-03"
+lastupdated: "2019-07-16"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance
 
@@ -38,8 +38,7 @@ By default, block storage volumes display for all resource groups in your region
 |-------|-------------|
 | Status | Status of the volume, which functions as the default filter for all rows. For information about volume statuses, see [Block Storage volume statuses](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage#status). |
 | Name | Click the name of the volume to see individual volume details. |
-| Resource Group | Resource group defined when you set up your VPC. Resource groups manage access to resources but do not affect billing or monitoring.|
-| Resource Group | Select a resource group for which to associate the volume.  Resource groups help you organize resources for access and billing.  For information, see [Best practices for organizing resources in a resource group](docs/resources?topic=resources-bp_resourcegroups). |
+| Resource Group | Resource groups are defined when you set up your VPC. Resource groups help organize your account resources for access control and billing purposes. |
 | Location | Availability zone in your region, inherited from the VPC (for example, US South 1). |
 | Size | Size of the volume you specified, in GBs. |
 | Max IOPS | Maximum IOPS available on the volume, defined by the general-purpose IOPS tier or custom IOPS value you specified. |
@@ -69,7 +68,7 @@ To view details about a block storage volume, navigate to the list of all block 
 | Max IOPS | Maximum IOPS value for a predefined IOPS tier or the value you specified for custom IOPS. |
 | Throughput | The performance a disk can deliver, measured in Gigabits/second (Gbps).  Based on your volume profile, throughput is calculated as the amount of IOPS * 16K block size. |
 | Encryption | Provider managed or customer managed. |
-{: caption="Table 1.Volume details" caption-side="top"}
+{: caption="Table 2. Volume details" caption-side="top"}
 
 Volumes attached to a virtual server instance are displayed under **Attached instances** on the **Volume details** page.  You can also [attach a volume to an instance](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage).
 

@@ -74,7 +74,7 @@ For more information about quotas and limits for your {{site.data.keyword.cloud}
 ## After creating a volume, can I increase its capacity later?
 {: faq}
 
-No, you cannot increase the capacity of a volume. We recommend that you estimate sufficient capacity for projected growth before you provision a block storage volume.
+No, you cannot increase the capacity of a volume. We recommend that you estimate sufficient capacity for projected growth before you provision a block storage volume. Also, consider how many volumes you need and the capacity of these volumes. See [Managing volume count and capacity limits](/docs/vpc-on-classic?topic=vpc-on-classic-managingstoragelimits) for more information.
 
 ## Does the volume need to be pre-warmed to achieve expected throughput?
 {: faq}

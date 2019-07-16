@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-07-03"
+lastupdated: "2019-07-11"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance
 
@@ -112,6 +112,7 @@ With Administrator privileges, you can assign volume-level user access to the {{
 | Resource Type | Select **Block Storage for VPC** |
 | Volume ID | Enter the [volume ID](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage#view-vol-details) to assign access to a specific volume |
 | Select Roles | Assign platform access roles, typically, Operator |
+{: caption="Table 1. Information for IAM" caption-side="top"}
 
 For more information, see the [best practices for assigning access](/docs/iam?topic=iam-account_setup#account_setup). For the complete IAM process, which includes inviting users to your account and assigning Cloud IAM access, see the [IAM getting started tutorial](/docs/iam?topic=iam-getstarted#getstarted).
 
@@ -133,6 +134,7 @@ The following table shows statuses you might see when creating, viewing, or mana
 | Pending | A volume is being created |
 | | A volume is being attached to an instance |
 | Pending deletion | A volume is being deleted |
+{: caption="Table 2. Block storage statuses" caption-side="top"}
 
 Do you prefer to manage block storage volumes using the CLI? For information, see [Managing block storage volumes (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli).
 {: tip}
