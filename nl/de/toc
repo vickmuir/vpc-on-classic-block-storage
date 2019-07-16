@@ -1,0 +1,50 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="vpc-on-classic-block-storage" category="vpc,storage" audience="service" arm="3662724" href="/docs/vpc-on-classic-block-storage/vpc-on-classic-block-storage-block-storage-getting-started" path="vpc-on-classic-block-storage"}
+IBM Cloud Block Storage for Virtual Private Cloud
+
+    {: .navgroup id="learn"}
+    block_storage_vpc_getting_started.md
+    [Informationen zu IBM Cloud Virtual Private Cloud](https://www.ibm.com/cloud/vpc){: external}
+    block_storage_vpc_about.md
+    block_storage_vpc_capacity_performance.md
+    block_storage_is_profiles.md
+    
+    {: .topicgroup}
+    Zugehörige Links
+        [Einführungslernprogramm für Virtual Private Cloud](/vpc-on-classic/vpc-on-classic-getting-started)
+        [IBM Cloud-VPC-Instanz über IBM Cloud-Konsole erstellen](/vpc-on-classic/vpc-on-classic-creating-a-vpc-using-the-ibm-cloud-console)
+        [Einführungslernprogramm für Virtual Servers for VPC](/vpc-on-classic-vsi/vpc-on-classic-vsi-getting-started)
+        [Virtuelle Serverinstanzen erstellen](/vpc-on-classic-vsi/vpc-on-classic-vsi-creating-virtual-servers)
+        [Einführungslernprogramm für Networking for Virtual Private Cloud](/vpc-on-classic-network/vpc-on-classic-network-getting-started)
+        [Private und öffentliche Teilnetze in Virtual Private Cloud](/tutorials/solution-tutorials-vpc-public-app-private-backend)
+    {: .navgroup-end}
+    
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    Erstellung
+	    block_storage_is_create.md
+	    block_storage_is_create_cli.md
+        block_storage_is_encryption.md
+	    block_storage_is_attach.md
+	    block_storage_is_attach_cli.md
+
+    {: .topicgroup}
+    Verwaltung
+        block_storage_is_manage.md
+        block_storage_is_manage_cli.md
+        block_storage_is_view.md
+        block_storage_is_view_cli.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    {: .topicgroup}
+    [API-Referenz für VPC](https://cloud.ibm.com/apidocs/vpc-on-classic)
+    [Befehlszeilenschnittstellenreferenz für Speicher für VPC](/vpc-infrastructure-cli-plugin/vpc-infrastructure-cli-plugin-vpc-reference#storage)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    block_storage_is_faq.md
+    block_storage_is_troubleshoot.md
+    {: .navgroup-end}
