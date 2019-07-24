@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-22"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance, IOPS, HPCS, Key Protect
 
@@ -66,7 +66,7 @@ By default, all boot and data volumes are encrypted with IBM provider-managed en
 
 You can encrypt block storage volumes with your own encryption keys. For data volumes, you specify customer-managed encryption when creating the volume. For boot volumes, you can edit the boot volume properties during instance creation and specify customer-managed encryption. For procedures, see [Creating block storage volumes with customer managed encryption](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).
 
-With customer-managed encryption, your encryption key is uploaded to a key management service ({{site.data.keyword.keymanagementservicelong_notm}} or {{site.data.keyword.hscrypto}}) . The VPC infrastructure locates the key in the key management service instance that you configured in advance, and then encrypts the volume. For prerequisites and a one-time set up procedure, see [Creating block storage volumes with customer managed encryption](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).
+With customer-managed encryption, your encryption key is uploaded to a key management service ({{site.data.keyword.keymanagementservicelong_notm}} or {{site.data.keyword.hscrypto}}) . The VPC infrastructure locates the key in the key management service instance that you configured in advance and then encrypts the volume. For prerequisites and a one-time set up procedure, see [Creating block storage volumes with customer managed encryption](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).
 
 For more information about creating customer-managed encryption for volumes during virtual server instance provisioning, see [Customer managed encryption for block storage](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-storage#customer-managed-encryption-keys).
 

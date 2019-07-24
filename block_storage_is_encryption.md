@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-23"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, Key Protect, encryption, key management, Hyper Protect Crypto Services, HPCS, volume, data storage, virtual server instance, instance, customer-managed encryption
 
@@ -111,4 +111,4 @@ You can also create volumes with customer-managed encryption during instance pro
 
 ## Editing boot volumes to use customer-managed encryption using the UI
 
-When you create an instance from the UI, you can specify customer-managed encryption by editing the boot volume properties. For information, see [Provisioning virtual server instances with volumes that use customer-managed encryption](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-storage#provision-byok-ui).
+When you create an instance from the UI, you can specify customer-managed encryption by editing the boot volume properties. For information, see [Provisioning virtual server instances with volumes that use customer-managed encryption](docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-instances-byok#provision-byok-ui).
