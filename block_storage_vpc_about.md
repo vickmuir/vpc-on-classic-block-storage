@@ -34,7 +34,7 @@ subcollection: vpc-on-classic-block-storage
 ### Boot volumes
 {: #block-storage-vpc-boot-volumes}
 
-When you create an instance, a 100 GB boot volume is automatically created and attached to the instance. The boot volume has a maximum IOPS of 3,000 IOPS. You can encrypt the boot volume by using [your own encyption keys](#about-customer-managed-encrytion) or use the default [provider-managed encryption](#about-provider-managed-encryption). A boot volume can't be manually detached and deleted but it is deleted when you delete the instance.
+When you create an instance, a 100 GB boot volume is automatically created and attached to the instance. The boot volume has a maximum IOPS of 3,000 IOPS. You can encrypt the boot volume by using [your own encryption keys](#about-customer-managed-encrytion) or use the default [provider-managed encryption](#about-provider-managed-encryption). A boot volume can't be manually detached and deleted but it is deleted when you delete the instance.
 
 ### Secondary data volumes
 {: #secondary-data-volumes}
@@ -45,7 +45,7 @@ You create data volumes as standalone volumes or when you provision an instance.
 
 Block storage data volumes can be attached to any available instance within your region, within [certain limits](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits). These volumes are detached by default when the instance is deleted. Detaching by default allows your data to persist beyond the virtual server instance life cycle. It only removes the volume's association with the instance. You can delete data volumes manually after they are detached or, when creating a volume, you can specify that they be [automatically detached and deleted](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage#auto-delete) when the instance is deleted.
 
-Data volumes are encryped by default with IBM-managed encryption. Optionally, you can encrypt data volumes by using [your own encryption key](#about-customer-managed-encrytion).
+Data volumes are encrypted by default with IBM-managed encryption. Optionally, you can encrypt data volumes by using [your own encryption key](#about-customer-managed-encrytion).
 
 ## Block Storage encryption for data-at-rest
 {: #encryption}
