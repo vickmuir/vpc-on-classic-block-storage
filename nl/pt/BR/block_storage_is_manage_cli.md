@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-01"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, volume attachment, data storage, virtual server instance, instance
 
@@ -18,23 +18,26 @@ subcollection: vpc-on-classic-block-storage
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-
 # Gerenciando volumes de armazenamento de bloco usando a CLI
 {: #managing-block-storage-cli}
 
-Essas informações se aplicam ao {{site.data.keyword.cloud}} Virtual Private Cloud no ambiente de infraestrutura clássica.
-{: important}
+Gerencie o {{site.data.keyword.block_storage_is_short}} por meio da interface da linha de comandos (CLI). Atualize um nome de volume, atualize um anexo de volume, separe um volume ou exclua um volume.
+{:shortdesc}
 
 ## Antes
 de Começar
 {: #before-managing-block-storage-cli}
 
-Certifique-se de que você tenha transferido por download, instalado e inicializado os plug-ins da CLI a seguir:
+1. Assegure-se de ter transferido por download, instalado e inicializado osvplug-ins da CLI a seguir:
+    * CLI do {{site.data.keyword.cloud_notm}}
+    * O plug-in de serviço de infraestrutura
 
-* CLI do {{site.data.keyword.cloud_notm}}
-* CLI da API regional do {{site.data.keyword.cloud_notm}}
-
-Para obter mais informações, consulte os pré-requisitos na [Referência da CLI do IBM Cloud para VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   Para obter mais informações, consulte [Referência da CLI do {{site.data.keyword.cloud_notm}} para VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   
+   Ao instalar o plug-in vpc-infrastructure pela primeira vez, deve-se configurar a geração de destino como gen 1, `ibmcloud is target --gen 1`.
+   {:important}
+   
+2. Certifique-se de que já tenha [criado um {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 
 ## Atualizar o nome de um volume
 {: #update-vol-name}

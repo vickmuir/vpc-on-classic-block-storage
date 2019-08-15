@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-13"
+lastupdated: "2019-07-03"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, VSI, virtual server instance, instance, IOPS
 
@@ -26,7 +26,7 @@ subcollection: vpc-on-classic-block-storage
 {: #creating-block-storage}
 [comment]: # (鏈結的說明主題)
 
-您可以在建立虛擬伺服器實例時建立區塊儲存空間磁區，或建立獨立式磁區以稍後連接至實例。
+您可以在建立虛擬伺服器實例時建立 {{site.data.keyword.block_storage_is_short}} 磁區，或建立獨立式磁區以稍後連接至實例。
 {:shortdesc}
 
 開始之前，請確定已[建立 {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started)。
@@ -35,7 +35,7 @@ subcollection: vpc-on-classic-block-storage
 ## 建立新實例時，建立及連接區塊儲存空間磁區
 {: #create-from-vsi}
 
-1. 建立實例。在 Virtual Private Cloud 的 [{{site.data.keyword.cloud_notm}} 主控台](https://{DomainName}/vpc){: external}中，導覽至**功能表圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) > 運算 > VPC 的虛擬伺服器實例 > 新建實例**。
+1. 建立實例。在 Virtual Private Cloud 的 [{{site.data.keyword.cloud_notm}} 主控台](https://{DomainName}/vpc){: external}中，導覽至**功能表圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) > 運算 > 虛擬伺服器實例 > 新建實例**。
 1. [配置您的虛擬伺服器實例](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-virtual-servers)。在**連接的區塊儲存空間磁區**下，選取**新建區塊儲存空間磁區**。
 1. 輸入下表中說明的資訊。完成時，按一下**建立磁區**。
 
@@ -58,7 +58,7 @@ subcollection: vpc-on-classic-block-storage
 
 您可以建立獨立於虛擬伺服器佈建之外的區塊儲存空間磁區，稍後再將該磁區連接至實例。
 
-1. 在 Virtual Private Cloud 的 [{{site.data.keyword.cloud_notm}} 主控台](https://{DomainName}/vpc){: external}中，導覽至**功能表圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) > 儲存空間 > VPC 的區塊儲存空間磁區**，然後選取**新建磁區**。
+1. 在 Virtual Private Cloud 的 [{{site.data.keyword.cloud_notm}} 主控台](https://{DomainName}/vpc){: external}中，導覽至**功能表圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) > 儲存空間 > 區塊儲存空間磁區**，然後選取**新建磁區**。
 1. 在下表中輸入資訊，以定義新的區塊儲存空間磁區。
 1. 完成時，按一下**建立磁區**。您會回到「區塊儲存空間磁區」頁面，其中的訊息指出正在建立磁區。建立磁區時，會顯示第二則訊息。
 1. 若要查看新磁區的詳細資料，請選取第二則訊息中的**檢視資源**鏈結，以導覽至「磁區詳細資料」頁面。

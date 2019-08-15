@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-22"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance, IOPS, HPCS, Key Protect
 
@@ -17,7 +17,7 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 {:note: .note}
 
-# Sobre o armazenamento de bloco para VPC
+# Sobre {{site.data.keyword.block_storage_is_short}}
 {: #block-storage-about}
 [comment]: # (tópico da ajuda vinculado)
 
@@ -47,7 +47,7 @@ Os volumes de dados de armazenamento de bloco podem ser anexados a qualquer inst
 
 Os volumes de dados são criptografados por padrão com a criptografia gerenciada pela IBM. Como opção, é possível criptografar volumes de dados usando [sua própria chave de criptografia](#about-customer-managed-encrytion).
 
-## Criptografia para dados em repouso
+## Criptografia de armazenamento de bloco para dados em repouso
 {: #encryption}
 
 O {{site.data.keyword.cloud_notm}} leva a sério a necessidade de segurança e entende a importância de ser capaz de criptografar dados para mantê-los seguros. Quando você cria um volume independente ou cria um volume como parte da criação da instância, é possível escolher proteger seus dados com a criptografia gerenciada por provedor IBM ou usar suas próprias chaves de criptografia.  
@@ -66,7 +66,7 @@ Por padrão, todos os volumes de inicialização e dados são criptografados com
 
 É possível criptografar volumes de armazenamento de bloco com suas próprias chaves de criptografia. Para volumes de dados, você especifica a criptografia gerenciada pelo cliente ao criar o volume. Para volumes de inicialização, é possível editar as propriedades do volume de inicialização durante a criação da instância e especificar a criptografia gerenciada pelo cliente. Para obter os procedimentos, consulte [Criando volumes de armazenamento de bloco com criptografia gerenciada pelo cliente](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).
 
-Com a criptografia gerenciada pelo cliente, sua chave de criptografia é transferida por upload para um serviço de gerenciamento de chave ({{site.data.keyword.keymanagementservicelong_notm}} ou {{site.data.keyword.hscrypto}}). A infraestrutura VPC localiza a chave na instância de serviço de gerenciamento de chave que você configurou antecipadamente e, em seguida, criptografa o volume. Para obter os pré-requisitos e um procedimento de configuração única, consulte [Criando volumes de armazenamento de bloco com criptografia gerenciada pelo cliente](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).
+Com a criptografia gerenciada pelo cliente, sua chave de criptografia é transferida por upload para um serviço de gerenciamento de chave ({{site.data.keyword.keymanagementservicelong_notm}} ou {{site.data.keyword.hscrypto}}). A infraestrutura de VPC localiza a chave na instância de serviço de gerenciamento de chaves que você configurou antecipadamente e, em seguida, criptografa o volume. Para obter os pré-requisitos e um procedimento de configuração única, consulte [Criando volumes de armazenamento de bloco com criptografia gerenciada pelo cliente](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).
 
 Para obter mais informações sobre a criação da criptografia gerenciada pelo cliente para volumes durante o fornecimento da instância de servidor virtual, consulte [Criptografia gerenciada pelo cliente para armazenamento de bloco](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-storage#customer-managed-encryption-keys).
 

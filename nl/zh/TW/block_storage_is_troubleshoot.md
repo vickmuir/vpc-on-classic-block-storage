@@ -2,10 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2018-06-17"
+lastupdated: "2018-07-03"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, data storage, troubleshooting, troubleshoot
-
 
 subcollection: vpc-on-classic-block-storage
 
@@ -24,10 +23,10 @@ subcollection: vpc-on-classic-block-storage
 {:DomainName: data-hd-keyref="APPDomain"}
 {:DomainName: data-hd-keyref="DomainName"}
 
-# 區塊儲存空間的疑難排解
+# {{site.data.keyword.block_storage_is_short}} 疑難排解
 {: #troubleshoot}
 
-當您建立或管理區塊儲存空間時，可能會發生問題。通常，您可以遵循一些簡單的步驟來回復。下列各節說明問題、症狀、可能原因及解決方案。
+當您建立或管理 {{site.data.keyword.block_storage_is_short}} 時，可能會發生問題。通常，您可以遵循一些簡單的步驟來回復。下列各節說明問題、症狀、可能原因及解決方案。
 {:shortdesc}
 
 ## 無法擷取指定區域中的磁區

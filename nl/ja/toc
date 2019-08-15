@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="vpc-on-classic-block-storage" category="vpc,storage" audience="service" arm="3662724" href="/docs/vpc-on-classic-block-storage/vpc-on-classic-block-storage-block-storage-getting-started" path="vpc-on-classic-block-storage"}
-IBM Cloud Block Storage for Virtual Private Cloud
+IBM Cloud Block Storage for VPC on Classic
 
     {: .navgroup id="learn"}
     block_storage_vpc_getting_started.md
@@ -15,9 +15,9 @@ IBM Cloud Block Storage for Virtual Private Cloud
     関連リンク
         [Virtual Private Cloud の入門チュートリアル](/vpc-on-classic/vpc-on-classic-getting-started)
         [IBM Cloud コンソールを使用した IBM Cloud VPC の作成](/vpc-on-classic/vpc-on-classic-creating-a-vpc-using-the-ibm-cloud-console)
-        [Virtual Servers for VPC の入門チュートリアル](/vpc-on-classic-vsi/vpc-on-classic-vsi-getting-started)
+        [Virtual Servers for VPC 概説](/vpc-on-classic-vsi/vpc-on-classic-vsi-getting-started)
         [仮想サーバー・インスタンスの作成](/vpc-on-classic-vsi/vpc-on-classic-vsi-creating-virtual-servers)
-        [Virtual Private Cloud (VPC) でのネットワーキングの入門チュートリアル](/vpc-on-classic-network/vpc-on-classic-network-getting-started)
+        [Networking for VPC 概説](/vpc-on-classic-network/vpc-on-classic-network-getting-started)
         [Virtual Private Cloud 内のプライベート・サブネットとパブリック・サブネット](/tutorials/solution-tutorials-vpc-public-app-private-backend)
     {: .navgroup-end}
     

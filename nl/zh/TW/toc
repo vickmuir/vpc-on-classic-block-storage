@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="vpc-on-classic-block-storage" category="vpc,storage" audience="service" arm="3662724" href="/docs/vpc-on-classic-block-storage/vpc-on-classic-block-storage-block-storage-getting-started" path="vpc-on-classic-block-storage"}
-IBM Cloud Block Storage for Virtual Private Cloud
+IBM Cloud Block Storage for VPC on Classic
 
     {: .navgroup id="learn"}
     block_storage_vpc_getting_started.md
@@ -15,9 +15,9 @@ IBM Cloud Block Storage for Virtual Private Cloud
     相關鏈結
         [Virtual Private Cloud 入門指導教學](/vpc-on-classic/vpc-on-classic-getting-started)
         [使用 IBM Cloud 主控台建立 IBM Cloud VPC](/vpc-on-classic/vpc-on-classic-creating-a-vpc-using-the-ibm-cloud-console)
-        [Virtual Servers for VPC 入門指導教學](/vpc-on-classic-vsi/vpc-on-classic-vsi-getting-started)
+        [開始使用 Virtual Servers for VPC](/vpc-on-classic-vsi/vpc-on-classic-vsi-getting-started)
         [建立虛擬伺服器實例](/vpc-on-classic-vsi/vpc-on-classic-vsi-creating-virtual-servers)
-        [Networking for Virtual Private Cloud 入門指導教學](/vpc-on-classic-network/vpc-on-classic-network-getting-started)
+        [開始使用 Networking for VPC](/vpc-on-classic-network/vpc-on-classic-network-getting-started)
         [Virtual Private Cloud 中的專用和公用子網路](/tutorials/solution-tutorials-vpc-public-app-private-backend)
     {: .navgroup-end}
     

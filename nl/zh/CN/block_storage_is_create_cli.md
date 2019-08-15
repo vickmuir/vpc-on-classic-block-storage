@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-13"
+lastupdated: "2019-07-01"
 
-keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
+keywords: block storage, IBM CLoud, VPC, virtual private cloud, CLI, block storage volume, volume, IOPS
 
 subcollection: vpc-on-classic-block-storage
 
@@ -21,18 +21,22 @@ subcollection: vpc-on-classic-block-storage
 # 使用 CLI 创建块存储卷
 {: #creating-block-storage-cli}
 
-您可以使用命令行界面 (CLI) 来创建 {{site.data.keyword.block_storage_is_full}} 卷。
+您可以使用命令行界面 (CLI) 来创建 {{site.data.keyword.block_storage_is_short}} 卷。
 {:shortdesc}
 
 ## 开始之前
 {: #before-creating-block-storage-cli}
 
-确保已下载、安装并初始化以下 CLI 插件：
+1. 确保已下载、安装并初始化以下 CLI 插件：
+    * {{site.data.keyword.cloud_notm}} CLI
+    * infrastructure-service 插件
 
-* {{site.data.keyword.cloud_notm}} CLI
-* infrastructure-service 插件
-
-有关更多信息，请参阅 [IBM Cloud CLI for VPC 参考](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)中的先决条件。
+   有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} CLI for VPC 参考](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)。
+   
+   首次安装 vpc-infrastructure 插件时，必须将目标生成设置为 gen 1：`ibmcloud is target --gen 1`。
+   {:important}
+   
+2. 请确保您已[创建 {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started)。
 
 ## 使用 CLI 创建块存储卷
 {: #create-vol-cli}

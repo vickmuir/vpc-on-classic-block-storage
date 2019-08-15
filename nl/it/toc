@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="vpc-on-classic-block-storage" category="vpc,storage" audience="service" arm="3662724" href="/docs/vpc-on-classic-block-storage/vpc-on-classic-block-storage-block-storage-getting-started" path="vpc-on-classic-block-storage"}
-IBM Cloud Block Storage per VPC (Virtual Private Cloud)
+IBM Cloud Block Storage per VPC on Classic
 
     {: .navgroup id="learn"}
     block_storage_vpc_getting_started.md
@@ -15,10 +15,10 @@ IBM Cloud Block Storage per VPC (Virtual Private Cloud)
     Link correlati
         [Virtual Private Cloud Getting started tutorial](/vpc-on-classic/vpc-on-classic-getting-started)
         [Creating an IBM Cloud VPC using the IBM Cloud console](/vpc-on-classic/vpc-on-classic-creating-a-vpc-using-the-ibm-cloud-console)
-        [Virtual Servers for VPC Getting started tutorial](/vpc-on-classic-vsi/vpc-on-classic-vsi-getting-started)
+        [Getting started with Virtual Servers for VPC](/vpc-on-classic-vsi/vpc-on-classic-vsi-getting-started)
         [Creating virtual server instances](/vpc-on-classic-vsi/vpc-on-classic-vsi-creating-virtual-servers)
-        [Networking for Virtual Private Cloud Getting started tutorial](/vpc-on-classic-network/vpc-on-classic-network-getting-started)
-        [Sottoreti private e pubbliche in un VPC (Virtual Private Cloud)](/tutorials/solution-tutorials-vpc-public-app-private-backend)
+        [Getting started with Networking for VPC](/vpc-on-classic-network/vpc-on-classic-network-getting-started)
+        [Private and public subnets in a Virtual Private Cloud](/tutorials/solution-tutorials-vpc-public-app-private-backend)
     {: .navgroup-end}
     
     {: .navgroup id="howto"}

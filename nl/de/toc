@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="vpc-on-classic-block-storage" category="vpc,storage" audience="service" arm="3662724" href="/docs/vpc-on-classic-block-storage/vpc-on-classic-block-storage-block-storage-getting-started" path="vpc-on-classic-block-storage"}
-IBM Cloud Block Storage for Virtual Private Cloud
+IBM Cloud Block Storage for VPC on Classic
 
     {: .navgroup id="learn"}
     block_storage_vpc_getting_started.md
@@ -15,9 +15,9 @@ IBM Cloud Block Storage for Virtual Private Cloud
     Zugehörige Links
         [Einführungslernprogramm für Virtual Private Cloud](/vpc-on-classic/vpc-on-classic-getting-started)
         [IBM Cloud-VPC-Instanz über IBM Cloud-Konsole erstellen](/vpc-on-classic/vpc-on-classic-creating-a-vpc-using-the-ibm-cloud-console)
-        [Einführungslernprogramm für Virtual Servers for VPC](/vpc-on-classic-vsi/vpc-on-classic-vsi-getting-started)
+        [Einführung in Virtual Servers for VPC](/vpc-on-classic-vsi/vpc-on-classic-vsi-getting-started)
         [Virtuelle Serverinstanzen erstellen](/vpc-on-classic-vsi/vpc-on-classic-vsi-creating-virtual-servers)
-        [Einführungslernprogramm für Networking for Virtual Private Cloud](/vpc-on-classic-network/vpc-on-classic-network-getting-started)
+        [Einführung in Networking for VPC](/vpc-on-classic-network/vpc-on-classic-network-getting-started)
         [Private und öffentliche Teilnetze in Virtual Private Cloud](/tutorials/solution-tutorials-vpc-public-app-private-backend)
     {: .navgroup-end}
     

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-01"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, volume attachment, data storage, virtual server instance, instance
 
@@ -18,22 +18,25 @@ subcollection: vpc-on-classic-block-storage
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-
 # 使用 CLI 管理块存储卷
 {: #managing-block-storage-cli}
 
-这些信息适用于经典基础架构环境中的 {{site.data.keyword.cloud}} Virtual Private Cloud。
-{: important}
+在命令行界面 (CLI) 中管理 {{site.data.keyword.block_storage_is_short}}。更新卷名称、更新卷连接、拆离卷或删除卷。
+{:shortdesc}
 
 ## 开始之前
 {: #before-managing-block-storage-cli}
 
-确保下载、安装并初始化以下 CLI 插件：
+1. 确保已下载、安装并初始化以下 CLI 插件：
+    * {{site.data.keyword.cloud_notm}} CLI
+    * infrastructure-service 插件
 
-* {{site.data.keyword.cloud_notm}} CLI
-* {{site.data.keyword.cloud_notm}} 区域 API CLI
-
-有关更多信息，请参阅 [IBM Cloud CLI for VPC 参考](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)中的先决条件。
+   有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} CLI for VPC 参考](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)。
+   
+   首次安装 vpc-infrastructure 插件时，必须将目标生成设置为 gen 1：`ibmcloud is target --gen 1`。
+   {:important}
+   
+2. 请确保您已[创建 {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started)。
 
 ## 更新卷名
 {: #update-vol-name}

@@ -2,10 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2018-06-17"
+lastupdated: "2018-07-03"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, data storage, troubleshooting, troubleshoot
-
 
 subcollection: vpc-on-classic-block-storage
 
@@ -24,10 +23,10 @@ subcollection: vpc-on-classic-block-storage
 {:DomainName: data-hd-keyref="APPDomain"}
 {:DomainName: data-hd-keyref="DomainName"}
 
-# Resolução de problemas de armazenamento de bloco
+# Resolução de problemas do {{site.data.keyword.block_storage_is_short}}
 {: #troubleshoot}
 
-Quando você cria ou gerencia o armazenamento de bloco, pode encontrar problemas. Geralmente, é possível recuperar-se seguindo algumas etapas fáceis. Problemas, sintomas, prováveis causas e resoluções são descritos nas seções a seguir.
+Ao criar ou gerenciar o {{site.data.keyword.block_storage_is_short}}, é possível encontrar problemas. Geralmente, é possível recuperar-se seguindo algumas etapas fáceis. Problemas, sintomas, prováveis causas e resoluções são descritos nas seções a seguir.
 {:shortdesc}
 
 ## Não é possível recuperar um volume em uma região especificada
@@ -49,7 +48,7 @@ Verifique se o volume não foi removido de uma instância de servidor virtual e 
 
 1. Selecione uma instância de servidor virtual na lista de todos os servidores virtuais.
 
-Se o volume não estiver anexado conforme o esperado e não aparecer na lista de volumes, ele provavelmente foi excluído. Como a exclusão de um volume remove completamente seus dados, ela não pode ser restaurada.  
+Se o volume não estiver anexado conforme o esperado e não aparecer na lista de volumes, ele provavelmente foi excluído.  Como a exclusão de um volume remove completamente seus dados, ela não pode ser restaurada.  
 
 Se você usar a CLI, verifique se inseriu a sintaxe correta para visualizar volumes. Consulte [Visualizar todos os volumes de armazenamento de bloco usando a CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage-cli). Verifique se você especificou o grupo de recursos ou a zona correta.
 {: tsResolve}

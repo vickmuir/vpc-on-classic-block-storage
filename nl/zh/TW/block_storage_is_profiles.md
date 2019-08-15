@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-01"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, profile, volume profile, data storage, storage profile, virtual server instance, instance
 
@@ -19,11 +19,10 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 {:note: .note}
 
-
-# 設定檔
+# {{site.data.keyword.block_storage_is_short}} 設定檔
 {: #block-storage-profiles}
 
-當您使用 {{site.data.keyword.cloud_notm}} 主控台、 CLI 或 API 來佈建 {{site.data.keyword.block_storage_is_short}} 次要磁區時，您會指定最符合您儲存空間需求的 IOPS 設定檔。設定檔可以作為三個預先定義的 IOPS 層級或自訂 IOPS 使用。IOPS 層級對高達 2 TB 容量的磁區提供保證的 IOPS/GB 效能。您也可以指定自訂 IOPS 設定檔，並在一定範圍內定義磁區容量及 IOPS。
+當您使用 {{site.data.keyword.cloud_notm}} 主控台、 CLI 或 API 來佈建 {{site.data.keyword.block_storage_is_short}} 次要磁區時，您會指定最符合您儲存空間需求的 IOPS 設定檔。設定檔可以作為三個預先定義的 IOPS 層級或自訂 IOPS 使用。IOPS 層級對高達 2 TB 容量的磁區提供保證的 IOPS/GB 效能。您也可以指定自訂 IOPS 設定檔，並在一定範圍內定義磁區容量及 IOPS。{:shortdesc}
 
 ## 分層 IOPS 設定檔
 {: #tiers}
@@ -38,7 +37,7 @@ subcollection: vpc-on-classic-block-storage
 | | | 超過 600 GB 至 2 TB | 5 IOPS/GB 高達 10,000 IOPS|
 |10 IOPS/GB | 高要求儲存空間工作負載 - NoSQL 資料庫所建立的資料密集工作負載、用於視訊、機器學習及分析的資料處理 | 10 GB 至 300 GB | 高達 3,000 IOPS |
 | | | 超過 300 GB 至 2 TB | 10 IOPS/GB 高達 20,000 IOPS |
-{: caption="表 1. IOPS 層級及效能" caption-side="top"}
+{: caption="表 1. 每個層級的 IOPS 層級設定檔及效能層次" caption-side="top"}
 
 所有區塊儲存空間 IOPS 層級的最大傳輸量是 750 MB/秒，以 16K 區塊大小為基礎
 
@@ -72,6 +71,7 @@ subcollection: vpc-on-classic-block-storage
 | 3 IOPS/GB       | [平衡](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles#balanced)，用於一般工作負載|
 | 5 IOPS/GB       | [運算](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles#compute)，用於密集 CPU 需求|
 |10 IOPS/GB | [記憶體](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles#memory)，用於記憶體密集工作負載|
+{: caption="表 3. 區塊儲存空間設定檔與虛擬伺服器設定檔的關係" caption-side="top"}
 
 ## 檢視 IOPS 設定檔
 {: #view-iops-profiles}

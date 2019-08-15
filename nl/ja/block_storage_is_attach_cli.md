@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-01"
 
-keywords: block storage, IBM Cloud, VPC, CLI, block storage volume, volume, volume attachment, virtual server instance, instance
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, CLI, block storage volume, volume, volume attachment, virtual server instance, instance
 
 subcollection: vpc-on-classic-block-storage
 
@@ -18,21 +18,24 @@ subcollection: vpc-on-classic-block-storage
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-
 # CLI を使用したブロック・ストレージ・ボリュームの接続
 {: #attaching-block-storage-cli}
 
-ボリューム接続では、ブロック・ストレージ・ボリュームが仮想サーバー・インスタンスに接続されます。各インスタンスには[複数のボリューム接続](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits)があってもかまいませんが、単一のボリューム接続では 1 つのボリュームが 1 つのインスタンスに接続されます。
+ボリューム接続では、{{site.data.keyword.block_storage_is_short}}・ボリュームが仮想サーバー・インスタンスに接続されます。各インスタンスには[複数のボリューム接続](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits)があってもかまいませんが、単一のボリューム接続では 1 つのボリュームが 1 つのインスタンスに接続されます。{:shortdesc}
 
 ## 始めに
 {: #before-attaching-block-storage-cli}
 
-以下の CLI プラグインのダウンロード、インストール、初期化を行ったことを確認します。
+1. 以下の CLI プラグインをダウンロード、インストール、初期化したことを確認します。
+    * {{site.data.keyword.cloud_notm}} CLI
+    * インフラストラクチャー・サービス・プラグイン
 
-* {{site.data.keyword.cloud_notm}} CLI
-* {{site.data.keyword.cloud_notm}} Regional API CLI
-
-詳しくは、[IBM Cloud CLI for VPC リファレンス](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference) の前提条件を参照してください。
+   詳しくは、[{{site.data.keyword.cloud_notm}}CLI for VPC リファレンス](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)を参照してください。
+   
+   初めて vpc-infrastructure プラグインをインストールするときは、`ibmcloud is target --gen 1` のようにターゲット世代を gen 1 に設定する必要があります。
+{:important}
+   
+2. [{{site.data.keyword.vpc_short}} がすでに作成されている](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started)ことを確認します。
 
 ## CLI を使用するブロック・ストレージ・ボリュームの接続
 {: #attach-block-storage-cli}
@@ -88,7 +91,7 @@ ibmcloud is instance-volume-attachments INSTANCE_ID [--json]
 ## ボリューム接続 JSON の作成
 {: #volume_attachment_json}
 
-CLI を使用して仮想サーバー・インスタンスをプロビジョンし、そのプロセスの一部としてブロック・ストレージ・ボリュームを作成する場合は、ボリューム接続 JSON を指定する必要があります。ボリューム接続 JSON は、コマンドで指定するかファイルとして指定し、ボリューム・パラメーターを定義します。[インスタンスを作成](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-virtual-servers-cli)する際に、`--volume-attach` パラメーターを指定する場合は、ボリューム JSON を指定します。例えば、`--volume-attach @/Users/myname/myvolume-attachment_create.json` と指定します。
+CLI を使用して仮想サーバー・インスタンスをプロビジョンし、そのプロセスの一部としてブロック・ストレージ・ボリュームを作成する場合は、ボリューム接続 JSON を指定する必要があります。 ボリューム接続 JSON は、コマンドで指定するかファイルとして指定し、ボリューム・パラメーターを定義します。 [インスタンスを作成](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-virtual-servers-cli)する際に、`--volume-attach` パラメーターを指定する場合は、ボリューム JSON を指定します。 例えば、`--volume-attach @/Users/myname/myvolume-attachment_create.json` と指定します。
 
 以下に、カスタム・ボリュームを定義するボリューム接続 JSON ファイルの例を示します。
 
@@ -113,7 +116,7 @@ CLI を使用して仮想サーバー・インスタンスをプロビジョン�
 ## 次のステップ
 {: #next-step-attaching-block-storage-cli}
 
-追加ボリュームを作成し、既存のボリュームを管理します。以下の情報を参照してください。
+追加ボリュームを作成し、既存のボリュームを管理します。  以下の情報を参照してください。
 
 * [CLI を使用したブロック・ストレージ・ボリュームの作成](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli#create-vol-cli)
 * [CLI を使用したブロック・ストレージ・ボリュームの管理](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)

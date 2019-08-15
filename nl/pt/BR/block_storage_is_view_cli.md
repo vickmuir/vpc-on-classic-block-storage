@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-03"
 
 Keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
 
@@ -24,18 +24,23 @@ subcollection: vpc-on-classic-block-storage
 # Visualizando volumes de armazenamento de bloco usando a CLI
 {: #viewing-block-storage-cli}
 
-Visualize detalhes sobre um volume de armazenamento de bloco ou informações resumidas sobre todos os volumes da CLI.
+Visualize detalhes sobre um volume do {{site.data.keyword.block_storage_is_short}} ou informações de resumo sobre todos os volumes por meio da CLI.
+{:shortdesc}
 
 ## Antes
 de Começar
 {: #before-viewing-block-storage-cli}
 
-Certifique-se de que você tenha transferido por download, instalado e inicializado os plug-ins da CLI a seguir:
+1. Assegure-se de ter transferido por download, instalado e inicializado osvplug-ins da CLI a seguir:
+    * CLI do {{site.data.keyword.cloud_notm}}
+    * O plug-in de serviço de infraestrutura
 
-* CLI do {{site.data.keyword.cloud_notm}}
-* CLI da API regional do {{site.data.keyword.cloud_notm}}
-
-Para obter mais informações, consulte os pré-requisitos na [Referência da CLI do {{site.data.keyword.cloud_notm}} para VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   Para obter mais informações, consulte [Referência da CLI do {{site.data.keyword.cloud_notm}} para VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   
+   Ao instalar o plug-in vpc-infrastructure pela primeira vez, deve-se configurar a geração de destino como gen 1, `ibmcloud is target --gen 1`.
+   {:important}
+   
+2. Certifique-se de que já tenha [criado um {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 
 ## Visualizar detalhes sobre um volume de armazenamento de bloco usando a CLI
 {: #viewvol-cli}
@@ -107,7 +112,7 @@ Execute este comando para visualizar detalhes de um anexo de volume para uma ins
 ibmcloud is instance-volume-attachment INSTANCE_ID VOLUME_ATTACHMENT_ID [--json]
 ```
 
-Especifique um ID de instância e um ID de anexo de volume. Como opção, exporte os detalhes no formato JSON.
+Especifique um ID de instância e um ID de anexo de volume.  Como opção, exporte os detalhes no formato JSON.
 
 ## Visualizar detalhes sobre todos os anexos de volume usando a CLI
 
@@ -169,5 +174,5 @@ Você prefere usar o console do {{site.data.keyword.cloud}} para visualizar seus
 
 Crie mais volumes ou gerencie seus volumes de armazenamento de bloco existentes.
 
-* [Criando volumes de armazenamento de bloco (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli)
-* [Gerenciando volumes de armazenamento de bloco (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)
+* [Criando volumes de armazenamento de bloco usando a CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli)
+* [Gerenciando volumes de armazenamento de bloco usando a CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)

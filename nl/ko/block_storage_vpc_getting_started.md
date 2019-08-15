@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-28"
 
-keywords: block storage, IBM Cloud, VPC, virtual private cloud, IBM CLoud, volume, data storage, classic, virtual server
+keywords: block storage, getting started, IBM Cloud, VPC, virtual private cloud, IBM CLoud, volume, data storage, classic, virtual server
 
 subcollection: vpc-on-classic-block-storage
 
@@ -18,14 +18,16 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 {:important: .important}
 {:note: .note}
+{:shortdesc: .shortdesc}
 {:DomainName: data-hd-keyref="APPDomain"}
 {:DomainName: data-hd-keyref="DomainName"}
 {:external: target="_blank" .external}
 
-# 시작하기 튜토리얼
+# {{site.data.keyword.block_storage_is_short}} 시작하기
 {: #getting-started}
 
-이 튜토리얼은 Virtual Private Cloud(VPC)에서 {{site.data.keyword.block_storage_is_short}} 볼륨 작성을 시작하는 데 도움이 됩니다. 
+이 튜토리얼은 Virtual Private Cloud(VPC)에서 {{site.data.keyword.block_storage_is_short}} 볼륨 작성을 시작하는 데 도움이 됩니다.
+{: .shortdesc}
 
 ## 시작하기 전에
 {: #block-storage-before-you-begin}
@@ -47,7 +49,7 @@ subcollection: vpc-on-classic-block-storage
 ## 2단계 - 블록 스토리지의 크기 지정 및 가격
 {: #size-price-block-storage}
 
-블록 스토리지 볼륨에 대한 [IOPS 티어 프로파일](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#tiers)을 선택하십시오. 선택사항으로, 사전 정의된 IOPS 티어 내에 속하지 않는 잘 정의된 성능 요구사항이 있는 경우에는 [사용자 정의 IOPS 프로파일](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom)을 선택하십시오. 
+블록 스토리지 볼륨에 대한 [IOPS 티어 프로파일](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#tiers)을 선택하십시오.  선택사항으로, 사전 정의된 IOPS 티어 내에 속하지 않는 잘 정의된 성능 요구사항이 있는 경우에는 [사용자 정의 IOPS 프로파일](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom)을 선택하십시오. 
 
 블록 스토리지 볼륨의 크기와 성능을 선택한 후에 [가격](/docs/vpc-on-classic?topic=vpc-on-classic-block-storage-pricing) 정보를 참조하면 볼륨 가격을 책정하고 비용 청구 방법을 파악하는 데 도움이 됩니다.
 

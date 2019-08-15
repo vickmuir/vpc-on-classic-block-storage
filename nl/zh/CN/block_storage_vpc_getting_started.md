@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-28"
 
-keywords: block storage, IBM Cloud, VPC, virtual private cloud, IBM CLoud, volume, data storage, classic, virtual server
+keywords: block storage, getting started, IBM Cloud, VPC, virtual private cloud, IBM CLoud, volume, data storage, classic, virtual server
 
 subcollection: vpc-on-classic-block-storage
 
@@ -18,14 +18,16 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 {:important: .important}
 {:note: .note}
+{:shortdesc: .shortdesc}
 {:DomainName: data-hd-keyref="APPDomain"}
 {:DomainName: data-hd-keyref="DomainName"}
 {:external: target="_blank" .external}
 
-# 入门教程
+# 开始使用 {{site.data.keyword.block_storage_is_short}}
 {: #getting-started}
 
 本教程可帮助您开始在 Virtual Private Cloud 上创建 {{site.data.keyword.block_storage_is_short}} 卷。
+{: .shortdesc}
 
 ## 开始之前
 {: #block-storage-before-you-begin}

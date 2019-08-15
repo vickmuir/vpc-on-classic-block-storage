@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-03"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance, IOPS
 
@@ -13,13 +13,16 @@ subcollection: vpc-on-classic-block-storage
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Block Storage for VPC - häufig gestellte Fragen
+# Häufig gestellte Fragen zu {{site.data.keyword.block_storage_is_short}}
 {: #block-storage-vpc-faq}
+
+Auf dieser Seite finden Sie häufig gestellte Fragen zu {{site.data.keyword.block_storage_is_short}}. Dieses Topic enthält Antworten zu zahlreichen Fragen in Bezug auf die Erstellung und Verwaltung von Blockspeicherdatenträgern. Wenn Sie weitere Fragen haben, die hier beantwortet werden sollen, senden Sie uns Ihr Feedback über den Link **Probleme** oder den Link **Topic bearbeiten**.
+{:shortdesc}
 
 ## Wie kann ich Speicher für meine Instanzen zuordnen?
 {: faq}
 
-Beim Erstellen einer virtuellen Serverinstanz können Sie einen [Blockspeicherdatenträger erstellen](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage#create-from-vsi), der der Instanz zugeordnet werden soll. Sie können auch [eigenständige Datenträger erstellen](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage#create-standalone-vol) und diese Datenträger Ihren Instanzen zu einem späteren Zeitpunkt zuordnen.
+Beim Erstellen einer virtuellen Serverinstanz können Sie einen [Blockspeicherdatenträger erstellen](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage#create-from-vsi), der der Instanz zugeordnet werden soll.  Sie können auch [eigenständige Datenträger erstellen](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage#create-standalone-vol) und diese Datenträger Ihren Instanzen zu einem späteren Zeitpunkt zuordnen.
 
 ## Wie viele Instanzen können einen bereitgestellten Blockspeicherdatenträger gemeinsam nutzen?
 {: faq}
@@ -65,12 +68,13 @@ Bei Verwendung kleinerer Blockgrößen kann der Höchstwert für E/A-Operationen
 ## Welche Nutzungsgebühren fallen an und gibt es Größenbeschränkungen?
 {: faq}
 
-Weitere Informationen zur Abrechnung finden Sie unter [Preisgestaltung bei Block Storage for VPC](/docs/vpc-on-classic?topic=vpc-on-classic-block-storage-pricing). Es gelten bestimmte Grenzen. Weitere Informationen zu Größenbeschränkungen und Begrenzungen für Ihre Instanz von {{site.data.keyword.cloud}} Virtual Private Cloud und mit der Instanz verfügbaren Ressourcen finden Sie unter [Größenbeschränkungen](/docs/vpc-on-classic?topic=vpc-on-classic-quotas#quotas).
+Weitere Informationen zur Abrechnung finden Sie unter [Preisgestaltung bei Block Storage for VPC](/docs/vpc-on-classic?topic=vpc-on-classic-block-storage-pricing). Es gelten bestimmte Grenzen.
+Weitere Informationen zu Größenbeschränkungen und Begrenzungen für Ihre Instanz von {{site.data.keyword.cloud}} Virtual Private Cloud und mit der Instanz verfügbaren Ressourcen finden Sie unter [Größenbeschränkungen](/docs/vpc-on-classic?topic=vpc-on-classic-quotas#quotas).
 
 ## Kann ich nach dem Erstellen eines Datenträgers die zugehörige Kapazität zu einem späteren Zeitpunkt erhöhen?
 {: faq}
 
-Nein, die Kapazität eines Datenträgers kann nicht nachträglich erhöht werden. Erstellen Sie vor dem Bereitstellen eines Blockspeicherdatenträgers eine Kapazitätsschätzung, die Raum für zukünftiges Wachstum lässt.
+Nein, die Kapazität eines Datenträgers kann nicht nachträglich erhöht werden. Erstellen Sie vor dem Bereitstellen eines Blockspeicherdatenträgers eine Kapazitätsschätzung, die Raum für zukünftiges Wachstum lässt. Beziehen Sie auch die Anzahl der benötigten Datenträger und die Kapazität dieser Datenträger in die Überlegungen ein. [Datenträgeranzahl und Kapazitätsgrenzwerte verwalten](/docs/vpc-on-classic?topic=vpc-on-classic-managingstoragelimits) enthält weitere Informationen hierzu. 
 
 ## Ist vor dem ersten Zugriff ein Initialisieren des Datenträgers erforderlich, damit der erwartete Durchsatz erzielt wird?
 {: faq}
@@ -80,7 +84,7 @@ Eine Initialisierung des Datenträgers ist nicht erforderlich. Der angegebene Du
 ## Kann ich verschlüsselte Datenträger erstellen?
 {: faq}
 
-Alle Blockspeicherdatenträger werden durch eine von IBM verwaltete Verschlüsselung (Standardeinstellung) oder über den Key Protect-Service mit Ihren eigenen Verschlüsselungsschlüsseln verschlüsselt. Informationen hierzu finden Sie unter [Blockspeicherdatenträger mit benutzerverwalteter Verschlüsselung erstellen](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption). 
+Alle Blockspeicherdatenträger werden durch eine von IBM verwaltete Verschlüsselung (Standardeinstellung) oder über den Key Protect-Service mit Ihren eigenen Verschlüsselungsschlüsseln verschlüsselt. Informationen hierzu finden Sie unter [Blockspeicherdatenträger mit benutzerverwalteter Verschlüsselung erstellen](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).
 
 ## Woran kann ich erkennen, welchen Verschlüsselungstyp ein Datenträger aufweist?
 {: faq}
@@ -126,7 +130,7 @@ Es hat sich bewährt, speicherbezogenen Datenverkehr in einem VLAN auszuführen,
 ## Wann kann ich einen Blockspeicherdatenträger für Daten löschen?
 {: faq}
 
-Sie können einen Blockspeicherdatenträger für Daten nur löschen, wenn der Datenträger keiner virtuellen Serverinstanz zugeordnet ist.[Heben Sie die Zuordnung des Datenträgers auf](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage#detach), bevor Sie die Löschanforderung für den Datenträger ausgeben. Bootdatenträger werden freigegeben und gelöscht, wenn die zugehörige Instanz gelöscht wird.
+Sie können einen Blockspeicherdatenträger für Daten nur löschen, wenn der Datenträger keiner virtuellen Serverinstanz zugeordnet ist. [Heben Sie die Zuordnung des Datenträgers auf](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage#detach), bevor Sie die Löschanforderung für den Datenträger ausgeben. Bootdatenträger werden freigegeben und gelöscht, wenn die zugehörige Instanz gelöscht wird.
 
 ## Was passiert mit meinen Daten, wenn ich einen sekundären Blockspeicherdatenträger lösche?
 {: faq}

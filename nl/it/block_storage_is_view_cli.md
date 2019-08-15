@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-03"
 
 Keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
 
@@ -21,22 +21,27 @@ subcollection: vpc-on-classic-block-storage
 {:DomainName: data-hd-keyref="APPDomain"}
 {:DomainName: data-hd-keyref="DomainName"}
 
-# Visualizzazione dei volumi di archiviazione blocchi utilizzando la CLI 
+# Visualizzazione dei volumi di archiviazione blocchi utilizzando la CLI
 {: #viewing-block-storage-cli}
 
-Visualizza i dettagli su un volume di archiviazione blocchi o le informazioni di riepilogo su tutti i volumi dalla CLI. 
+Visualizza i dettagli su un volume {{site.data.keyword.block_storage_is_short}} o le informazioni di riepilogo su tutti i volumi dalla CLI.
+{:shortdesc}
 
 ## Prima di cominciare
 {: #before-viewing-block-storage-cli}
 
-Assicurati di aver scaricato, installato e inizializzato i seguenti plugin CLI:
+1. Assicurati di aver scaricato, installato e inizializzato i seguenti plugin CLI:
+    * CLI {{site.data.keyword.cloud_notm}}
+    * Il plugin infrastructure-service
 
-* CLI {{site.data.keyword.cloud_notm}}
-* CLI API regionale {{site.data.keyword.cloud_notm}}
+   Per ulteriori informazioni, vedi [{{site.data.keyword.cloud_notm}}CLI for VPC Reference](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   
+   Quando installi il plugin vpc-infrastructure per la prima volta, devi impostare la generazione di destinazione su gen 1, `ibmcloud is target --gen 1`.
+   {:important}
+   
+2. Assicurati di aver già [creato un {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 
-Per ulteriori informazioni, vedi i prerequisiti in [{{site.data.keyword.cloud_notm}}CLI for VPC Reference](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
-
-## Visualizza i dettagli su un volume di archiviazione blocchi utilizzando la CLI 
+## Visualizza i dettagli su un volume di archiviazione blocchi utilizzando la CLI
 {: #viewvol-cli}
 
 Specifica questo comando per mostrare i dettagli su un volume.
@@ -70,7 +75,7 @@ Volume Attachment Instance Reference    none
 
 Se il tuo volume è collegato a un'istanza del server virtuale, vengono visualizzati anche il nome e l'ID dell'istanza e del collegamento di volumi.
 
-## Visualizza tutti i volumi di archiviazione blocchi utilizzando la CLI 
+## Visualizza tutti i volumi di archiviazione blocchi utilizzando la CLI
 {: #viewall-vol-cli}
 
 Immetti questo comando per elencare le informazioni di riepilogo su tutti i volumi:
@@ -168,5 +173,5 @@ Preferisci utilizzare la console {{site.data.keyword.cloud}} per visualizzare i 
 
 Crea ulteriori volumi o gestisci i tuoi volumi di archiviazione blocchi esistenti.
 
-* [Creazione di volumi di archiviazione blocchi (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli)
-* [Gestione di volumi di archiviazione blocchi (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)
+* [Creazione dei volumi di archiviazione blocchi utilizzando la CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli)
+* [Gestione dei volumi di archiviazione blocchi utilizzando la CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)

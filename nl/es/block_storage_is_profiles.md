@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-01"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, profile, volume profile, data storage, storage profile, virtual server instance, instance
 
@@ -19,11 +19,11 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 {:note: .note}
 
-
-# Perfiles
+# Perfiles de {{site.data.keyword.block_storage_is_short}}
 {: #block-storage-profiles}
 
 Cuando se suministran volúmenes secundarios de {{site.data.keyword.block_storage_is_short}} mediante la consola de {{site.data.keyword.cloud_notm}}, la CLI o la API, se especifica el perfil de IOPS que mejor se adapta a los requisitos de almacenamiento. Los perfiles están disponibles como tres niveles de IOPS predefinidos o como IOPS personalizados.  Los niveles de IOPS proporcionan un rendimiento de IOPS/GB garantizado para los volúmenes de hasta 2 TB de capacidad. También puede especificar un perfil de IOPS personalizado y definir la capacidad del volumen y la IOPS dentro de un rango.
+{:shortdesc}
 
 ## Perfiles de IOPS por niveles
 {: #tiers}
@@ -38,7 +38,7 @@ El almacenamiento en bloque proporciona tres niveles de IOPS predefinidos que pu
 | | | Entre 600 GB y 2 TB | 5 IOPS/GB hasta 10.000 IOPS|
 | 10 IOPS/GB | Cargas de trabajo con gran consumo de almacenamiento: cargas de trabajo con gran cantidad de datos creadas por bases de datos NoSQL, procesos de datos para vídeo, aprendizaje automático y análisis | Entre 10 GB y 300 GB | Hasta 3.000 IOPS |
 | | | Entre 300 GB y 2 TB | 10 IOPS/GB hasta 20.000 IOPS |
-{: caption="Tabla 1. Niveles de IOPS y rendimiento" caption-side="top"}
+{: caption="Tabla 1. Perfiles de niveles de IOPS y niveles de rendimiento de cada uno" caption-side="top"}
 
 El rendimiento máximo para todos los niveles de IOPS de almacenamiento en bloque es de 750 MB/s basado en un tamaño de bloque de 16 K
 
@@ -72,6 +72,7 @@ Cuando se crea un volumen de datos secundario como parte de la creación de inst
 | 3 IOPS/GB       | [Equilibrado](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles#balanced) para cargas de trabajo comunes |
 | 5 IOPS/GB       | [Cálculo](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles#compute) para grandes demandas de CPU |
 | 10 IOPS/GB      | [Memoria](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles#memory) para cargas de trabajo con uso intensivo de memoria |
+{: caption="Tabla 3. Relación entre los perfiles de almacenamiento en bloque y los perfiles de servidor virtual" caption-side="top"}
 
 ## Visualización de los perfiles de IOPS
 {: #view-iops-profiles}

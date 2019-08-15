@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-13"
+lastupdated: "2019-07-03"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, VSI, virtual server instance, instance, IOPS
 
@@ -26,7 +26,7 @@ subcollection: vpc-on-classic-block-storage
 {: #creating-block-storage}
 [comment]: # (链接的帮助主题)
 
-您可以在创建虚拟服务器实例时创建块存储卷，或者创建独立卷，以便日后连接到实例。
+您可以在创建虚拟服务器实例时创建 {{site.data.keyword.block_storage_is_short}} 卷，或者创建独立卷，以便日后连接到实例。
 {:shortdesc}
 
 开始之前，请确保已[创建 {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started)。
@@ -35,7 +35,7 @@ subcollection: vpc-on-classic-block-storage
 ## 创建新实例时创建并连接块存储卷
 {: #create-from-vsi}
 
-1. 创建实例。在用于 Virtual Private Cloud 的 [{{site.data.keyword.cloud_notm}} 控制台](https://{DomainName}/vpc){: external}中，导航至**菜单图标 ![“菜单”图标](../../icons/icon_hamburger.svg) > 计算 > Virtual Server for VPC 实例 > 新建实例**。
+1. 创建实例。在用于 Virtual Private Cloud 的 [{{site.data.keyword.cloud_notm}} 控制台](https://{DomainName}/vpc){: external}中，导航至**菜单图标 ![“菜单”图标](../../icons/icon_hamburger.svg) > 计算 > 虚拟服务器实例 > 新建实例**。
 1. [配置虚拟服务器实例](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-virtual-servers)。在**连接的块存储卷**下，选择**新建块存储卷**。
 1. 输入下表中描述的信息。完成后，单击**创建卷**。
 
@@ -58,7 +58,7 @@ subcollection: vpc-on-classic-block-storage
 
 您可以独立于虚拟服务器供应来创建块存储卷，并且日后将卷连接到实例。
 
-1. 在用于 Virtual Private Cloud 的 [{{site.data.keyword.cloud_notm}} 控制台](https://{DomainName}/vpc){: external}中，导航至**菜单图标 ![“菜单”图标](../../icons/icon_hamburger.svg) > 存储 > Block Storage for VPC 卷**，然后选择**新建卷**。
+1. 在用于 Virtual Private Cloud 的 [{{site.data.keyword.cloud_notm}} 控制台](https://{DomainName}/vpc){: external}中，导航至**菜单图标 ![“菜单”图标](../../icons/icon_hamburger.svg) > 存储 > 块存储卷**，然后选择**新建卷**。
 1. 输入下表中的信息以定义新的块存储卷。
 1. 完成后，单击**创建卷**。您将返回到“块存储卷”页面，其中一条消息指示正在创建卷。创建了卷后，将显示另一条消息。
 1. 要查看新卷的详细信息，请选择后一条消息中的**查看资源**链接，以导航至“卷详细信息”页面。

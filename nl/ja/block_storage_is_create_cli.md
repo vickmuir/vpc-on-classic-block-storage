@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-13"
+lastupdated: "2019-07-01"
 
-keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
+keywords: block storage, IBM CLoud, VPC, virtual private cloud, CLI, block storage volume, volume, IOPS
 
 subcollection: vpc-on-classic-block-storage
 
@@ -21,18 +21,22 @@ subcollection: vpc-on-classic-block-storage
 # CLI を使用したブロック・ストレージ・ボリュームの作成
 {: #creating-block-storage-cli}
 
-コマンド・ライン・インターフェース (CLI) を使用して {{site.data.keyword.block_storage_is_full}} ボリュームを作成できます。
+コマンド・ライン・インターフェース (CLI) を使用して {{site.data.keyword.block_storage_is_short}} ボリュームを作成できます。
 {:shortdesc}
 
 ## 始めに
 {: #before-creating-block-storage-cli}
 
-以下の CLI プラグインをダウンロード、インストール、初期化したことを確認します。
+1. 以下の CLI プラグインをダウンロード、インストール、初期化したことを確認します。
+    * {{site.data.keyword.cloud_notm}} CLI
+    * インフラストラクチャー・サービス・プラグイン
 
-* {{site.data.keyword.cloud_notm}} CLI
-* インフラストラクチャー・サービス・プラグイン
-
-詳しくは、[IBM Cloud CLI for VPC リファレンス](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)の前提条件を参照してください。
+   詳しくは、[{{site.data.keyword.cloud_notm}}CLI for VPC リファレンス](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)を参照してください。
+   
+   初めて vpc-infrastructure プラグインをインストールするときは、`ibmcloud is target --gen 1` のようにターゲット世代を gen 1 に設定する必要があります。
+{:important}
+   
+2. [{{site.data.keyword.vpc_short}} がすでに作成されている](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started)ことを確認します。
 
 ## CLI を使用してブロック・ストレージ・ボリュームを作成する
 {: #create-vol-cli}
@@ -63,11 +67,11 @@ Volume Attachment Instance Reference    none
 ```
 {:screen}
 
-容量は M バイト単位で示され、10 から 2,000 GB までの範囲を指定できます。IOPS の値は、ボリューム・サイズに応じて 1,000 から 20,000 IOPS にすることができます。IOPS 値を指定しない場合、デフォルトでボリューム・プロファイルごとの有効な構成になります。詳しくは、[ボリューム・サイズに基づく IOPS 範囲](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom)の表を参照してください。
+容量は M バイト単位で示され、10 から 2,000 GB までの範囲を指定できます。  IOPS の値は、ボリューム・サイズに応じて 1,000 から 20,000 IOPS にすることができます。 IOPS 値を指定しない場合、デフォルトでボリューム・プロファイルごとの有効な構成になります。 詳しくは、[ボリューム・サイズに基づく IOPS 範囲](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom)の表を参照してください。
 
 上記の例のボリューム ID は、ブロック・ストレージを仮想サーバー・インスタンスに接続したり、ブロック・ストレージ・ボリュームの詳細を表示したり、ボリュームを削除したりするときに使用されます。
 
-{{site.data.keyword.cloud}} コンソールからブロック・ストレージ・ボリュームを作成する場合、詳しくは、[ブロック・ストレージ・ボリュームの作成](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage)を参照してください。
+{{site.data.keyword.cloud}} コンソールからブロック・ストレージ・ボリュームを作成する場合、 詳しくは、[ブロック・ストレージ・ボリュームの作成](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage)を参照してください。
 {: tip}
 
 ## 次のステップ

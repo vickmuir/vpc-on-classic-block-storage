@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-28"
 
-keywords: block storage, IBM Cloud, VPC, virtual private cloud, IBM CLoud, volume, data storage, classic, virtual server
+keywords: block storage, getting started, IBM Cloud, VPC, virtual private cloud, IBM CLoud, volume, data storage, classic, virtual server
 
 subcollection: vpc-on-classic-block-storage
 
@@ -18,14 +18,16 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 {:important: .important}
 {:note: .note}
+{:shortdesc: .shortdesc}
 {:DomainName: data-hd-keyref="APPDomain"}
 {:DomainName: data-hd-keyref="DomainName"}
 {:external: target="_blank" .external}
 
-# Tutorial de Introdução
+# Introdução ao {{site.data.keyword.block_storage_is_short}}
 {: #getting-started}
 
 Este tutorial ajuda a iniciar a criação de volumes de {{site.data.keyword.block_storage_is_short}} em uma Nuvem particular virtual.
+{: .shortdesc}
 
 ## Antes
 de Começar
@@ -48,7 +50,7 @@ Você está criando uma instância de servidor virtual também? Consulte [como o
 ## Etapa 2 - Tamanho e preço de seu armazenamento de bloco
 {: #size-price-block-storage}
 
-Selecione um [perfil da camada de IOPS](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#tiers) para seu volume de armazenamento de bloco. Como opção, se você tiver requisitos de desempenho bem definidos que não estão dentro de uma camada de IOPS predefinida, escolha um [perfil de IOPS customizado](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom). 
+Selecione um [perfil da camada de IOPS](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#tiers) para seu volume de armazenamento de bloco.  Como opção, se você tiver requisitos de desempenho bem definidos que não estão dentro de uma camada de IOPS predefinida, escolha um [perfil de IOPS customizado](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom). 
 
 Depois de escolher o tamanho e o desempenho para seus volumes de armazenamento de bloco, consulte as informações de [Precificação](/docs/vpc-on-classic?topic=vpc-on-classic-block-storage-pricing) para ajudar a precificar seus volumes e entender como é o faturamento.
 

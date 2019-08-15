@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-13"
+lastupdated: "2019-07-01"
 
-keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
+keywords: block storage, IBM CLoud, VPC, virtual private cloud, CLI, block storage volume, volume, IOPS
 
 subcollection: vpc-on-classic-block-storage
 
@@ -21,17 +21,22 @@ subcollection: vpc-on-classic-block-storage
 # Blockspeicherdatenträger über die Befehlszeilenschnittstelle erstellen
 {: #creating-block-storage-cli}
 
-Sie können {{site.data.keyword.block_storage_is_full}}-Datenträger über die Befehlszeilenschnittstelle (Command Line Interface - CLI) erstellen.{:shortdesc}
+Sie können {{site.data.keyword.block_storage_is_short}}-Datenträger über die Befehlszeilenschnittstelle (Command Line Interface - CLI) erstellen.
+{:shortdesc}
 
 ## Vorbereitungen
 {: #before-creating-block-storage-cli}
 
-Stellen Sie sicher, dass Sie die folgenden Plug-ins für die Befehlszeilenschnittstelle heruntergeladen, installiert und initialisiert haben:
+1. Stellen Sie sicher, dass Sie die folgenden Plug-ins für die Befehlszeilenschnittstelle heruntergeladen, installiert und initialisiert haben:
+    * {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle
+    * Infrastrukturservice-Plug-in
 
-* {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle
-* Infrastrukturservice-Plug-in
-
-Weitere Informationen finden Sie im Abschnitt zu den Voraussetzungen in der [Referenz zu IBM Cloud CLI for VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   Weitere Informationen finden Sie in den [Referenzinformationen zur {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle für VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference). 
+   
+   Wenn Sie das VPC-Infrastruktur-Plug-in zum ersten Mal installieren, müssen Sie für die Zielgeneration 'gen 1' festlegen: `ibmcloud is target --gen 1`.
+   {:important}
+   
+2. Stellen Sie sicher, dass bereits eine [{{site.data.keyword.vpc_short}}-Instanz erstellt](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started) wurde. 
 
 ## Blockspeicherdatenträger über die Befehlszeilenschnittstelle erstellen
 {: #create-vol-cli}
@@ -62,7 +67,7 @@ Volume Attachment Instance Reference    none
 ```
 {:screen}
 
-Die in Megabyte angegebene Kapazität kann zwischen 10 und 2.000 GB liegen. Die IOPS-Werte können je nach Datenträgergröße 1.000 bis 20.000 E/A-Operationen pro Sekunde betragen. Wenn Sie keinen IOPS-Wert angeben, wird standardmäßig die für das Datenträgerprofil gültige Konfiguration festgelegt. Informationen hierzu finden Sie in der Tabelle der [an der Datenträgergröße ausgerichteten IOPS-Bereiche](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom).
+Die in Megabyte angegebene Kapazität kann zwischen 10 und 2.000 GB liegen.  Die IOPS-Werte können je nach Datenträgergröße 1.000 bis 20.000 E/A-Operationen pro Sekunde betragen. Wenn Sie keinen IOPS-Wert angeben, wird standardmäßig die für das Datenträgerprofil gültige Konfiguration festgelegt. Informationen hierzu finden Sie in der Tabelle der [an der Datenträgergröße ausgerichteten IOPS-Bereiche](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom).
 
 Die Datenträger-ID im zuvor genannten Beispiel wird verwendet, wenn Blockspeicher zu einer virtuellen Serverinstanz zugeordnet wird, Details eines Blockspeicherdatenträgers anzuzeigen werden oder Datenträger gelöscht werden.
 

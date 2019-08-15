@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-03"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance, IOPS
 
@@ -13,8 +13,11 @@ subcollection: vpc-on-classic-block-storage
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Preguntas frecuentes sobre Block Storage for VPC
+# Preguntas frecuentes sobre {{site.data.keyword.block_storage_is_short}}
 {: #block-storage-vpc-faq}
+
+Bienvenido a la página de preguntas frecuentes sobre {{site.data.keyword.block_storage_is_short}}.  Este tema da respuestas a muchas de las preguntas sobre la creación y gestión de sus volúmenes de almacenamiento en bloque.  Si tiene otras preguntas que desea que se traten en este tema, envíe sus comentarios mediante los enlaces **Problemas** o **Editar tema**.
+{:shortdesc}
 
 ## ¿Cómo puedo asignar almacenamiento para mis instancias?
 {: faq}
@@ -71,7 +74,7 @@ Para obtener más información sobre las cuotas y los límites de su {{site.data
 ## Después de crear un volumen, ¿puedo aumentar su capacidad más tarde?
 {: faq}
 
-No, no puede aumentar la capacidad de un volumen.  Le recomendamos que calcule la capacidad suficiente para el crecimiento estimado antes de suministrar un volumen de almacenamiento en bloque.
+No, no puede aumentar la capacidad de un volumen. Le recomendamos que calcule la capacidad suficiente para el crecimiento estimado antes de suministrar un volumen de almacenamiento en bloque. Asimismo, considere cuántos volúmenes necesita y la capacidad de dichos volúmenes. Consulte [Gestión del recuento y capacidad de los volúmenes](/docs/vpc-on-classic?topic=vpc-on-classic-managingstoragelimits) para obtener más información.
 
 ## ¿El volumen debe precalentarse para alcanzar el rendimiento esperado?
 {: faq}
@@ -81,7 +84,7 @@ No es necesario precalentar un volumen. Puede ver el rendimiento especificado in
 ## ¿Puedo crear volúmenes cifrados?
 {: faq}
 
-Todos los volúmenes de almacenamiento en bloque están cifrados, ya sea mediante el cifrado gestionado por IBM (valor predeterminado) o a través del servicio de protección de claves utilizando sus propias claves de cifrado.  Para obtener información, consulte [Creación de volúmenes de almacenamiento en bloque con cifrado gestionado por el cliente](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).
+Todos los volúmenes de almacenamiento en bloque están cifrados, ya sea mediante el cifrado gestionado por IBM (valor predeterminado) o a través del servicio de protección de claves utilizando sus propias claves de cifrado. Para obtener información, consulte [Creación de volúmenes de almacenamiento en bloque con cifrado gestionado por el cliente](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).
 
 ## ¿Cómo puedo saber el tipo de cifrado que tiene un volumen?
 {: faq}

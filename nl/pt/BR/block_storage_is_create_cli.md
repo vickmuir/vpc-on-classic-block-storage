@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-13"
+lastupdated: "2019-07-01"
 
-keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
+keywords: block storage, IBM CLoud, VPC, virtual private cloud, CLI, block storage volume, volume, IOPS
 
 subcollection: vpc-on-classic-block-storage
 
@@ -21,19 +21,23 @@ subcollection: vpc-on-classic-block-storage
 # Criando volumes de armazenamento de bloco usando a CLI
 {: #creating-block-storage-cli}
 
-É possível criar volumes do {{site.data.keyword.block_storage_is_full}} usando a interface da linha de comandos (CLI).
+É possível criar volumes do {{site.data.keyword.block_storage_is_short}} usando a interface da linha de comandos (CLI).
 {:shortdesc}
 
 ## Antes
 de Começar
 {: #before-creating-block-storage-cli}
 
-Assegure-se de ter transferido por download, instalado e inicializado osvplug-ins da CLI a seguir:
+1. Assegure-se de ter transferido por download, instalado e inicializado osvplug-ins da CLI a seguir:
+    * CLI do {{site.data.keyword.cloud_notm}}
+    * O plug-in de serviço de infraestrutura
 
-* CLI do {{site.data.keyword.cloud_notm}}
-* O plug-in de serviço de infraestrutura
-
-Para obter mais informações, consulte os pré-requisitos na [Referência da CLI do IBM Cloud para VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   Para obter mais informações, consulte [Referência da CLI do {{site.data.keyword.cloud_notm}} para VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   
+   Ao instalar o plug-in vpc-infrastructure pela primeira vez, deve-se configurar a geração de destino como gen 1, `ibmcloud is target --gen 1`.
+   {:important}
+   
+2. Certifique-se de que já tenha [criado um {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 
 ## Criar um volume de armazenamento de bloco usando a CLI
 {: #create-vol-cli}
@@ -64,7 +68,7 @@ Volume Attachment Instance Reference    none
 ```
 {:screen}
 
-A capacidade, indicada em megabytes, pode variar de 10 a 2.000 GBs. Os valores IOPS podem ser de 1.000 a 20.000 IOPS, dependendo do tamanho do volume. Se você não especificar um valor IOPS, ele será padronizado para a configuração válida por perfil de volume. Para obter informações, consulte a tabela de [Intervalos de IOPS com base no tamanho do volume](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom).
+A capacidade, indicada em megabytes, pode variar de 10 a 2.000 GBs.  Os valores IOPS podem ser de 1.000 a 20.000 IOPS, dependendo do tamanho do volume. Se você não especificar um valor IOPS, ele será padronizado para a configuração válida por perfil de volume. Para obter informações, consulte a tabela de [Intervalos de IOPS com base no tamanho do volume](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom).
 
 O ID do volume no exemplo acima é usado ao anexar o armazenamento de bloco a uma instância de servidor virtual, visualizando detalhes do volume de armazenamento de bloco e excluindo volumes.
 

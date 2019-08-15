@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-01"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, volume attachment, data storage, virtual server instance, instance
 
@@ -18,22 +18,25 @@ subcollection: vpc-on-classic-block-storage
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-
 # Blockspeicherdatenträger über die Befehlszeilenschnittstelle verwalten
 {: #managing-block-storage-cli}
 
-Die nachfolgenden Informationen beziehen sich auf {{site.data.keyword.cloud}} Virtual Private Cloud in der klassischen Infrastrukturumgebung.
-{: important}
+Sie können {{site.data.keyword.block_storage_is_short}} über die Befehlszeilenschnittstelle (CLI) verwalten. Aktualisieren Sie einen Datenträgernamen oder eine Datenträgerzuordnung, heben Sie die Zuordnung für einen Datenträger auf oder löschen Sie einen Datenträger.
+{:shortdesc}
 
 ## Vorbereitungen
 {: #before-managing-block-storage-cli}
 
-Stellen Sie sicher, dass Sie die folgenden Plug-ins für die Befehlszeilenschnittstelle heruntergeladen, installiert und initialisiert haben:
+1. Stellen Sie sicher, dass Sie die folgenden Plug-ins für die Befehlszeilenschnittstelle heruntergeladen, installiert und initialisiert haben:
+    * {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle
+    * Infrastrukturservice-Plug-in
 
-* {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle
-* {{site.data.keyword.cloud_notm}} Regional API-Befehlszeilenschnittstelle
-
-Weitere Informationen finden Sie im Abschnitt zu den Voraussetzungen in der [Referenz zu IBM Cloud CLI for VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   Weitere Informationen finden Sie in den [Referenzinformationen zur {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle für VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference). 
+   
+   Wenn Sie das VPC-Infrastruktur-Plug-in zum ersten Mal installieren, müssen Sie für die Zielgeneration 'gen 1' festlegen: `ibmcloud is target --gen 1`.
+   {:important}
+   
+2. Stellen Sie sicher, dass bereits eine [{{site.data.keyword.vpc_short}}-Instanz erstellt](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started) wurde. 
 
 ## Namen eines Datenträgers aktualisieren
 {: #update-vol-name}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-13"
+lastupdated: "2019-07-03"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, VSI, virtual server instance, instance, IOPS
 
@@ -22,11 +22,11 @@ subcollection: vpc-on-classic-block-storage
 {:DomainName: data-hd-keyref="APPDomain"}
 {:DomainName: data-hd-keyref="DomainName"}
 
-# Creación de volúmenes de almacenamiento de bloque en la consola de {{site.data.keyword.cloud_notm}}
+# Creación de volúmenes de almacenamiento en bloque en la consola de {{site.data.keyword.cloud_notm}}
 {: #creating-block-storage}
 [comment]: # (tema de ayuda enlazado)
 
-Puede crear un volumen de almacenamiento en bloque cuando cree una instancia de servidor virtual o puede crear un volumen autónomo para luego conectarlo a una instancia.
+Puede crear un volumen de {{site.data.keyword.block_storage_is_short}} al crear una instancia de servidor virtual o puede crear un volumen autónomo para luego conectarlo a una instancia.
 {:shortdesc}
 
 Antes de empezar, asegúrese de que [ha creado un {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
@@ -35,7 +35,7 @@ Antes de empezar, asegúrese de que [ha creado un {{site.data.keyword.vpc_short}
 ## Creación y conexión de un volumen de almacenamiento en bloque cuando se crea una instancia nueva
 {: #create-from-vsi}
 
-1. Cree una instancia. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} correspondiente a Virtual Private Cloud, vaya a **icono de menú ![icono de menú](../../icons/icon_hamburger.svg) > Cálculo > Instancias de servidor virtual para VPC > Nueva instancia**.
+1. Cree una instancia. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} correspondiente a Virtual Private Cloud, vaya a **icono de menú ![icono de menú](../../icons/icon_hamburger.svg) > Cálculo > Instancias de servidor virtual > Nueva instancia**.
 1. [Configure la instancia de servidor virtual](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-virtual-servers). En **Volúmenes de almacenamiento en bloque conectados**, seleccione **Nuevo volumen de almacenamiento en bloque**.
 1. Especifique la información que se describe en la tabla siguiente.  Cuando termine, pulse **Crear volumen**.
 
@@ -58,7 +58,7 @@ Un volumen de almacenamiento en bloque solo se puede conectar a un servidor virt
 
 Puede crear un volumen de almacenamiento en bloque independiente del suministro de servidor virtual y conectar el volumen a una instancia más adelante.
 
-1. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} correspondiente a Virtual Private Cloud, vaya a **icono de menú ![icono de menú](../../icons/icon_hamburger.svg) > Almacenamiento > Volúmenes de almacenamiento en bloque para VPC** y seleccione **Nuevo volumen**.
+1. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} correspondiente a Virtual Private Cloud, vaya a **icono de menú ![icono de menú](../../icons/icon_hamburger.svg) > Almacenamiento > Volúmenes de almacenamiento en bloque** y seleccione **Nuevo volumen**.
 1. Especifique la información de la tabla siguiente para definir el nuevo volumen de almacenamiento en bloque.
 1. Cuando termine, pulse **Crear volumen**. Volverá a la página Volúmenes de almacenamiento en bloque, donde un mensaje indica que se está creando el volumen. Se muestra un segundo mensaje cuando se crea el volumen.
 1. Para ver los detalles del nuevo volumen, seleccione el enlace **Ver recurso** en el segundo mensaje para ir a la página Detalles de volumen.

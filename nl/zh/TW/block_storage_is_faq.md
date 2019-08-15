@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-03"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance, IOPS
 
@@ -13,8 +13,11 @@ subcollection: vpc-on-classic-block-storage
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Block Storage for VPC 常見問題
+# {{site.data.keyword.block_storage_is_short}} 常見問題
 {: #block-storage-vpc-faq}
+
+歡迎使用 {{site.data.keyword.block_storage_is_short}} 的常見問題頁面。本主題回答許多建立及管理區塊儲存空間磁區的問題。如果您有其他要查看且本主題所處理的問題，請使用**問題**或**編輯主題**鏈結來提供意見。
+{:shortdesc}
 
 ## 如何為我的實例配置儲存空間？
 {: faq}
@@ -71,7 +74,7 @@ IOPS 設定檔會針對各種容量的磁區定義 IOPS/GB 效能。有三個您
 ## 建立磁區之後，稍後是否可以增加其容量？
 {: faq}
 
-否，您無法增加磁區的容量。建議您在佈建區塊儲存空間磁區之前，為預計的成長預估足夠的容量。
+否，您無法增加磁區的容量。建議您在佈建區塊儲存空間磁區之前，為預計的成長預估足夠的容量。此外，請考量您需要多少磁區及這些磁區的容量。如需相關資訊，請參閱[管理磁區計數及容量限制](/docs/vpc-on-classic?topic=vpc-on-classic-managingstoragelimits)。
 
 ## 磁區是否需要預先暖機，才能達到預期的傳輸量？
 {: faq}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-13"
+lastupdated: "2019-07-03"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, VSI, virtual server instance, instance, IOPS
 
@@ -26,7 +26,7 @@ subcollection: vpc-on-classic-block-storage
 {: #creating-block-storage}
 [comment]: # (tópico da ajuda vinculado)
 
-É possível criar um volume de armazenamento de bloco ao criar uma instância do servidor virtual ou criar um volume independente para anexar posteriormente a uma instância.
+É possível criar um volume do {{site.data.keyword.block_storage_is_short}} ao criar uma instância de servidor virtual ou criar um volume independente para anexar posteriormente a uma instância.
 {:shortdesc}
 
 Antes de iniciar, certifique-se de ter [criado um {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
@@ -35,15 +35,12 @@ Antes de iniciar, certifique-se de ter [criado um {{site.data.keyword.vpc_short}
 ## Criar e anexar um volume de armazenamento de bloco ao criar uma nova instância
 {: #create-from-vsi}
 
-1. Crie uma instância. No
-[Console do {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} para a Nuvem particular
-virtual, navegue para **Ícone de menu
-![Ícone de menu](../../icons/icon_hamburger.svg) > Cálculo > Instâncias do servidor virtual para VPC > Nova instância**.
+1. Crie uma instância. No [console do {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} para a nuvem particular virtual, navegue até **Ícone de menu ![Ícone de menu](../../icons/icon_hamburger.svg) > Cálculo > Instâncias de servidor virtual > Nova instância**.
 1. [Configure
 sua instância de servidor virtual](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-virtual-servers). Em Volumes de armazenamento de bloco
 anexados**, selecione **Novo volume de armazenamento de
 bloco**.
-1. Insira as informações descritas na tabela a seguir. Quando concluído, clique em
+1. Insira as informações descritas na tabela a seguir.  Quando concluído, clique em
 **Criar volume**.
 
 | Campo | Value |
@@ -52,8 +49,8 @@ bloco**.
 | Perfil | Selecione [Camadas](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#tiers) e selecione o nível de desempenho necessário na lista de IOPs. Se seus requisitos de desempenho não se enquadram em uma camada de IOPS predefinida, selecione [Customizado](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom) e selecione um valor IOPS dentro do intervalo para esse tamanho de volume. Clique no link **tamanho do armazenamento** para ver uma tabela de intervalos de tamanho e IOPS. |
 | Exclusão Automática | Ative esse recurso para excluir automaticamente esse volume quando a instância do servidor virtual anexada for excluída. É possível mudar essa configuração posteriormente na página de detalhes do servidor virtual. |
 | IOPS | Selecione 3, 5 ou 10 IOPS/GB para um perfil em Camada |
-| Tamanho | Insira um tamanho de volume em GBs. Os tamanhos de volume podem estar entre 10 GB e 2 TBs. |
-| Encryption | A criptografia com chaves gerenciadas pela IBM é ativada por padrão em todos os volumes. Também é possível escolher **Gerenciado pelo cliente** e usar sua própria chave de criptografia. Para pré-requisitos e etapas para configurar a criptografia gerenciada pelo cliente, consulte [Criando volumes de armazenamento de bloco com criptografia gerenciada pelo cliente](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption). |
+| Tamanho | Insira um tamanho de volume em GBs.  Os tamanhos de volume podem estar entre 10 GB e 2 TBs. |
+| Encryption | A criptografia com chaves gerenciadas pela IBM é ativada por padrão em todos os volumes. Também é possível escolher **Gerenciado pelo cliente** e usar sua própria chave de criptografia.  Para pré-requisitos e etapas para configurar a criptografia gerenciada pelo cliente, consulte [Criando volumes de armazenamento de bloco com criptografia gerenciada pelo cliente](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption). |
 {: caption="Tabela 1. Valores de volume de armazenamento de bloco especificados ao provisionar uma instância" caption-side="top"}
 
 Um volume de armazenamento de bloco é criado e anexado à instância do servidor virtual. Na página de detalhes da instância, a lista **Volumes de armazenamento de bloco anexados** é atualizada para mostrar o novo volume.
@@ -65,7 +62,7 @@ Um volume de armazenamento de bloco pode ser anexado apenas a um servidor virtua
 
 É possível criar um volume de armazenamento de bloco independente do fornecimento do servidor virtual e anexar o volume a uma instância posteriormente.
 
-1. No [Console do {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} para a Nuvem particular virtual, navegue para **Ícone de menu ![Ícone de menu](../../icons/icon_hamburger.svg) > Armazenamento > Volumes de armazenamento de bloco para VPC** e selecione **Novo volume**.
+1. No [console do {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} para a Nuvem particular virtual, navegue até **Ícone de menu ![Ícone de menu](../../icons/icon_hamburger.svg) > Armazenamento > Volumes de armazenamento de bloco** e selecione **Novo volume**.
 1. Insira as informações na tabela abaixo para definir seu novo volume de armazenamento de bloco.
 1. Quando concluído, clique em **Criar volume**. Você é retornado para a página Volumes de armazenamento de bloco, em que uma mensagem indica que o volume está sendo criado. Uma segunda mensagem é exibida quando o volume é criado.
 1. Para ver detalhes do novo volume, selecione o link **Visualizar recurso** na segunda mensagem para navegar para a página Detalhes do volume.
@@ -78,7 +75,7 @@ Um volume de armazenamento de bloco pode ser anexado apenas a um servidor virtua
 | Localização | A zona de disponibilidade em sua região, herdada do VPC (por exemplo, Sul dos EUA 1). |
 | Tamanho | Insira um tamanho de volume em GBs.  Os tamanhos do volume podem estar entre 10 GB a 2 TBs. |
 | IOPS | Selecione [Camadas IOPS](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#tiers) e selecione o tile com o nível de desempenho necessário. |
-| Customizado | Dependendo do tamanho do volume especificado, selecione um valor IOPS dentro do intervalo para esse tamanho de volume. Clique no link **tamanho do armazenamento** para ver uma tabela de intervalos de tamanho e IOPS. Para obter mais informações, consulte [Perfil IOPS customizado](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom). |
+| Customizado | Dependendo do tamanho do volume especificado, selecione um valor IOPS dentro do intervalo para esse tamanho de volume.  Clique no link **tamanho do armazenamento** para ver uma tabela de intervalos de tamanho e IOPS. Para obter mais informações, consulte [Perfil IOPS customizado](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom). |
 | Encryption | A criptografia com chaves gerenciadas pela IBM é ativada por padrão em todos os volumes. Para usar suas próprias chaves de criptografia, escolha uma opção de criptografia gerenciada pelo cliente. Para obter informações, consulte [Criando volumes de armazenamento de bloco com criptografia gerenciada pelo cliente](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).|
 {: caption="Tabela 2. Valores para definir um volume de armazenamento de bloco" caption-side="top"}
 

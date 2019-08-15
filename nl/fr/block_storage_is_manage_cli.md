@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-01"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, volume attachment, data storage, virtual server instance, instance
 
@@ -18,27 +18,30 @@ subcollection: vpc-on-classic-block-storage
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-
-# Gestion de volumes de stockage par blocs à l'aide de la CLI 
+# Gestion de volumes de stockage par blocs à l'aide de la CLI
 {: #managing-block-storage-cli}
 
-Ces informations s'appliquent à {{site.data.keyword.cloud}} Virtual Private Cloud dans l'environnement Classic Infrastructure.
-{: important}
+Gérez {{site.data.keyword.block_storage_is_short}} à partir de l'interface de ligne de commande (CLI). Mettez à jour un nom de volume ou une pièce jointe de volume, détachez un volume ou supprimez un volume.
+{:shortdesc}
 
 ## Avant de commencer
 {: #before-managing-block-storage-cli}
 
-Assurez-vous d'avoir téléchargé, installé et initialisé les plug-ins CLI suivants : 
+1. Assurez-vous d'avoir téléchargé, installé et initialisé les plug-ins CLI suivants :
+    * Interface CLI d'{{site.data.keyword.cloud_notm}}
+    * Plug-in infrastructure-service
 
-* Interface CLI d'{{site.data.keyword.cloud_notm}}
-* Interface CLI de l'API d'{{site.data.keyword.cloud_notm}} Regional 
+   Pour plus d'informations, voir [{{site.data.keyword.cloud_notm}} CLI for VPC Reference](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   
+   Lorsque vous installez le plug-in vpc-infrastructure pour la première fois, vous devez définir la génération cible sur gen 1, `ibmcloud is target --gen 1`.
+   {:important}
+   
+2. Assurez-vous que vous avez déjà [créé une instance {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 
-Pour plus d'informations, voir les conditions préalables requises dans [Référence CLI IBM Cloud for VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
-
-## Mise à jour le nom d'un volume 
+## Mise à jour le nom d'un volume
 {: #update-vol-name}
 
-Pour modifier un nom de volume, spécifiez le nom du volume ou son ID, puis indiquez le nouveau nom. 
+Pour modifier un nom de volume, spécifiez le nom du volume ou son ID, puis indiquez le nouveau nom.
 
 ```bash
 ibmcloud is volume-update VOLUME_ID [--name NEW_NAME] [--json]
@@ -65,7 +68,7 @@ Volume Attachment Instance Reference    none
 ```
 {: screen}
 
-## Mise à jour d'une connexion de volume à l'aide de la CLI 
+## Mise à jour d'une connexion de volume à l'aide de la CLI
 {: #update-vol-name-cli}
 
 Vous pouvez mettre à jour le nom de la connexion du volume et modifier le paramètre de suppression automatique par défaut à l'aide de la commande `instance-volume-attachment-update`.
@@ -74,9 +77,9 @@ Vous pouvez mettre à jour le nom de la connexion du volume et modifier le param
 ibmcloud is instance-volume-attachment-update INSTANCE_ID VOLUME_ATTACHMENT_ID [--name NEW_NAME] [--auto-delete true | false] [--json]
 ```
 
-Utilisez le paramètre `--name` et spécifiez un nouveau nom pour la connexion au volume. 
+Utilisez le paramètre `--name` et spécifiez un nouveau nom pour la connexion au volume.
 
-Spécifiez `--auto-delete true` pour supprimer automatiquement le volume lorsque vous supprimez l'instance à laquelle il est connecté. 
+Spécifiez `--auto-delete true` pour supprimer automatiquement le volume lorsque vous supprimez l'instance à laquelle il est connecté.
 
 Exemple montrant les détails de `Volume Attachment Instance Reference` :
 
@@ -86,21 +89,21 @@ Vdisk-data1   fd146b1f-e1bb-4eab-ba78-3109e6bc3a2d   data         true          
 ```
 {: screen}
 
-## Déconnexion d'un volume à l'aide de la CLI 
+## Déconnexion d'un volume à l'aide de la CLI
 {: #detach-vol-attachment-cli}
 
-Utilisez la commande `instance-volume-attachment-detach` pour déconnecter un volume d'une instance et supprimer la connexion du volume. Le volume de stockage par blocs n'est pas supprimé, vous pourrez le [connecter ultérieurement à une autre instance](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage-cli). 
+Utilisez la commande `instance-volume-attachment-detach` pour déconnecter un volume d'une instance et supprimer la connexion du volume. Le volume de stockage par blocs n'est pas supprimé, vous pourrez le [connecter ultérieurement à une autre instance](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage-cli).
 
 ```bash
 ibmcloud is instance-volume-attachment-detach INSTANCE_ID VOLUME_ATTACHMENT_ID [-f, --force]
 ```
 
-## Suppression d'un volume de stockage par blocs à l'aide de la CLI 
+## Suppression d'un volume de stockage par blocs à l'aide de la CLI
 {: #delete-vol-cli}
 
-Utilisez la commande `volume-delete` et spécifiez l'ID de volume pour supprimer un volume de stockage par blocs. 
+Utilisez la commande `volume-delete` et spécifiez l'ID de volume pour supprimer un volume de stockage par blocs.
 
-**Remarque :** vous ne pouvez pas supprimer un volume de stockage par blocs actif. Vous devez d'abord [le déconnecter du serveur virtuel](#detach-vol-attachment-cli). 
+**Remarque :** vous ne pouvez pas supprimer un volume de stockage par blocs actif. Vous devez d'abord [le déconnecter du serveur virtuel](#detach-vol-attachment-cli).
 
 ```bash
 ibmcloud is volume-delete (VOLUME_NAME | VOLUME_ID) [-f, --force]
@@ -126,4 +129,3 @@ Vous préférez gérer les volumes de stockage par blocs à l'aide de la console
 [Créez davantage de volumes à l'aide de la CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli).
 
 Pour les problèmes liés aux volumes de stockage par blocs existants, vous pouvez peut-être identifier et résoudre les problèmes vous-même. Pour plus d'informations, voir [Traitement des incidents liés au stockage par blocs](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-troubleshoot).
-

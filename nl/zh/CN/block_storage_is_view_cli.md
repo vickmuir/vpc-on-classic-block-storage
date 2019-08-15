@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-03"
 
 Keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
 
@@ -24,17 +24,22 @@ subcollection: vpc-on-classic-block-storage
 # 使用 CLI 查看块存储卷
 {: #viewing-block-storage-cli}
 
-通过 CLI 查看有关块存储卷的详细信息或有关所有卷的摘要信息。
+通过 CLI 查看有关 {{site.data.keyword.block_storage_is_short}} 卷的详细信息或有关所有卷的摘要信息。
+{:shortdesc}
 
 ## 开始之前
 {: #before-viewing-block-storage-cli}
 
-确保下载、安装并初始化以下 CLI 插件：
+1. 确保已下载、安装并初始化以下 CLI 插件：
+    * {{site.data.keyword.cloud_notm}} CLI
+    * infrastructure-service 插件
 
-* {{site.data.keyword.cloud_notm}} CLI
-* {{site.data.keyword.cloud_notm}} 区域 API CLI
-
-有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} CLI for VPC 参考](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)中的先决条件。
+   有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} CLI for VPC 参考](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)。
+   
+   首次安装 vpc-infrastructure 插件时，必须将目标生成设置为 gen 1：`ibmcloud is target --gen 1`。
+   {:important}
+   
+2. 请确保您已[创建 {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started)。
 
 ## 使用 CLI 查看有关块存储卷的详细信息
 {: #viewvol-cli}
@@ -168,5 +173,5 @@ Crn      crn:v1:public:globalcatalog::::volume.profile:generalpurpose
 
 创建更多卷或管理现有块存储卷。
 
-* [创建块存储卷 (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli)
-* [管理块存储卷 (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)
+* [使用 CLI 创建块存储卷](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli)
+* [使用 CLI 管理块存储卷](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)

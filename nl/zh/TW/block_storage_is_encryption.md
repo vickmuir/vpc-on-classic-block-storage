@@ -2,9 +2,9 @@
 
 Copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-23"
 
-keywords: block storage, IBM Cloud, VPC, virtual private cloud, Key Protect, encryption, key management, Hyper Protect Crypto Services, HPCS, volume, data storage, virtual server instance, instance
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, Key Protect, encryption, key management, Hyper Protect Crypto Services, HPCS, volume, data storage, virtual server instance, instance, customer-managed encryption
 
 subcollection: vpc-on-classic-block-storage
 
@@ -18,11 +18,10 @@ subcollection: vpc-on-classic-block-storage
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 
-
 # 使用客戶管理的加密建立區塊儲存空間磁區
 {: #block-storage-encryption}
 
-依預設，會使用 IBM 管理的加密來加密 {{site.data.keyword.block_storage_is_short}} 啟動和資料磁區。您也可以建立客戶管理的加密磁區，方法是使用支援的金鑰管理服務來建立或匯入客戶根金鑰。客戶管理的加密是一種選項，用於實例佈建期間所建立的啟動和資料磁區。您也可以在建立獨立式資料磁區時指定客戶管理的加密。  
+依預設，會使用 IBM 管理的加密來加密 {{site.data.keyword.block_storage_is_short}} 啟動和資料磁區。您也可以建立客戶管理的加密磁區，方法是使用支援的金鑰管理服務來建立或匯入客戶根金鑰。客戶管理的加密是一種選項，用於實例佈建期間所建立的啟動和資料磁區。您也可以在建立獨立式資料磁區時指定客戶管理的加密。{:shortdesc}
 
 ## 區塊儲存空間磁區的金鑰管理服務
 {: #key-mgt-services-for-storage}
@@ -33,6 +32,7 @@ subcollection: vpc-on-classic-block-storage
 | ----- | ----- |
 | [{{site.data.keyword.keymanagementserviceshort}}](/docs/services/key-protect/concepts?topic=key-protect-getting-started-tutorial#getting-started-tutorial) | FIPS 140-2 *層次 2* 規範 |
 | [{{site.data.keyword.hscrypto}}](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started) | FIPS 140-2 *層次 4* 規範 |
+{: caption="表 1. {{site.data.keyword.block_storage_is_short}} 的金鑰管理服務" caption-side="top"}
 
 ## 必要條件
 {: #custom-managed-vol-prereqs}
@@ -51,7 +51,7 @@ subcollection: vpc-on-classic-block-storage
 2. 在 {{site.data.keyword.keymanagementservicelong_notm}} 中[建立](/docs/services/key-protect?topic=key-protect-create-root-keys#create-root-keys)或[匯入](/docs/services/key-protect?topic=key-protect-import-root-keys#import-root-keys)客戶根金鑰 (CRK)。
 3. 從 IBM {{site.data.keyword.iamshort}} (IAM) 中，[授權](/docs/iam?topic=iam-serviceauth#serviceauth) **Cloud Block Storage**（來源服務）與 **{{site.data.keyword.keymanagementserviceshort}}**（目標服務）之間的存取。
 
-## 利用使用者介面來建立客戶管理的加密資料磁區
+## 利用使用者介面建立客戶管理的加密資料磁區
 {: #data-vol-encryption-ui}
 
 在實例佈建期間建立新的區塊儲存空間磁區，或將其建立為獨立式磁區時，您可以指定客戶管理的加密。
@@ -62,7 +62,7 @@ subcollection: vpc-on-classic-block-storage
 
 1. 在 {{site.data.keyword.cloud_notm}} 主控台中，導覽至**功能表圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) > VPC 基礎架構 > 儲存空間 > 區塊儲存空間磁區**。
 即會顯示所有區塊儲存空間磁區的清單。
-1. 選取**新建磁區**。在「新建區塊儲存空間磁區」頁面上，更新「加密」區段中的欄位。
+1. 選取**新建磁區**。
 1. 在**新建區塊儲存空間磁區**頁面上，更新**加密**區段中的欄位。請參閱下表，以取得相關資訊。當您完成變更時，請按一下**建立磁區**。
 
 | 欄位 | 值 |
@@ -108,4 +108,4 @@ Volume Attachment Instance Reference    none
 
 ## 利用使用者介面編輯啟動磁區來使用客戶管理的加密
 
-從使用者介面建立實例時，您可以編輯啟動磁區內容來指定客戶管理的加密。如需相關資訊，請參閱[佈建虛擬伺服器實例與使用客戶管理加密的磁區](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-storage#provision-byok-ui)。
+從使用者介面建立實例時，您可以編輯啟動磁區內容來指定客戶管理的加密。如需相關資訊，請參閱[佈建虛擬伺服器實例與使用客戶管理加密的磁區](docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-instances-byok#provision-byok-ui)。

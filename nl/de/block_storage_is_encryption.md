@@ -2,9 +2,9 @@
 
 Copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-23"
 
-keywords: block storage, IBM Cloud, VPC, virtual private cloud, Key Protect, encryption, key management, Hyper Protect Crypto Services, HPCS, volume, data storage, virtual server instance, instance
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, Key Protect, encryption, key management, Hyper Protect Crypto Services, HPCS, volume, data storage, virtual server instance, instance, customer-managed encryption
 
 subcollection: vpc-on-classic-block-storage
 
@@ -18,11 +18,11 @@ subcollection: vpc-on-classic-block-storage
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 
-
 # Blockspeicherdatenträger mit benutzerverwalteter Verschlüsselung erstellen
 {: #block-storage-encryption}
 
-Standardmäßig werden {{site.data.keyword.block_storage_is_short}}-Bootdatenträger und -Datenträger für Daten mit von IBM verwalteter Verschlüsselung verschlüsselt. Sie können benutzerverwaltete verschlüsselte Datenträger jedoch auch erstellen, indem Sie über einen unterstützten Schlüsselmanagementservice einen Kundenrootschlüssel erstellen oder den Rootschlüssel importieren. Bei der benutzerverwalteten Verschlüsselung handelt es sich um eine Option für bei der Instanzbereitstellung erstellte Bootdatenträger und Datenträger für Daten. Sie können die benutzerverwaltete Verschlüsselung auch angeben, wenn Sie einen eigenständigen Datenträger erstellen.  
+Standardmäßig werden {{site.data.keyword.block_storage_is_short}}-Bootdatenträger und -Datenträger für Daten mit von IBM verwalteter Verschlüsselung verschlüsselt. Sie können benutzerverwaltete verschlüsselte Datenträger jedoch auch erstellen, indem Sie über einen unterstützten Schlüsselmanagementservice einen Kundenrootschlüssel erstellen oder den Rootschlüssel importieren. Bei der benutzerverwalteten Verschlüsselung handelt es sich um eine Option für bei der Instanzbereitstellung erstellte Bootdatenträger und Datenträger für Daten.  Sie können die benutzerverwaltete Verschlüsselung auch angeben, wenn Sie einen eigenständigen Datenträger erstellen.
+{:shortdesc}
 
 ## Schlüsselmanagementservices für Blockspeicherdatenträger
 {: #key-mgt-services-for-storage}
@@ -33,6 +33,7 @@ Es stehen zwei Schlüsselmanagementservices zur Verfügung, {{site.data.keyword.
 | ----- | ----- |
 | [{{site.data.keyword.keymanagementserviceshort}}](/docs/services/key-protect/concepts?topic=key-protect-getting-started-tutorial#getting-started-tutorial) | FIPS 140-2-Konformität (*Level 2*) |
 | [{{site.data.keyword.hscrypto}}](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started) | FIPS 140-2-Konformität (*Level 4*) |
+{: caption="Tabelle 1. Schlüsselmanagementservices für {{site.data.keyword.block_storage_is_short}}" caption-side="top"}
 
 ## Voraussetzungen
 {: #custom-managed-vol-prereqs}
@@ -40,7 +41,7 @@ Es stehen zwei Schlüsselmanagementservices zur Verfügung, {{site.data.keyword.
 Zum Erstellen von Blockspeicherdatenträgern mit benutzerverwalteter Verschlüsselung müssen Sie zunächst einen Schlüsselmanagementservice bereitstellen und Ihren Kundenrootschlüssel erstellen oder importieren.
 Darüber hinaus müssen Sie auch für eine Autorisierung der Zugriffe von Cloud Block Storage auf den Schlüsselmanagementservice und umgekehrt sorgen. Wenn diese Voraussetzungen erfüllt sind, können Sie mit dem Erstellen von Blockspeicherdatenträgern beginnen, die eine benutzerverwaltete Verschlüsselung verwenden.
 
-Die folgenden Schritte sind auf {{site.data.keyword.keymanagementserviceshort}} bezogen, der Ablauf gilt im Wesentlichen jedoch auch für {{site.data.keyword.hscrypto}}. Wenn Sie {{site.data.keyword.hscrypto}} verwenden, finden Sie in den [Informationen zu {{site.data.keyword.hscrypto}}](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started) entsprechende Anleitungen.
+Die folgenden Schritte sind auf {{site.data.keyword.keymanagementserviceshort}} bezogen, der Ablauf gilt im Wesentlichen jedoch auch für {{site.data.keyword.hscrypto}}.  Wenn Sie {{site.data.keyword.hscrypto}} verwenden, finden Sie in den [Informationen zu {{site.data.keyword.hscrypto}}](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started) entsprechende Anleitungen.
 {:note}
 
 1. [Service '{{site.data.keyword.keymanagementserviceshort}}'](/docs/services/key-protect?topic=key-protect-provision#provision) bereitstellen
@@ -62,8 +63,9 @@ Informationen zum Erstellen eines verschlüsselten Datenträgers beim Erstellen 
 
 Führen Sie die folgenden Schritte aus, um eine benutzerverwaltete Verschlüsselung beim Erstellen eines eigenständigen Datenträgers anzugeben:
 
-1. Navigieren Sie in der {{site.data.keyword.cloud_notm}}-Konsole zu **Menüsymbol ![Menüsymbol](../../icons/icon_hamburger.svg) > VPC-Infrastruktur > Speicher > Blockspeicherdatenträger**. Daraufhin wird eine Liste sämtlicher Blockspeicherdatenträger angezeigt.
-1. Wählen Sie **Neuer Datenträger** aus. Aktualisieren Sie auf der Seite 'Neuer Blockspeicherdatenträger' die Felder im Bereich 'Verschlüsselung'.
+1. Navigieren Sie in der {{site.data.keyword.cloud_notm}}-Konsole zu **Menüsymbol ![Menüsymbol](../../icons/icon_hamburger.svg) > VPC-Infrastruktur > Speicher > Blockspeicherdatenträger**.
+Daraufhin wird eine Liste sämtlicher Blockspeicherdatenträger angezeigt.
+1. Wählen Sie **Neuer Datenträger** aus.
 1. Aktualisieren Sie auf der Seite **Neuer Blockspeicherdatenträger** die Felder im Bereich **Verschlüsselung**. Weitere Informationen hierzu finden Sie in der nachfolgenden Tabelle. Klicken Sie auf **Datenträger erstellen**, wenn alle Felder aktualisiert sind.
 
 | Feld | Wert |
@@ -105,8 +107,8 @@ Volume Attachment Instance Reference    none
 ```
 {:screen}
 
-Sie können Datenträger mit benutzerverwalteter Verschlüsselung auch bei der Instanzbereitstellung erstellen. Informationen hierzu finden Sie unter [Instanzen und Datenträger mit benutzerverwalteter Verschlüsselung über die Befehlszeilenschnittstelle bereitstellen](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-instances-byok#provision-byok-cli).
+Sie können Datenträger mit benutzerverwalteter Verschlüsselung auch bei der Instanzbereitstellung erstellen.  Informationen hierzu finden Sie unter [Instanzen und Datenträger mit benutzerverwalteter Verschlüsselung über die Befehlszeilenschnittstelle bereitstellen](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-instances-byok#provision-byok-cli).
 
 ## Bootdatenträger über die Benutzerschnittstelle für die Verwendung einer benutzerverwalteten Verschlüsselung bearbeiten
 
-Wenn Sie eine Instanz über die Benutzerschnittstelle erstellen, können Sie eine benutzerverwaltete Verschlüsselung angeben, indem Sie die Eigenschaften des Bootdatenträgers bearbeiten. Informationen hierzu finden Sie unter [Virtuelle Serverinstanzen mit Datenträgern mit benutzerverwalteter Verschlüsselung bereitstellen](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-storage#provision-byok-ui).
+Wenn Sie eine Instanz über die Benutzerschnittstelle erstellen, können Sie eine benutzerverwaltete Verschlüsselung angeben, indem Sie die Eigenschaften des Bootdatenträgers bearbeiten. Informationen hierzu finden Sie unter [Virtuelle Serverinstanzen mit Datenträgern mit benutzerverwalteter Verschlüsselung bereitstellen](docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-instances-byok#provision-byok-ui).

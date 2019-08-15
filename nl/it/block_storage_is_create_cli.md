@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-13"
+lastupdated: "2019-07-01"
 
-keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
+keywords: block storage, IBM CLoud, VPC, virtual private cloud, CLI, block storage volume, volume, IOPS
 
 subcollection: vpc-on-classic-block-storage
 
@@ -21,18 +21,22 @@ subcollection: vpc-on-classic-block-storage
 # Creazione dei volumi di archiviazione blocchi utilizzando la CLI
 {: #creating-block-storage-cli}
 
-Puoi creare dei volumi {{site.data.keyword.block_storage_is_full}} utilizzando l'interfaccia riga di comando (CLI).
+Puoi creare dei volumi {{site.data.keyword.block_storage_is_short}} utilizzando l'interfaccia riga di comando (CLI).
 {:shortdesc}
 
 ## Prima di cominciare
 {: #before-creating-block-storage-cli}
 
-Assicurati di aver scaricato, installato e inizializzato i seguenti plugin CLI:
+1. Assicurati di aver scaricato, installato e inizializzato i seguenti plugin CLI:
+    * CLI {{site.data.keyword.cloud_notm}}
+    * Il plugin infrastructure-service
 
-* CLI {{site.data.keyword.cloud_notm}}
-* Il plugin infrastructure-service
-
-Per ulteriori informazioni, vedi i prerequisiti in [IBM Cloud CLI for VPC Reference](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   Per ulteriori informazioni, vedi [{{site.data.keyword.cloud_notm}}CLI for VPC Reference](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   
+   Quando installi il plugin vpc-infrastructure per la prima volta, devi impostare la generazione di destinazione su gen 1, `ibmcloud is target --gen 1`.
+   {:important}
+   
+2. Assicurati di aver già [creato un {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 
 ## Crea un volume di archiviazione blocchi utilizzando la CLI
 {: #create-vol-cli}

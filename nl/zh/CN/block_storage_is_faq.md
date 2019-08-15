@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-03"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance, IOPS
 
@@ -13,8 +13,11 @@ subcollection: vpc-on-classic-block-storage
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Block Storage for VPC 常见问题
+# {{site.data.keyword.block_storage_is_short}} 常见问题
 {: #block-storage-vpc-faq}
+
+欢迎访问 {{site.data.keyword.block_storage_is_short}} 的常见问题页面。本主题会回答有关创建和管理块存储卷的若干问题。如果您希望在本主题中提及其他问题，请使用**问题**或**编辑主题**链接提供反馈。
+{:shortdesc}
 
 ## 如何为实例分配存储器？
 {: faq}
@@ -70,7 +73,7 @@ IOPS 概要文件为各种容量的卷定义 IOPS/GB 性能。有三个预定义
 ## 创建卷后，日后可以增大其容量吗?
 {: faq}
 
-不能，不能增大卷的容量。建议您在供应块存储卷之前，估算足够的容量以满足预测的增长。
+不能，不能增大卷的容量。建议您在供应块存储卷之前，估算足够的容量以满足预测的增长。同时，考虑您需要多少个卷以及这些卷的容量。请参阅[管理卷计数和容量限制](/docs/vpc-on-classic?topic=vpc-on-classic-managingstoragelimits)，以获取更多信息。
 
 ## 卷需要预热才能达到所需吞吐量吗？
 {: faq}

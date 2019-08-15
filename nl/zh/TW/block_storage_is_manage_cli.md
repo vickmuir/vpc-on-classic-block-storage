@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-01"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, volume attachment, data storage, virtual server instance, instance
 
@@ -18,22 +18,25 @@ subcollection: vpc-on-classic-block-storage
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-
 # 使用 CLI 管理區塊儲存空間磁區
 {: #managing-block-storage-cli}
 
-此資訊適用於「標準基礎架構」環境中的 {{site.data.keyword.cloud}} Virtual Private Cloud。
-{: important}
+從指令行介面 (CLI) 管理 {{site.data.keyword.block_storage_is_short}}。更新磁區名稱、更新磁區連接、分離磁區，或刪除磁區。
+{:shortdesc}
 
 ## 在開始之前
 {: #before-managing-block-storage-cli}
 
-請確定您已下載、安裝及起始設定下列 CLI 外掛程式：
+1. 請確保您已下載、安裝及起始設定下列 CLI 外掛程式：
+    * {{site.data.keyword.cloud_notm}} CLI
+    * 基礎架構服務外掛程式
 
-* {{site.data.keyword.cloud_notm}} CLI
-* {{site.data.keyword.cloud_notm}} 區域 API CLI
-
-如需相關資訊，請參閱 [IBM Cloud CLI for VPC Reference](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference) 中的必要條件。
+   如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} CLI for VPC 參考資料](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)。
+   
+   當您第一次安裝 vpc-infrastructure 外掛程式時，必須將目標世代設為 gen 1：`ibmcloud is target --gen 1`。
+   {:important}
+   
+2. 確定您已[建立 {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started)。
 
 ## 更新磁區的名稱
 {: #update-vol-name}
@@ -125,4 +128,4 @@ Volume ID 64d85f0f-6c08-4188-9e9a-0057b3aa1b69 is deleted.
 
 [使用 CLI 來建立更多磁區](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli)。
 
-對於現有區塊儲存空間磁區的問題，您可能可以自行疑難排解及修正問題。如需相關資訊，請參閱[區塊儲存空間的疑難排解](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-troubleshoot)。
+對於現有區塊儲存空間磁區的問題，您或許能夠自行疑難排解並修正問題。如需相關資訊，請參閱[區塊儲存空間的疑難排解](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-troubleshoot)。

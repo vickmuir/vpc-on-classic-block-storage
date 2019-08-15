@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-03"
 
 Keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
 
@@ -24,17 +24,21 @@ subcollection: vpc-on-classic-block-storage
 # CLI を使用したブロック・ストレージ・ボリュームの表示
 {: #viewing-block-storage-cli}
 
-CLI を使用して、1 つのブロック・ストレージ・ボリュームに関する詳細、またはすべてのボリュームに関する要約情報を表示できます。
+CLI を使用して、1 つの {{site.data.keyword.block_storage_is_short}} ボリュームに関する詳細、またはすべてのボリュームに関する要約情報を表示できます。{:shortdesc}
 
 ## 始めに
 {: #before-viewing-block-storage-cli}
 
-以下の CLI プラグインのダウンロード、インストール、初期化を行ったことを確認します。
+1. 以下の CLI プラグインをダウンロード、インストール、初期化したことを確認します。
+    * {{site.data.keyword.cloud_notm}} CLI
+    * インフラストラクチャー・サービス・プラグイン
 
-* {{site.data.keyword.cloud_notm}} CLI
-* {{site.data.keyword.cloud_notm}} Regional API CLI
-
-詳しくは、[{{site.data.keyword.cloud_notm}} CLI for VPC リファレンス](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)で前提条件を参照してください。
+   詳しくは、[{{site.data.keyword.cloud_notm}}CLI for VPC リファレンス](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)を参照してください。
+   
+   初めて vpc-infrastructure プラグインをインストールするときは、`ibmcloud is target --gen 1` のようにターゲット世代を gen 1 に設定する必要があります。
+{:important}
+   
+2. [{{site.data.keyword.vpc_short}} がすでに作成されている](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started)ことを確認します。
 
 ## CLI を使用した 1 つのブロック・ストレージ・ボリュームに関する詳細の表示
 {: #viewvol-cli}
@@ -93,7 +97,7 @@ a3f4d60a-c9cf-4666-9a2a-0b1d85f92c19   demo_volume1      50         10     Manua
 ```
 {: screen}
 
-リソース・グループ ID または名前を指定すると、そのリソース・グループに属するボリュームでリストがフィルターに掛けられます。このパラメーターを省略すると、デフォルトですべてのリソース・グループになります。特定のアベイラビリティー・ゾーン内のすべてのボリュームを表示することもできます。
+リソース・グループ ID または名前を指定すると、そのリソース・グループに属するボリュームでリストがフィルターに掛けられます。 このパラメーターを省略すると、デフォルトですべてのリソース・グループになります。 特定のアベイラビリティー・ゾーン内のすべてのボリュームを表示することもできます。
 
 デフォルトでは、1 ページあたり最初の 25 個のボリュームが表示されます。
 
@@ -106,7 +110,7 @@ a3f4d60a-c9cf-4666-9a2a-0b1d85f92c19   demo_volume1      50         10     Manua
 ibmcloud is instance-volume-attachment INSTANCE_ID VOLUME_ATTACHMENT_ID [--json]
 ```
 
-インスタンス ID とボリューム接続 ID を指定します。オプションで、JSON 形式で詳細をエクスポートします。
+インスタンス ID とボリューム接続 ID を指定します。  オプションで、JSON 形式で詳細をエクスポートします。
 
 ## CLI を使用したすべてのボリューム接続に関する詳細の表示
 
@@ -160,7 +164,7 @@ Crn      crn:v1:public:globalcatalog::::volume.profile:generalpurpose
 ```
 {: screen}
 
-{{site.data.keyword.cloud}} コンソールを使用してブロック・ストレージ・ボリュームを表示する場合、詳しくは、[ブロック・ストレージ・ボリュームの詳細の表示](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage)を参照してください。
+{{site.data.keyword.cloud}} コンソールを使用してブロック・ストレージ・ボリュームを表示する場合、 詳しくは、[ブロック・ストレージ・ボリュームの詳細の表示](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage)を参照してください。
 {: tip}
 
 ## 次のステップ

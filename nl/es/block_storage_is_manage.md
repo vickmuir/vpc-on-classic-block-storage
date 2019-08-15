@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-11"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance
 
@@ -24,6 +24,9 @@ subcollection: vpc-on-classic-block-storage
 # Gestión de volúmenes de almacenamiento en bloque mediante la interfaz de usuario
 {: #managing-block-storage}
 
+Gestione {{site.data.keyword.block_storage_is_short}} desde la interfaz de usuario. Puede desconectar un volumen de una instancia de servidor virtual, transferir un volumen de una instancia a otra, conectar un volumen previamente conectado, renombrar un volumen, establecer la supresión automática de volúmenes, suprimir manualmente un volumen o asignar acceso a un volumen.
+{:shortdesc}
+
 ## Desconexión de un volumen de almacenamiento en bloque de una instancia de servidor virtual
 {: #detach}
 
@@ -31,7 +34,7 @@ Puede desconectar un volumen de almacenamiento en bloque que esté conectado act
 
 Para desconectar un volumen:
 
-1. Vaya a la lista de todos los volúmenes de almacenamiento en bloque. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} correspondiente a Virtual Private Cloud, vaya a **icono de menú ![icono de menú](../../icons/icon_hamburger.svg) > Almacenamiento> Volúmenes de almacenamiento en bloque para VPC**.
+1. Vaya a la lista de todos los volúmenes de almacenamiento en bloque. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} correspondiente a Virtual Private Cloud, vaya a **icono de menú ![icono de menú](../../icons/icon_hamburger.svg) > Almacenamiento> Almacenamiento en bloque**.
 1. Localice el volumen y luego pulse los puntos suspensivos (...) que hay al final de la fila de la tabla. Aparecerá un
 menú de contexto.
 1. En el menú, pulse **Desconectar de instancia**.
@@ -45,7 +48,7 @@ De forma alternativa, puede pulsar un volumen individual de la lista de todos lo
 Para transferir un volumen de almacenamiento en bloque a otra instancia de servidor virtual:
 
 1. [Desconecte el volumen de su instancia de servidor virtual](#detach).
-1. Vaya a la instancia de servidor virtual a la que desea transferir el volumen. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} correspondiente a Virtual Private Cloud, vaya a **icono de menú ![icono de menú](../../icons/icon_hamburger.svg) > Cálculo > Instancias de servidor virtual para VPC**.
+1. Vaya a la instancia de servidor virtual a la que desea transferir el volumen. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} correspondiente a Virtual Private Cloud, vaya a **icono de menú ![icono de menú](../../icons/icon_hamburger.svg) > Cálculo > Instancias de servidor virtual**.
 1. Seleccione un servidor virtual de la lista.
 1. En Volúmenes de almacenamiento conectados, pulse el signo más para añadir un volumen. Se muestran todos los volúmenes de almacenamiento en bloque.
 1. En la lista de volúmenes, seleccione el volumen que ha desconectado anteriormente.
@@ -55,7 +58,7 @@ Para transferir un volumen de almacenamiento en bloque a otra instancia de servi
 
 Los volúmenes de almacenamiento en bloque se conectan de forma predeterminada cuando se crea una nueva instancia de servidor virtual.  Cuando desconecta un volumen de una instancia, el volumen existe como volumen no conectado y se muestra en la lista de [todos los volúmenes de almacenamiento en bloque](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage#viewvols). Puede conectarlo a otra imagen de la lista de volúmenes de almacenamiento en bloque.
 
-1. Vaya a la lista de todos los volúmenes de almacenamiento en bloque. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} correspondiente a Virtual Private Cloud, vaya a **icono de menú ![icono de menú](../../icons/icon_hamburger.svg) > Almacenamiento> Volúmenes de almacenamiento en bloque para VPC**.
+1. Vaya a la lista de todos los volúmenes de almacenamiento en bloque. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} correspondiente a Virtual Private Cloud, vaya a **icono de menú ![icono de menú](../../icons/icon_hamburger.svg) > Almacenamiento> Almacenamiento en bloque**.
 1. Localice el volumen y luego pulse los puntos suspensivos (...) que hay al final de la fila de la tabla. Aparecerá un
 menú de contexto.
 1. En el menú, pulse **Conectar a instancia**.
@@ -67,7 +70,7 @@ menú de contexto.
 
 Puede cambiar el nombre de un volumen existente por uno más significativo.
 
-1. Vaya a la lista de todos los volúmenes de almacenamiento en bloque. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} correspondiente a Virtual Private Cloud, vaya a **icono de menú ![icono de menú](../../icons/icon_hamburger.svg) > Almacenamiento> Volúmenes de almacenamiento en bloque para VPC**.
+1. Vaya a la lista de todos los volúmenes de almacenamiento en bloque. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} correspondiente a Virtual Private Cloud, vaya a **icono de menú ![icono de menú](../../icons/icon_hamburger.svg) > Almacenamiento> Almacenamiento en bloque**.
 1. Localice el volumen y luego pulse el nombre del volumen para ir a la página Detalles del volumen.
 1. Pulse el icono de lápiz que hay tras el nombre del volumen y edite el nombre del volumen.
 1. Confirme la edición.
@@ -79,9 +82,8 @@ Cuando se suprime un volumen de almacenamiento en bloque, se eliminan sus datos 
 
 No se puede suprimir un volumen de almacenamiento en bloque activo. Para suprimir un volumen, primero debe [desconectarlo](#detach) del servidor virtual y, a continuación, debe seguir estos pasos:
 
-1. Vaya a la lista de todos los volúmenes de almacenamiento en bloque. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} correspondiente a Virtual Private Cloud, vaya a **icono de menú ![icono de menú](../../icons/icon_hamburger.svg) > Almacenamiento> Volúmenes de almacenamiento en bloque para VPC**.
-1. Localice el volumen que desea suprimir y pulse los puntos suspensivos que hay al final de la fila de la tabla. Aparecerá un
-menú de contexto.
+1. Vaya a la lista de todos los volúmenes de almacenamiento en bloque. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} correspondiente a Virtual Private Cloud, vaya a **icono de menú ![icono de menú](../../icons/icon_hamburger.svg) > Almacenamiento> Almacenamiento en bloque**.
+1. Localice el volumen que desea suprimir y pulse los puntos suspensivos que hay al final de la fila de la tabla. Aparecerá un menú de contexto.
 1. En el menú, pulse **Suprimir**.
 1. Confirme la supresión.
 
@@ -92,12 +94,12 @@ Mediante la característica de supresión automática, puede especificar que se 
 
 Para habilitar la supresión automática de un volumen de almacenamiento en bloque existente conectado a una instancia, siga estos pasos:
 
-1. Localice la instancia de servidor virtual a la que está conectado el volumen. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} correspondiente a Virtual Private Cloud, vaya a **icono de menú ![icono de menú](../../icons/icon_hamburger.svg) > Cálculo > Instancias de servidor virtual para VPC**.
+1. Localice la instancia de servidor virtual a la que está conectado el volumen. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} correspondiente a Virtual Private Cloud, vaya a **icono de menú ![icono de menú](../../icons/icon_hamburger.svg) > Cálculo > Instancias de servidor virtual**.
 1. En **Volúmenes de almacenamiento en bloque conectados**, seleccione un volumen.
 1. En el menú emergente, pulse el botón Supresión automática para habilitarlo.
 1. Confirme la selección.
 
-De forma alternativa, empiece seleccionando un volumen de la lista de volúmenes de almacenamiento en bloque (**Almacenamiento > Volúmenes de almacenamiento en bloque para VPC**).
+De forma alternativa, empiece seleccionando un volumen de la lista de volúmenes de almacenamiento en bloque (**Almacenamiento > Almacenamiento en bloque**).
 
 Para habilitar la supresión automática en un nuevo volumen al crear una instancia, consulte [Creación y conexión de un volumen de almacenamiento en bloque al crear una nueva instancia](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage#create-from-vsi).
 
@@ -112,6 +114,7 @@ Con privilegios de administrador, puede asignar acceso de usuario a nivel de vol
 | Tipo de recurso | Seleccione **Block Storage for VPC** |
 | ID de volumen | Especifique el [ID de volumen](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage#view-vol-details) para asignar acceso a un volumen específico |
 | Seleccione roles | Asigne roles de acceso a la plataforma, normalmente el de operador |
+{: caption="Tabla 1. Información para IAM" caption-side="top"}
 
 Para obtener más información, consulte las [prácticas recomendadas para asignar acceso](/docs/iam?topic=iam-account_setup#account_setup). Para ver el proceso completo de IAM, que incluye la invitación de usuarios a su cuenta y la asignación de acceso de IAM de Cloud, consulte la [guía de aprendizaje de iniciación de IAM](/docs/iam?topic=iam-getstarted#getstarted).
 
@@ -133,6 +136,7 @@ En la tabla siguiente se muestran los estados que puede ver cuando se crean, se 
 | Pendiente | Se está creando un volumen |
 | | Se está conectando un volumen a una instancia |
 | Pendiente de supresión | Se está suprimiendo un volumen |
+{: caption="Tabla 2. Estados de almacenamiento en bloque" caption-side="top"}
 
 ¿Prefiere gestionar los volúmenes de almacenamiento en bloque mediante la CLI? Para obtener información, consulte [Gestión de volúmenes de almacenamiento en bloque (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli).
 {: tip}

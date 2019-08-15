@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-01"
 
-keywords: block storage, IBM Cloud, VPC, CLI, block storage volume, volume, volume attachment, virtual server instance, instance
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, CLI, block storage volume, volume, volume attachment, virtual server instance, instance
 
 subcollection: vpc-on-classic-block-storage
 
@@ -18,21 +18,24 @@ subcollection: vpc-on-classic-block-storage
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-
 # 使用 CLI 連接區塊儲存空間磁區
 {: #attaching-block-storage-cli}
 
-磁區連接可將區塊儲存空間磁區連接至虛擬伺服器實例。每個實例都可有[多個磁區連接](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits)，但單一磁區連接只會將一個磁區連接至一個實例。
+磁區連接可將 {{site.data.keyword.block_storage_is_short}} 磁區連接至虛擬伺服器實例。每個實例都可有[多個磁區連接](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits)，但單一磁區連接只會將一個磁區連接至一個實例。{:shortdesc}
 
 ## 在開始之前
 {: #before-attaching-block-storage-cli}
 
-請確定您已下載、安裝及起始設定下列 CLI 外掛程式：
+1. 請確保您已下載、安裝及起始設定下列 CLI 外掛程式：
+    * {{site.data.keyword.cloud_notm}} CLI
+    * 基礎架構服務外掛程式
 
-* {{site.data.keyword.cloud_notm}} CLI
-* {{site.data.keyword.cloud_notm}} 地區 API CLI
-
-如需相關資訊，請參閱 [IBM Cloud CLI for VPC 參考資料](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)中的必要條件。
+   如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} CLI for VPC 參考資料](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)。
+   
+   當您第一次安裝 vpc-infrastructure 外掛程式時，必須將目標世代設為 gen 1：`ibmcloud is target --gen 1`。
+   {:important}
+   
+2. 確定您已[建立 {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started)。
 
 ## 使用 CLI 連接區塊儲存空間磁區
 {: #attach-block-storage-cli}

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-01"
 
-keywords: block storage, IBM Cloud, VPC, CLI, block storage volume, volume, volume attachment, virtual server instance, instance
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, CLI, block storage volume, volume, volume attachment, virtual server instance, instance
 
 subcollection: vpc-on-classic-block-storage
 
@@ -18,22 +18,26 @@ subcollection: vpc-on-classic-block-storage
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-
 # Anexando um volume de armazenamento de bloco usando a CLI
 {: #attaching-block-storage-cli}
 
-Um anexo de volume conecta um volume de armazenamento de bloco a uma instância de servidor virtual. Cada instância pode ter [muitos anexos de volume](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits), mas um único anexo de volume conecta um volume a uma instância.
+Um anexo de volume conecta um volume do {{site.data.keyword.block_storage_is_short}} a uma instância de servidor virtual. Cada instância pode ter [muitos anexos de volume](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits), mas um único anexo de volume conecta um volume a uma instância.
+{:shortdesc}
 
 ## Antes
 de Começar
 {: #before-attaching-block-storage-cli}
 
-Certifique-se de que você tenha transferido por download, instalado e inicializado os plug-ins da CLI a seguir:
+1. Assegure-se de ter transferido por download, instalado e inicializado osvplug-ins da CLI a seguir:
+    * CLI do {{site.data.keyword.cloud_notm}}
+    * O plug-in de serviço de infraestrutura
 
-* CLI do {{site.data.keyword.cloud_notm}}
-* CLI da API regional do {{site.data.keyword.cloud_notm}}
-
-Para obter mais informações, consulte os pré-requisitos na [Referência da CLI do IBM Cloud para VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   Para obter mais informações, consulte [Referência da CLI do {{site.data.keyword.cloud_notm}} para VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   
+   Ao instalar o plug-in vpc-infrastructure pela primeira vez, deve-se configurar a geração de destino como gen 1, `ibmcloud is target --gen 1`.
+   {:important}
+   
+2. Certifique-se de que já tenha [criado um {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 
 ## Anexar um volume de armazenamento de bloco usando a CLI
 {: #attach-block-storage-cli}
@@ -114,7 +118,7 @@ Aqui está um arquivo JSON de anexo de volume de exemplo que define um volume cu
 ## Próximas Etapas
 {: #next-step-attaching-block-storage-cli}
 
-Crie volumes adicionais e gerencie os existentes. Consulte as informações a seguir.
+Crie volumes adicionais e gerencie os existentes.  Consulte as informações a seguir.
 
 * [Criar um volume de armazenamento de bloco usando a CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli#create-vol-cli)
 * [Gerenciando volumes de armazenamento de bloco usando a CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)

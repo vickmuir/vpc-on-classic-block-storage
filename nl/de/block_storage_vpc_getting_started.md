@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-28"
 
-keywords: block storage, IBM Cloud, VPC, virtual private cloud, IBM CLoud, volume, data storage, classic, virtual server
+keywords: block storage, getting started, IBM Cloud, VPC, virtual private cloud, IBM CLoud, volume, data storage, classic, virtual server
 
 subcollection: vpc-on-classic-block-storage
 
@@ -18,14 +18,16 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 {:important: .important}
 {:note: .note}
+{:shortdesc: .shortdesc}
 {:DomainName: data-hd-keyref="APPDomain"}
 {:DomainName: data-hd-keyref="DomainName"}
 {:external: target="_blank" .external}
 
-# Lernprogramm zur Einführung
+# {{site.data.keyword.block_storage_is_short}} - Einführung
 {: #getting-started}
 
 Das vorliegende Lernprogramm hilft Ihnen beim Erstellen von {{site.data.keyword.block_storage_is_short}}-Datenträgern in Virtual Private Cloud.
+{: .shortdesc}
 
 ## Vorbereitungen
 {: #block-storage-before-you-begin}
@@ -47,7 +49,7 @@ Erstellen Sie auch eine virtuelle Serverinstanz? Weitere Informationen finden Si
 ## Schritt 2 - Größe und Preis für Ihren Blockspeicher
 {: #size-price-block-storage}
 
-Wählen Sie ein [IOPS-Tier-Profil](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#tiers) für Ihren Blockspeicherdatenträger aus. Wenn Sie über genau definierte Leistungsanforderungen verfügen, die keinem vordefinierten IOPS-Tier entsprechen, wählen Sie bei Bedarf ein [angepasstes IOPS-Profil](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom) aus. 
+Wählen Sie ein [IOPS-Tier-Profil](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#tiers) für Ihren Blockspeicherdatenträger aus.  Wenn Sie über genau definierte Leistungsanforderungen verfügen, die keinem vordefinierten IOPS-Tier entsprechen, wählen Sie bei Bedarf ein [angepasstes IOPS-Profil](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom) aus. 
 
 Nachdem Sie die Größe und Leistung für Ihre Blockspeicherdatenträger ausgewählt haben, lesen Sie die Informationen zur [Preisstruktur](/docs/vpc-on-classic?topic=vpc-on-classic-block-storage-pricing), um sich über die Preisgestaltung Ihrer Datenträger und die Rechnungsstellung zu informieren.
 

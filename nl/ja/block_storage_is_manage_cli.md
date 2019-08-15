@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-01"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, volume attachment, data storage, virtual server instance, instance
 
@@ -18,22 +18,24 @@ subcollection: vpc-on-classic-block-storage
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-
 # CLI を使用したブロック・ストレージ・ボリュームの管理
 {: #managing-block-storage-cli}
 
-この情報は、クラシック・インフラストラクチャー環境の {{site.data.keyword.cloud}} Virtual Private Cloud に適用されます。
-{: important}
+コマンド・ライン・インターフェース (CLI) から {{site.data.keyword.block_storage_is_short}} を管理します。ボリューム名の更新、ボリューム接続の更新、ボリュームのデタッチ、またはボリュームの削除を行います。{:shortdesc}
 
 ## 始めに
 {: #before-managing-block-storage-cli}
 
-以下の CLI プラグインのダウンロード、インストール、初期化を行ったことを確認します。
+1. 以下の CLI プラグインをダウンロード、インストール、初期化したことを確認します。
+    * {{site.data.keyword.cloud_notm}} CLI
+    * インフラストラクチャー・サービス・プラグイン
 
-* {{site.data.keyword.cloud_notm}} CLI
-* {{site.data.keyword.cloud_notm}} Regional API CLI
-
-詳しくは、[IBM Cloud CLI for VPC リファレンス](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference) の前提条件を参照してください。
+   詳しくは、[{{site.data.keyword.cloud_notm}}CLI for VPC リファレンス](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)を参照してください。
+   
+   初めて vpc-infrastructure プラグインをインストールするときは、`ibmcloud is target --gen 1` のようにターゲット世代を gen 1 に設定する必要があります。
+{:important}
+   
+2. [{{site.data.keyword.vpc_short}} がすでに作成されている](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started)ことを確認します。
 
 ## ボリュームの名前の更新
 {: #update-vol-name}
@@ -89,7 +91,7 @@ Vdisk-data1   fd146b1f-e1bb-4eab-ba78-3109e6bc3a2d   data         true          
 ## CLI を使用したボリュームの切り離し
 {: #detach-vol-attachment-cli}
 
-`instance-volume-attachment-detach` コマンドを使用して、インスタンスからボリュームを切り離し、ボリューム接続を削除します。ブロック・ストレージ・ボリュームは削除されません。後で[別のインスタンスに接続](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage-cli)できます。
+`instance-volume-attachment-detach` コマンドを使用して、インスタンスからボリュームを切り離し、ボリューム接続を削除します。 ブロック・ストレージ・ボリュームは削除されません。後で[別のインスタンスに接続](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage-cli)できます。
 
 ```bash
 ibmcloud is instance-volume-attachment-detach INSTANCE_ID VOLUME_ATTACHMENT_ID [-f, --force]
@@ -100,7 +102,7 @@ ibmcloud is instance-volume-attachment-detach INSTANCE_ID VOLUME_ATTACHMENT_ID [
 
 `volume-delete` コマンドを使用して、ボリューム ID を指定してブロック・ストレージ・ボリュームを削除します。
 
-**注:** アクティブなブロック・ストレージ・ボリュームを削除することはできません。まず、[仮想サーバーから切り離す](#detach-vol-attachment-cli)必要があります。
+**注:** アクティブなブロック・ストレージ・ボリュームを削除することはできません。 まず、[仮想サーバーから切り離す](#detach-vol-attachment-cli)必要があります。
 
 ```bash
 ibmcloud is volume-delete (VOLUME_NAME | VOLUME_ID) [-f, --force]
@@ -117,7 +119,7 @@ Volume ID 64d85f0f-6c08-4188-9e9a-0057b3aa1b69 is deleted.
 ```
 {: screen}
 
-{{site.data.keyword.cloud}} コンソールを使用してブロック・ストレージ・ボリュームを管理する場合、詳しくは、[ブロック・ストレージ・ボリュームの管理](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage)を参照してください。
+{{site.data.keyword.cloud}} コンソールを使用してブロック・ストレージ・ボリュームを管理する場合、 詳しくは、[ブロック・ストレージ・ボリュームの管理](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage)を参照してください。
 {:tip}
 
 ## 次のステップ
@@ -125,4 +127,4 @@ Volume ID 64d85f0f-6c08-4188-9e9a-0057b3aa1b69 is deleted.
 
 [CLI を使用してさらにボリュームを作成](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli)します。
 
-既存のブロック・ストレージ・ボリュームに関する問題は、ユーザー自身がトラブルシューティングして解決できる場合があります。詳しくは、[ブロック・ストレージのトラブルシューティング](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-troubleshoot)を参照してください。
+既存のブロック・ストレージ・ボリュームに関する問題は、ユーザー自身がトラブルシューティングして解決できる場合があります。 詳しくは、[ブロック・ストレージのトラブルシューティング](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-troubleshoot)を参照してください。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-03"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance, IOPS
 
@@ -13,13 +13,16 @@ subcollection: vpc-on-classic-block-storage
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Perguntas mais frequentes do armazenamento de bloco para VPC
+# Perguntas mais frequentes do {{site.data.keyword.block_storage_is_short}}
 {: #block-storage-vpc-faq}
+
+Bem-vindo à página de perguntas mais frequentes para o {{site.data.keyword.block_storage_is_short}}. Este tópico responde muitas das suas perguntas para criar e gerenciar seus volumes de armazenamento de bloco. Se você tiver perguntas adicionais que gostaria de ver abordadas nesse tópico, forneça feedback usando os links **Problemas** ou **Editar tópico**.
+{:shortdesc}
 
 ## Como alocar armazenamento para minhas instâncias?
 {: faq}
 
-Quando você cria uma instância de servidor virtual, é possível [criar um volume de armazenamento de bloco](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage#create-from-vsi) que será anexado a essa instância. Também é possível [criar volumes independentes](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage#create-standalone-vol) e, posteriormente, anexá-los às suas instâncias.
+Quando você cria uma instância de servidor virtual, é possível [criar um volume de armazenamento de bloco](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage#create-from-vsi) que será anexado a essa instância.  Também é possível [criar volumes independentes](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage#create-standalone-vol) e, posteriormente, anexá-los às suas instâncias.
 
 ## Quantas instâncias podem compartilhar um volume de armazenamento de bloco provisionado?
 {: faq}
@@ -72,7 +75,7 @@ Para obter mais informações sobre cotas e limites para o seu {{site.data.keywo
 ## Depois de criar um volume, posso aumentar sua capacidade mais tarde?
 {: faq}
 
-Não, não é possível aumentar a capacidade de um volume. Recomendamos que você estime a capacidade suficiente para o crescimento projetado antes de provisionar um volume de armazenamento de bloco.
+Não, não é possível aumentar a capacidade de um volume. Recomendamos que você estime a capacidade suficiente para o crescimento projetado antes de provisionar um volume de armazenamento de bloco. Além disso, considere quantos volumes você precisa e a capacidade desses volumes. Consulte [Gerenciando contagem de volume e limites de capacidade](/docs/vpc-on-classic?topic=vpc-on-classic-managingstoragelimits) para obter mais informações.
 
 ## O volume precisa ser pré-aquecido para alcançar o rendimento esperado?
 {: faq}

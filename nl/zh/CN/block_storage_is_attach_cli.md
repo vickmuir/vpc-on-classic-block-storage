@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-01"
 
-keywords: block storage, IBM Cloud, VPC, CLI, block storage volume, volume, volume attachment, virtual server instance, instance
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, CLI, block storage volume, volume, volume attachment, virtual server instance, instance
 
 subcollection: vpc-on-classic-block-storage
 
@@ -18,21 +18,25 @@ subcollection: vpc-on-classic-block-storage
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-
 # 使用 CLI 连接块存储卷
 {: #attaching-block-storage-cli}
 
-卷连接用于将块存储卷连接到虚拟服务器实例。每个实例可以具有[多个卷连接](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits)，但单个卷连接只能将一个卷连接到一个实例。
+卷连接用于将 {{site.data.keyword.block_storage_is_short}} 卷连接到虚拟服务器实例。每个实例可以具有[多个卷连接](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits)，但单个卷连接只能将一个卷连接到一个实例。
+{:shortdesc}
 
 ## 开始之前
 {: #before-attaching-block-storage-cli}
 
-确保下载、安装并初始化以下 CLI 插件：
+1. 确保已下载、安装并初始化以下 CLI 插件：
+    * {{site.data.keyword.cloud_notm}} CLI
+    * infrastructure-service 插件
 
-* {{site.data.keyword.cloud_notm}} CLI
-* {{site.data.keyword.cloud_notm}} 区域 API CLI
-
-有关更多信息，请参阅 [IBM Cloud CLI for VPC 参考](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)中的先决条件。
+   有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} CLI for VPC 参考](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)。
+   
+   首次安装 vpc-infrastructure 插件时，必须将目标生成设置为 gen 1：`ibmcloud is target --gen 1`。
+   {:important}
+   
+2. 请确保您已[创建 {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started)。
 
 ## 使用 CLI 连接块存储卷
 {: #attach-block-storage-cli}

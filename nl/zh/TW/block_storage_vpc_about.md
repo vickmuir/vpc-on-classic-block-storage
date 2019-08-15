@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-22"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance, IOPS, HPCS, Key Protect
 
@@ -17,7 +17,7 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 {:note: .note}
 
-# 關於 Block Storage for VPC
+# 關於 {{site.data.keyword.block_storage_is_short}}
 {: #block-storage-about}
 [comment]: # (鏈結的說明主題)
 
@@ -47,7 +47,7 @@ subcollection: vpc-on-classic-block-storage
 
 依預設會使用 IBM 管理的加密來加密資料磁區。您可以選擇使用[自己的加密金鑰](#about-customer-managed-encrytion)來加密資料磁區。
 
-## 靜態資料加密
+## Block Storage 靜態資料加密
 {: #encryption}
 
 {{site.data.keyword.cloud_notm}} 極度重視安全，並瞭解能夠加密資料以確保其安全的重要性。在建立實例的過程中建立獨立式磁區或建立磁區時，您可以選擇使用 IBM 提供者管理的加密來保護資料，或使用您自己的加密金鑰。  
@@ -66,7 +66,7 @@ subcollection: vpc-on-classic-block-storage
 
 您可以使用自己的加密金鑰來加密區塊儲存空間磁區。若為資料磁區，您可以在建立磁區時指定客戶管理的加密。若為啟動磁區，您可以在實例建立期間編輯啟動磁區內容，並指定客戶管理的加密。如需程序，請參閱[使用客戶管理的加密建立區塊儲存空間磁區](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption)。
 
-使用客戶管理的加密，您的加密金鑰會上傳至金鑰管理服務（{{site.data.keyword.keymanagementservicelong_notm}} 或 {{site.data.keyword.hscrypto}}）。VPC 基礎架構會先找出您事先配置之金鑰管理服務實例中的金鑰，然後加密磁區。如需必要條件及一次性設定程序，請參閱[使用客戶管理的加密建立區塊儲存空間磁區](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption)。
+使用客戶管理的加密，您的加密金鑰會上傳至金鑰管理服務（{{site.data.keyword.keymanagementservicelong_notm}} 或 {{site.data.keyword.hscrypto}}）。VPC 基礎架構會先找出您事先配置之金鑰管理服務實例中的金鑰，然後將磁區加密。如需必要條件及一次性設定程序，請參閱[使用客戶管理的加密建立區塊儲存空間磁區](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption)。
 
 如需在虛擬伺服器實例佈建期間為磁區建立客戶管理之加密的相關資訊，請參閱[客戶管理的區塊儲存空間加密](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-storage#customer-managed-encryption-keys)。
 

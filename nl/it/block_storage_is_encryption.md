@@ -2,9 +2,9 @@
 
 Copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-23"
 
-keywords: block storage, IBM Cloud, VPC, virtual private cloud, Key Protect, encryption, key management, Hyper Protect Crypto Services, HPCS, volume, data storage, virtual server instance, instance
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, Key Protect, encryption, key management, Hyper Protect Crypto Services, HPCS, volume, data storage, virtual server instance, instance, customer-managed encryption
 
 subcollection: vpc-on-classic-block-storage
 
@@ -18,11 +18,11 @@ subcollection: vpc-on-classic-block-storage
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 
-
 # Creazione dei volumi di archiviazione blocchi con la crittografia gestita dal cliente 
 {: #block-storage-encryption}
 
-Per impostazione predefinita, i volumi di dati e avvio {{site.data.keyword.block_storage_is_short}} sono crittografati con la crittografia gestita da IBM. Puoi anche creare dei volumi crittografati gestiti dal cliente utilizzando un servizio di gestione delle chiavi supportato per creare o importare la chiave root del cliente. La crittografia gestita dal cliente è un'opzione per i volumi di dati e avvio creati durante il provisioning dell'istanza.  Puoi anche specificare la crittografia gestita dal cliente quando crei un volume di dati autonomo.  
+Per impostazione predefinita, i volumi di dati e avvio {{site.data.keyword.block_storage_is_short}} sono crittografati con la crittografia gestita da IBM. Puoi anche creare dei volumi crittografati gestiti dal cliente utilizzando un servizio di gestione delle chiavi supportato per creare o importare la chiave root del cliente. La crittografia gestita dal cliente è un'opzione per i volumi di dati e avvio creati durante il provisioning dell'istanza.  Puoi anche specificare la crittografia gestita dal cliente quando crei un volume di dati autonomo.
+{:shortdesc}
 
 ## Servizi di gestione delle chiavi per i volumi di archiviazione blocchi
 {: #key-mgt-services-for-storage}
@@ -33,6 +33,7 @@ Sono disponibili due servizi di gestione delle chiavi, {{site.data.keyword.keyma
 | ----- | ----- |
 | [{{site.data.keyword.keymanagementserviceshort}}](/docs/services/key-protect/concepts?topic=key-protect-getting-started-tutorial#getting-started-tutorial) | Conforme a FIPS 140-2 *Level 2* |
 | [{{site.data.keyword.hscrypto}}](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started) | Conforme a FIPS 140-2 *Level 4* |
+{: caption="Tabella 1. Servizi di gestione delle chiavi per {{site.data.keyword.block_storage_is_short}}" caption-side="top"}
 
 ## Prerequisiti
 {: #custom-managed-vol-prereqs}
@@ -56,7 +57,7 @@ La seguente procedura è specifica per {{site.data.keyword.keymanagementservices
 ## Creazione dei volumi di dati crittografati e gestiti dal cliente utilizzando l'IU
 {: #data-vol-encryption-ui}
 
-Puoi specificare la crittografia gestita dal cliente quando crei un nuovo volume di archiviazione blocchi durante il provisioning dell'istanza o come un volume autonomo. 
+Puoi specificare la crittografia gestita dal cliente quando crei un nuovo volume di archiviazione blocchi durante il provisioning dell'istanza o come un volume autonomo.
 
 Per creare un volume crittografato quando crei un'istanza del server virtuale, vedi [Creazione delle istanze del server virtuale con la crittografia gestita dal cliente](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-instance-creating-instances-byok).
 
@@ -64,18 +65,18 @@ Per specificare la crittografia gestita dal cliente durante la creazione di un v
 
 1. Nella console {{site.data.keyword.cloud_notm}}, passa a **Menu icon ![Icona menu](../../icons/icon_hamburger.svg) > VPC Infrastructure > Storage > Block storage volumes**.
 Viene visualizzato un elenco di tutti i volumi di archiviazione blocchi.
-1. Seleziona **New volume**. Nella pagina New block storage volume, aggiorna i campi nella sezione Encryption.
+1. Seleziona **New volume**.
 1. Nella pagina **New block storage volume**, aggiorna i campi nella sezione **Encryption**. Per ulteriori informazioni, vedi la seguente tabella. Quando hai terminato di apportate modifiche, fai clic su **Create Volume**.
 
 | Campo | Valore |
 | ----- | ----- |
-| Crittografia |_Provider managed_ è la modalità di crittografia predefinita. Per utilizzare la crittografia gestita dal cliente, seleziona un servizio di gestione delle chiavi ({{site.data.keyword.keymanagementserviceshort}} o {{site.data.keyword.hscrypto}}). L'istanza del servizio di gestione delle chiavi dovrebbe includere la chiave root del cliente che vuoi utilizzare per la crittografia gestita dal cliente. |
-| Istanza del servizio di crittografia |Se disponi di più istanze del servizio di gestione delle chiavi di cui è stato eseguito il provisioning nel tuo account, seleziona quella che include la chiave root del cliente che vuoi utilizzare per la crittografia gestita dal cliente. |
-|Nome della chiave| Seleziona la chiave di crittografia dei dati all'interno dell'istanza di {{site.data.keyword.keymanagementserviceshort}} che vuoi utilizzare per crittografare il volume. |
-|ID chiave| Visualizza l'ID chiave associato alla chiave di crittografia dei dati che hai selezionato. |
+| Crittografia | _Provider managed_ è la modalità di crittografia predefinita. Per utilizzare la crittografia gestita dal cliente, seleziona un servizio di gestione delle chiavi ({{site.data.keyword.keymanagementserviceshort}} o {{site.data.keyword.hscrypto}}). L'istanza del servizio di gestione delle chiavi dovrebbe includere la chiave root del cliente che vuoi utilizzare per la crittografia gestita dal cliente. |
+| Istanza del servizio di crittografia | Se disponi di più istanze del servizio di gestione delle chiavi di cui è stato eseguito il provisioning nel tuo account, seleziona quella che include la chiave root del cliente che vuoi utilizzare per la crittografia gestita dal cliente. |
+| Nome della chiave | Seleziona la chiave di crittografia dei dati all'interno dell'istanza di {{site.data.keyword.keymanagementserviceshort}} che vuoi utilizzare per crittografare il volume. |
+| ID chiave | Visualizza l'ID chiave associato alla chiave di crittografia dei dati che hai selezionato. |
 {: caption="Tabella 1. Valori per la crittografia gestita dal cliente" caption-side="top"}
 
-## Creazione dei volumi di dati crittografati e gestiti dal cliente utilizzando la CLI 
+## Creazione dei volumi di dati crittografati e gestiti dal cliente utilizzando la CLI
 {: #data-vol-encryption-cli}
 
 Per creare un volume di archiviazione blocchi con la crittografia gestita dal cliente utilizzando la CLI, specifica il parametro `ibmcloud is volume-create` con il parametro `--encryption-key`.
@@ -110,4 +111,4 @@ Puoi anche creare i volumi con la crittografia gestita dal cliente durante il pr
 
 ## Modifica dei volumi di avvio in modo che utilizzino la crittografia gestita dal cliente tramite l'IU
 
-Quando crei un'istanza dall'IU, puoi specificare la crittografia gestita dal cliente modificando le proprietà del volume di avvio. Per informazioni, vedi [Provisioning delle istanze del server virtuale con volumi che utilizzano la crittografia gestita dal cliente](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-storage#provision-byok-ui).
+Quando crei un'istanza dall'IU, puoi specificare la crittografia gestita dal cliente modificando le proprietà del volume di avvio. Per informazioni, vedi [Provisioning delle istanze del server virtuale con volumi che utilizzano la crittografia gestita dal cliente](docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-instances-byok#provision-byok-ui).

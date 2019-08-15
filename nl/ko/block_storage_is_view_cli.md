@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-03"
 
 Keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
 
@@ -24,30 +24,35 @@ subcollection: vpc-on-classic-block-storage
 # CLI를 사용하여 블록 스토리지 볼륨 보기
 {: #viewing-block-storage-cli}
 
-CLI에서 블록 스토리지 볼륨에 대한 세부사항이나 모든 볼륨에 대한 요약 정보를 봅니다. 
+CLI에서 {{site.data.keyword.block_storage_is_short}} 볼륨에 대한 세부사항이나 모든 볼륨에 대한 요약 정보를 봅니다.
+{:shortdesc}
 
 ## 시작하기 전에
 {: #before-viewing-block-storage-cli}
 
-다음의 CLI 플러그인을 다운로드, 설치 및 초기화했는지 확인하십시오. 
+1. 다음의 CLI 플러그인을 다운로드, 설치 및 초기화했는지 확인하십시오.
+    * {{site.data.keyword.cloud_notm}} CLI
+    * infrastructure-service 플러그인
 
-* {{site.data.keyword.cloud_notm}} CLI
-* {{site.data.keyword.cloud_notm}} 지역 API CLI
-
-자세한 정보는 [VPC용 {{site.data.keyword.cloud_notm}} CLI 참조서](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)의 전제조건을 참조하십시오.
+   자세한 정보는 [VPC용 {{site.data.keyword.cloud_notm}} CLI 참조](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)의 내용을 참조하십시오.
+   
+   vpc 인프라 플러그인을 처음 설치할 때 대상 세대를 1 세대로 설정해야 합니다(`ibmcloud is target --gen 1`).
+   {:important}
+   
+2. 이미 [{{site.data.keyword.vpc_short}}를 작성](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started)했는지 확인하십시오.
 
 ## CLI를 사용하여 블록 스토리지 볼륨에 대한 세부사항 보기
 {: #viewvol-cli}
 
-볼륨에 대한 세부사항을 표시하려면 다음 명령을 지정하십시오. 
+볼륨에 대한 세부사항을 표시하려면 다음 명령을 지정하십시오.
 
 ```bash
 ibmcloud is volume VOLUME_ID [--json]
 ```
 
-예: 
+예:
 
-이 예에서는 볼륨 ID를 사용하여 볼륨 세부사항을 표시합니다. 
+이 예에서는 볼륨 ID를 사용하여 볼륨 세부사항을 표시합니다.
 
 ```bash
 $ ibmcloud is volume 933c8781-f7f5-4a8f-8a2d-3bfc711788ee
@@ -68,18 +73,18 @@ Volume Attachment Instance Reference    none
 ```
 {:screen}
 
-볼륨이 가상 서버 인스턴스에 연결된 경우에는 볼륨 연결 및 인스턴스의 이름과 ID도 표시됩니다. 
+볼륨이 가상 서버 인스턴스에 연결된 경우에는 볼륨 연결 및 인스턴스의 이름과 ID도 표시됩니다.
 
 ## CLI를 사용하여 모든 블록 스토리지 볼륨 보기
 {: #viewall-vol-cli}
 
-이 명령을 실행하여 모든 볼륨에 대한 요약 정보를 나열할 수 있습니다. 
+이 명령을 실행하여 모든 볼륨에 대한 요약 정보를 나열할 수 있습니다.
 
 ```bash
 ibmcloud is volumes [--json]
 ```
 
-예: 
+예:
 
 다음 예에서는 가용성 구역의 모든 리소스 그룹에 대한 모든 볼륨을 표시합니다.  
 
@@ -93,9 +98,9 @@ a3f4d60a-c9cf-4666-9a2a-0b1d85f92c19   demo_volume1      50         10     Manua
 ```
 {: screen}
 
-리소스 그룹 ID 또는 이름을 지정하면 리소스 그룹에 속하는 볼륨으로 목록이 필터링됩니다. 이 매개변수를 생략하면 모든 리소스 그룹으로 기본값이 설정됩니다. 특정 가용성 구역의 모든 볼륨을 볼 수도 있습니다. 
+리소스 그룹 ID 또는 이름을 지정하면 리소스 그룹에 속하는 볼륨으로 목록이 필터링됩니다. 이 매개변수를 생략하면 모든 리소스 그룹으로 기본값이 설정됩니다. 특정 가용성 구역의 모든 볼륨을 볼 수도 있습니다.
 
-기본적으로 페이지당 처음 25개의 볼륨이 표시됩니다. 
+기본적으로 페이지당 처음 25개의 볼륨이 표시됩니다.
 
 ## CLI를 사용하여 볼륨 연결에 대한 세부사항 보기
 {: #viewvol-attachment-cli}
@@ -106,7 +111,7 @@ a3f4d60a-c9cf-4666-9a2a-0b1d85f92c19   demo_volume1      50         10     Manua
 ibmcloud is instance-volume-attachment INSTANCE_ID VOLUME_ATTACHMENT_ID [--json]
 ```
 
-인스턴스 ID와 볼륨 연결 ID를 지정하십시오. 선택사항으로, JSON 형식으로 세부사항을 내보낼 수 있습니다. 
+인스턴스 ID와 볼륨 연결 ID를 지정하십시오.  선택사항으로, JSON 형식으로 세부사항을 내보낼 수 있습니다.
 
 ## CLI를 사용하여 모든 볼륨 연결에 대한 세부사항 보기
 
@@ -125,7 +130,7 @@ ibmcloud is instance-volume-attachments INSTANCE_ID [--json]
 ibmcloud is volume-profiles [--json]
 ```
 
-예: 
+예:
 
 ```bash
 $ ibmcloud is volume-profiles
@@ -147,9 +152,9 @@ generalpurpose3  tiered   crn:v1:public:globalcatalog::::volume.profile:generalp
 ibmcloud is volume-profile PROFILE_NAME [--json]
 ```
 
-PROFILE_NAME 값은 10iops-tier, 5iops-tier, general-purpose 및 custom입니다. 
+PROFILE_NAME 값은 10iops-tier, 5iops-tier, general-purpose 및 custom입니다.
 
-예: 
+예:
 
 ```bash
 $ ibmcloud is volume-profile generalpurpose1
@@ -166,7 +171,7 @@ Crn      crn:v1:public:globalcatalog::::volume.profile:generalpurpose
 ## 다음 단계
 {: #next-step-viewing-block-storage-cli}
 
-추가 볼륨을 작성하거나 기존 블록 스토리지 볼륨을 관리하십시오. 
+추가 볼륨을 작성하거나 기존 블록 스토리지 볼륨을 관리하십시오.
 
-* [블록 스토리지 볼륨 작성(CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli)
-* [블록 스토리지 볼륨 관리(CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)
+* [CLI를 사용하여 블록 스토리지 볼륨 작성](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli)
+* [CLI를 사용하여 블록 스토리지 볼륨 관리](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)

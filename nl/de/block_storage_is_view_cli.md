@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-03"
 
 Keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
 
@@ -24,17 +24,22 @@ subcollection: vpc-on-classic-block-storage
 # Blockspeicherdatenträger über die Befehlszeilenschnittstelle anzeigen
 {: #viewing-block-storage-cli}
 
-Zeigen Sie Details zu einem Blockspeicherdatenträger oder Übersichtsdaten zu allen Datenträgern über die Befehlszeilenschnittstelle an.
+Sie können Details zu einem {{site.data.keyword.block_storage_is_short}}-Datenträger oder eine Zusammenfassung der Informationen zu allen Datenträgern über die Befehlszeilenschnittstelle (CLI) anzeigen.
+{:shortdesc}
 
 ## Vorbereitungen
 {: #before-viewing-block-storage-cli}
 
-Stellen Sie sicher, dass Sie die folgenden Plug-ins für die Befehlszeilenschnittstelle heruntergeladen, installiert und initialisiert haben:
+1. Stellen Sie sicher, dass Sie die folgenden Plug-ins für die Befehlszeilenschnittstelle heruntergeladen, installiert und initialisiert haben:
+    * {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle
+    * Infrastrukturservice-Plug-in
 
-* {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle
-* {{site.data.keyword.cloud_notm}} Regional API-Befehlszeilenschnittstelle
-
-Weitere Informationen finden Sie im Abschnitt zu den Voraussetzungen in der [Referenz zur {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle für VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   Weitere Informationen finden Sie in den [Referenzinformationen zur {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle für VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference). 
+   
+   Wenn Sie das VPC-Infrastruktur-Plug-in zum ersten Mal installieren, müssen Sie für die Zielgeneration 'gen 1' festlegen: `ibmcloud is target --gen 1`.
+   {:important}
+   
+2. Stellen Sie sicher, dass bereits eine [{{site.data.keyword.vpc_short}}-Instanz erstellt](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started) wurde. 
 
 ## Details zu einem Blockspeicherdatenträger über die Befehlszeilenschnittstelle anzeigen
 {: #viewvol-cli}
@@ -106,7 +111,7 @@ Führen Sie den folgenden Befehl aus, um Details zu einer Datenträgerzuordnung 
 ibmcloud is instance-volume-attachment INSTANZ-ID DATENTRÄGERZUORDNUNGS-ID [--json]
 ```
 
-Geben Sie eine Instanz-ID und eine ID für die Datenträgerzuordnung an. Bei Bedarf können Sie die Details auch im JSON-Format exportieren.
+Geben Sie eine Instanz-ID und eine ID für die Datenträgerzuordnung an.  Bei Bedarf können Sie die Details auch im JSON-Format exportieren.
 
 ## Details zu allen Datenträgerzuordnungen über die Befehlszeilenschnittstelle anzeigen
 

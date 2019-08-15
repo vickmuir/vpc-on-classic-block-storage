@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-01"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, profile, volume profile, data storage, storage profile, virtual server instance, instance
 
@@ -19,11 +19,11 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 {:note: .note}
 
-
-# 概要文件
+# {{site.data.keyword.block_storage_is_short}} 概要文件
 {: #block-storage-profiles}
 
 使用 {{site.data.keyword.cloud_notm}} 控制台、CLI 或 API 来供应 {{site.data.keyword.block_storage_is_short}} 辅助卷时，可指定最能满足存储需求的 IOPS 概要文件。概要文件可作为三个预定义 IOPS 层提供，也可作为定制 IOPS 提供。IOPS 层可为最高 2 TB 容量的卷提供保证的 IOPS/GB 性能。您还可以指定定制 IOPS 概要文件，并定义某一范围内的卷容量和 IOPS。
+{:shortdesc}
 
 ## 分层 IOPS 概要文件
 {: #tiers}
@@ -38,7 +38,7 @@ subcollection: vpc-on-classic-block-storage
 | | |高于 600 GB 到 2 TB|5 IOPS/GB，最高 10,000 IOPS|
 |10 IOPS/GB|高要求存储工作负载 - 由 NoSQL 数据库创建的数据密集型工作负载，处理用于视频、机器学习和分析的数据|10 GB 到 300 GB|最高 3,000 IOPS|
 | | |高于 300 GB 到 2 TB|10 IOPS/GB，最高 20,000 IOPS|
-{: caption="表 1. IOPS 层和性能" caption-side="top"}
+{: caption="表 1. 每层的 IOPS 层概要文件和性能级别" caption-side="top"}
 
 所有块存储器 IOPS 层的最大吞吐量为 750 MB/秒（基于 16K 块大小）
 
@@ -72,6 +72,7 @@ subcollection: vpc-on-classic-block-storage
 |3 IOPS/GB|[均衡](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles#balanced)（对于常见工作负载）|
 |5 IOPS/GB|[计算](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles#compute)（对于密集型 CPU 需求）|
 |10 IOPS/GB|[内存](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles#memory)（对于内存密集型工作负载）|
+{: caption="表 3. 块存储器概要文件与虚拟服务器概要文件的关系" caption-side="top"}
 
 ## 查看 IOPS 概要文件
 {: #view-iops-profiles}

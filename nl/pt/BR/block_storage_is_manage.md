@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-11"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance
 
@@ -24,14 +24,17 @@ subcollection: vpc-on-classic-block-storage
 # Gerenciando volumes de armazenamento de bloco usando a UI
 {: #managing-block-storage}
 
+Gerencie o {{site.data.keyword.block_storage_is_short}} por meio da IU. Separe um volume de uma instância de servidor virtual, transfira um volume de uma instância para outra, anexe um volume anexado anteriormente, renomeie um volume, configure a exclusão de volume automática, exclua manualmente um volume ou designe o acesso a um volume.
+{:shortdesc}
+
 ## Remover um volume de armazenamento de bloco de uma instância de servidor virtual
 {: #detach}
 
-É possível remover um volume de armazenamento de bloco que está atualmente anexado a uma instância do servidor virtual. A remoção libera o volume para uso por outra instância.
+É possível remover um volume de armazenamento de bloco que está atualmente anexado a uma instância do servidor virtual.  A remoção libera o volume para uso por outra instância.
 
 Para remover um volume:
 
-1. Navegue para a lista de todos os volumes de armazenamento de bloco. No [Console do {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} para a Nuvem particular virtual, acesse **Ícone de menu ![Ícone de menu](../../icons/icon_hamburger.svg) > Armazenamento > Volumes de armazenamento de bloco para VPC**.
+1. Navegue para a lista de todos os volumes de armazenamento de bloco. No [console do {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} para a Nuvem particular virtual, acesse **Ícone de menu ![Ícone de menu](../../icons/icon_hamburger.svg) > Armazenamento > Armazenamento de bloco**.
 1. Localize o volume e, em seguida, clique nas elipsis (...) no final da linha da tabela. Um menu de contexto é exibido.
 1. No menu, clique em **Remover da instância**.
 1. Confirme clicando em **Remover instância** no pop-up.
@@ -44,7 +47,7 @@ Como alternativa, é possível clicar em um volume individual na lista de todos 
 Para transferir um volume de armazenamento de bloco para outra instância de servidor virtual:
 
 1. [Remova o volume de sua instância do servidor virtual](#detach).
-1. Navegue para a instância do servidor virtual para a qual você deseja transferir o volume. No [Console do {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} para a Nuvem particular virtual, acesse **Ícone de menu ![Ícone de menu](../../icons/icon_hamburger.svg) > Cálculo > Instâncias do servidor virtual para VPC.**.
+1. Navegue para a instância do servidor virtual para a qual você deseja transferir o volume. No [console do {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} para a Nuvem particular virtual, acesse **Ícone de menu ![Ícone de menu](../../icons/icon_hamburger.svg) > Cálculo > Instâncias de servidor virtual**.
 1. Selecione um servidor virtual na lista.
 1. Em volumes de Armazenamento anexado, clique no sinal de mais para incluir um volume. Todos os volumes de armazenamento de bloco são exibidos.
 1. Na lista de volumes, selecione o volume que você removeu anteriormente.
@@ -52,9 +55,9 @@ Para transferir um volume de armazenamento de bloco para outra instância de ser
 ## Anexar um volume de armazenamento de bloco anexado anteriormente
 {: #reattach}
 
-Os volumes de armazenamento de bloco são anexados por padrão quando você cria uma nova instância de servidor virtual. Quando você remove um volume de uma instância, ele existe como um volume não anexado e é exibido na lista de [todos os volumes de armazenamento de bloco](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage#viewvols). É possível anexá-lo a outra imagem na lista de volumes de armazenamento de bloco.
+Os volumes de armazenamento de bloco são anexados por padrão quando você cria uma nova instância de servidor virtual.  Quando você remove um volume de uma instância, ele existe como um volume não anexado e é exibido na lista de [todos os volumes de armazenamento de bloco](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage#viewvols). É possível anexá-lo a outra imagem na lista de volumes de armazenamento de bloco.
 
-1. Navegue para a lista de todos os volumes de armazenamento de bloco. No [Console do {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} para a Nuvem particular virtual, navegue para **Ícone de menu ![Ícone de menu](../../icons/icon_hamburger.svg) > Armazenamento > Volumes de armazenamento de bloco para VPC**.
+1. Navegue para a lista de todos os volumes de armazenamento de bloco. No [console do {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} para a Nuvem particular virtual, navegue até **Ícone de menu ![Ícone de menu](../../icons/icon_hamburger.svg) > Armazenamento > Armazenamento de bloco**.
 1. Localize o volume e, em seguida, clique nas elipsis (...) no final da linha da tabela. Um menu de contexto é exibido.
 1. No menu, clique em **Anexar à instância**.
 1. Selecione uma instância de servidor virtual disponível.
@@ -65,7 +68,7 @@ Os volumes de armazenamento de bloco são anexados por padrão quando você cria
 
 É possível mudar o nome de um volume existente para torná-lo mais significativo.
 
-1. Navegue para a lista de todos os volumes de armazenamento de bloco. No [Console do {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} para a Nuvem particular virtual, acesse **Ícone de menu ![Ícone de menu](../../icons/icon_hamburger.svg) > Armazenamento > Volumes de armazenamento de bloco para VPC**.
+1. Navegue para a lista de todos os volumes de armazenamento de bloco. No [console do {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} para a Nuvem particular virtual, acesse **Ícone de menu ![Ícone de menu](../../icons/icon_hamburger.svg) > Armazenamento > Armazenamento de bloco**.
 1. Localize o volume e, em seguida, clique no nome do volume para ir para a página Detalhes do volume.
 1. Clique no ícone de lápis após o nome do volume e edite o nome.
 1. Confirme sua edição.
@@ -77,7 +80,7 @@ A exclusão de um volume de armazenamento de bloco remove completamente seus dad
 
 Não é possível excluir um volume de armazenamento de bloco ativo. Para excluir um volume, primeiro [remova-o](#detach) do servidor virtual e, em seguida, siga estas etapas:
 
-1. Navegue para a lista de todos os volumes de armazenamento de bloco. No [Console do {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} para a Nuvem particular virtual, acesse **Ícone de menu ![Ícone de menu](../../icons/icon_hamburger.svg) > Armazenamento > Volumes de armazenamento de bloco para VPC**.
+1. Navegue para a lista de todos os volumes de armazenamento de bloco. No [console do {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} para a Nuvem particular virtual, acesse **Ícone de menu ![Ícone de menu](../../icons/icon_hamburger.svg) > Armazenamento > Armazenamento de bloco**.
 1. Localize o volume que você deseja excluir e, em seguida, clique nas elipsis no final da linha da tabela. Um menu de contexto é exibido.
 1. No menu, clique em **Excluir**.
 1. Confirme a exclusão.
@@ -89,12 +92,12 @@ Usando o recurso Exclusão automática, é possível especificar que um volume d
 
 Para ativar a Exclusão automática de um volume de armazenamento de bloco existente anexado a uma instância, siga estas etapas:
 
-1. Localize a instância do servidor virtual à qual o volume está anexado. No [Console do {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} para a Nuvem particular virtual, navegue para **Ícone de menu ![Ícone de menu](../../icons/icon_hamburger.svg) > Cálculo > Instâncias do servidor virtual para VPC.**.
+1. Localize a instância do servidor virtual à qual o volume está anexado. No [console do {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} para a Nuvem particular virtual, navegue até **Ícone de menu ![Ícone de menu](../../icons/icon_hamburger.svg) > Cálculo > Instâncias de servidor virtual**.
 1. Em **Volumes de armazenamento de bloco anexados**, selecione um volume.
 1. No menu pop-up, clique no botão de Exclusão automática para ativar.
 1. Confirme sua seleção.
 
-Como alternativa, comece selecionando um volume na lista de volumes de armazenamento de bloco (**Armazenamento > Volumes de armazenamento de bloco para VPC**).
+Como alternativa, comece selecionando um volume na lista de volumes de armazenamento de bloco (**Armazenamento > Armazenamento de bloco**).
 
 Para ativar a Exclusão automática em um novo volume ao criar uma instância, consulte [Criar e anexar um volume de armazenamento de bloco ao criar uma nova instância](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage#create-from-vsi).
 
@@ -109,6 +112,7 @@ Com privilégios de Administrador, é possível designar acesso de usuário de n
 | Tipo de recurso | Selecione **Armazenamento de bloco para VPC** |
 | ID do volume | Insira o [ID do volume](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage#view-vol-details) para designar acesso a um volume específico |
 | Selecione Funções | Designe funções de acesso da plataforma, geralmente, Operador |
+{: caption="Tabela 1. Informações para o IAM" caption-side="top"}
 
 Para obter mais informações, consulte as [melhores práticas para designar acesso](/docs/iam?topic=iam-account_setup#account_setup). Para o processo completo do IAM, que inclui convidar usuários para sua conta e designar acesso ao Cloud IAM, consulte o [Tutorial de introdução do IAM](/docs/iam?topic=iam-getstarted#getstarted).
 
@@ -130,6 +134,7 @@ A tabela a seguir mostra os status que você pode ver ao criar, visualizar ou ge
 | Pendente | Um volume está sendo criado |
 | | Um volume está sendo anexado a uma instância |
 | Exclusão pendente | Um volume está sendo excluído |
+{: caption="Tabela 2. Status de armazenamento de bloco" caption-side="top"}
 
 Você prefere gerenciar volumes de armazenamento de bloco usando a CLI? Para obter informações, consulte [Gerenciando volumes de armazenamento de bloco (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli).
 {: tip}

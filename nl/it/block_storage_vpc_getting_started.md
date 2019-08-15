@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-28"
 
-keywords: block storage, IBM Cloud, VPC, virtual private cloud, IBM CLoud, volume, data storage, classic, virtual server
+keywords: block storage, getting started, IBM Cloud, VPC, virtual private cloud, IBM CLoud, volume, data storage, classic, virtual server
 
 subcollection: vpc-on-classic-block-storage
 
@@ -18,14 +18,16 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 {:important: .important}
 {:note: .note}
+{:shortdesc: .shortdesc}
 {:DomainName: data-hd-keyref="APPDomain"}
 {:DomainName: data-hd-keyref="DomainName"}
 {:external: target="_blank" .external}
 
-# Esercitazione introduttiva 
+# Introduzione a {{site.data.keyword.block_storage_is_short}}
 {: #getting-started}
 
 Questa esercitazione ti aiuta nella creazione di volumi {{site.data.keyword.block_storage_is_short}} su un VPC (Virtual Private Cloud).
+{: .shortdesc}
 
 ## Prima di cominciare
 {: #block-storage-before-you-begin}
@@ -51,7 +53,7 @@ Seleziona un [profilo livello IOPS](/docs/vpc-on-classic-block-storage?topic=vpc
 
 Dopo aver scelto la dimensione e le prestazioni dei tuoi volumi di archiviazione blocchi, vedi le informazioni sui [Prezzi](/docs/vpc-on-classic?topic=vpc-on-classic-block-storage-pricing) per calcolare i prezzi dei tuoi volumi e comprendere come avviene la fatturazione.
 
-## Passo 3 - Accedi al tuo account {{site.data.keyword.cloud_notm}} 
+## Passo 3 - Accedi al tuo account {{site.data.keyword.cloud_notm}}
 {: block-storage-log-into-ibm-account}
 
 Accesso al modulo d'ordine di {{site.data.keyword.block_storage_is_short}} dal [catalogo {{site.data.keyword.cloud_notm}}](https://{DomainName}/catalog){: external}. Utilizza il tuo ID IBM e la tua password.

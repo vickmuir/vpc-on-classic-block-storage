@@ -2,9 +2,9 @@
 
 Copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-23"
 
-keywords: block storage, IBM Cloud, VPC, virtual private cloud, Key Protect, encryption, key management, Hyper Protect Crypto Services, HPCS, volume, data storage, virtual server instance, instance
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, Key Protect, encryption, key management, Hyper Protect Crypto Services, HPCS, volume, data storage, virtual server instance, instance, customer-managed encryption
 
 subcollection: vpc-on-classic-block-storage
 
@@ -18,11 +18,11 @@ subcollection: vpc-on-classic-block-storage
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 
-
-# 创建使用客户管理的加密的块存储卷
+# 使用客户管理的加密创建块存储卷
 {: #block-storage-encryption}
 
-缺省情况下，{{site.data.keyword.block_storage_is_short}} 引导卷和数据卷使用 IBM 管理的加密进行加密。您还可以使用支持的密钥管理服务创建或导入客户根密钥，以创建客户管理的加密卷。对于在实例供应期间创建的引导卷和数据卷，可以选择“客户管理的加密”选项。还可以在创建独立数据卷时，指定客户管理的加密。  
+缺省情况下，{{site.data.keyword.block_storage_is_short}} 引导卷和数据卷使用 IBM 管理的加密进行加密。您还可以使用支持的密钥管理服务创建或导入客户根密钥，以创建客户管理的加密卷。对于在实例供应期间创建的引导卷和数据卷，可以选择“客户管理的加密”选项。还可以在创建独立数据卷时，指定客户管理的加密。
+{:shortdesc}
 
 ## 块存储卷的密钥管理服务
 {: #key-mgt-services-for-storage}
@@ -33,6 +33,7 @@ subcollection: vpc-on-classic-block-storage
 | ----- | ----- |
 | [{{site.data.keyword.keymanagementserviceshort}}](/docs/services/key-protect/concepts?topic=key-protect-getting-started-tutorial#getting-started-tutorial) |符合 FIPS 140-2 *第 2 级*要求|
 | [{{site.data.keyword.hscrypto}}](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started) |符合 FIPS 140-2 *第 4 级*要求|
+{: caption="表 1. {{site.data.keyword.block_storage_is_short}} 的密钥管理服务" caption-side="top"}
 
 ## 先决条件
 {: #custom-managed-vol-prereqs}
@@ -60,7 +61,7 @@ subcollection: vpc-on-classic-block-storage
 要在创建独立卷时指定客户管理的加密，请执行以下步骤：
 
 1. 在 {{site.data.keyword.cloud_notm}} 控制台中，导航至**菜单图标 ![“菜单”图标](../../icons/icon_hamburger.svg) > VPC 基础架构 > 存储 > 块存储卷**。这将显示所有块存储卷的列表。
-1. 选择**新建卷**。在“新建块存储卷”页面上，更新“加密”部分中的字段。
+1. 选择**新建卷**。
 1. 在**新建块存储卷**页面上，更新**加密**部分中的字段。请参阅下表以获取更多信息。更改完成后，单击**创建卷**。
 
 |字段|值|
@@ -106,4 +107,4 @@ Volume Attachment Instance Reference    none
 
 ## 使用 UI 编辑引导卷以使用客户管理的加密
 
-通过 UI 创建实例时，可以通过编辑引导卷属性来指定客户管理的加密。有关信息，请参阅[为虚拟服务器实例供应使用客户管理的加密的卷](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-storage#provision-byok-ui)。
+通过 UI 创建实例时，可以通过编辑引导卷属性来指定客户管理的加密。有关信息，请参阅[为虚拟服务器实例供应使用客户管理的加密的卷](docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-instances-byok#provision-byok-ui)。

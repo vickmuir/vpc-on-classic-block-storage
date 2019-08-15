@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-22"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance, IOPS, HPCS, Key Protect
 
@@ -17,14 +17,14 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 {:note: .note}
 
-# Informationen zu Block Storage for VPC
+# Informationen zu {{site.data.keyword.block_storage_is_short}}
 {: #block-storage-about}
 [comment]: # (verknüpfter Hilfeabschnitt)
 
-{{site.data.keyword.block_storage_is_full}} (VPC) stellt einen hypervisorbasierten Hochleistungsdatenspeicher für Ihre virtuellen Serverinstanzen (Instanzen) bereit, die Sie in {{site.data.keyword.vpc_full}} (VPC) bereitstellen können. Die VPC-Infrastruktur ermöglicht eine schnelle Skalierung über mehrere Regionen und Zonen hinweg und bietet zusätzliche Leistung und Sicherheit. Weitere Informationen zu {{site.data.keyword.vpc_short}} finden Sie unter [Informationen zu Virtual Private Cloud](/docs/vpc-on-classic?topic=vpc-on-classic-about).{:shortdesc}
+{{site.data.keyword.block_storage_is_full}} (VPC) stellt einen hypervisorbasierten Hochleistungsdatenspeicher für Ihre virtuellen Serverinstanzen (Instanzen) bereit, die Sie in {{site.data.keyword.vpc_full}} (VPC) bereitstellen können. Die VPC-Infrastruktur ermöglicht eine schnelle Skalierung über mehrere Regionen und Zonen hinweg und bietet zusätzliche Leistung und Sicherheit. Weitere Informationen zu {{site.data.keyword.vpc_short}} finden Sie unter [Informationen zu Virtual Private Cloud](/docs/vpc-on-classic?topic=vpc-on-classic-about).
+{:shortdesc}
 
-{{site.data.keyword.block_storage_is_short}} stellt primäre Bootdatenträger und sekundäre Datenträger für Daten bereit. Bootdatenträger werden bei der Instanzbereitstellung automatisch erstellt und zugeordnet. Sekundäre Datenträger können bei der Instanzbereitstellung erstellt und zugeordnet werden oder als eigenständige Datenträger erstellt werden, die Sie zu einem späteren Zeitpunkt zu einer Instanz zuordnen können. Zum Schutz Ihrer Daten können Sie Ihren eigenen Verschlüsselungsschlüssel oder die von IBM verwaltete Verschlüsselung verwenden.
-Mit [IOPS-Tier-Profilen](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#tiers) können Sie eine vordefinierte Leistungsstufe für Ihre Datenträger angeben. Sie können auch ein [angepasstes IOPS-Profil](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom) auswählen und eine eigene Datenträgerkapazität und IOPS-Stufe definieren.
+{{site.data.keyword.block_storage_is_short}} stellt primäre Bootdatenträger und sekundäre Datenträger für Daten bereit. Bootdatenträger werden bei der Instanzbereitstellung automatisch erstellt und zugeordnet. Sekundäre Datenträger können bei der Instanzbereitstellung erstellt und zugeordnet werden oder als eigenständige Datenträger erstellt werden, die Sie zu einem späteren Zeitpunkt zu einer Instanz zuordnen können. Zum Schutz Ihrer Daten können Sie Ihren eigenen Verschlüsselungsschlüssel oder die von IBM verwaltete Verschlüsselung verwenden. Mit [IOPS-Tier-Profilen](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#tiers) können Sie eine vordefinierte Leistungsstufe für Ihre Datenträger angeben. Sie können auch ein [angepasstes IOPS-Profil](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom) auswählen und eine eigene Datenträgerkapazität und IOPS-Stufe definieren.
 
 ## Blockspeicher für VPC-Datenträger
 {: #block-storage-vpc-volumes}
@@ -39,7 +39,7 @@ Wenn Sie eine Instanz erstellen, wird automatisch ein 100-GB-Bootdatenträger er
 ### Sekundäre Datenträger (für Daten)
 {: #secondary-data-volumes}
 
-Blockspeicherdatenträger für Daten stellen sekundäre Datenträger mit einem Gesamtkapazitätsbereich von 10 GB bis 2000 GB dar. Die maximalen E/A-Operationen pro Sekunde für sekundäre Datenträger variieren je nach Datenträgergröße und dem ausgewählten IOPS-Tier-Profil. Der maximale IOPS-Wert für einen für allgemeine Zwecke eingesetzten Datenträger mit bis zu 1 TB beträgt beispielsweise 3.000 E/A-Operationen pro Sekunde. Weitere Informationen hierzu finden Sie unter [Profile mit IOPS-Tiers](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#tiers). 
+Blockspeicherdatenträger für Daten stellen sekundäre Datenträger mit einem Gesamtkapazitätsbereich von 10 GB bis 2000 GB dar. Die maximalen E/A-Operationen pro Sekunde für sekundäre Datenträger variieren je nach Datenträgergröße und dem ausgewählten IOPS-Tier-Profil. Der maximale IOPS-Wert für einen für allgemeine Zwecke eingesetzten Datenträger mit bis zu 1 TB beträgt beispielsweise 3.000 E/A-Operationen pro Sekunde. Weitere Informationen hierzu finden Sie unter [Profile mit IOPS-Tiers](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#tiers).
 
 Sekundäre Datenträger werden als eigenständige Datenträger oder beim Bereitstellen einer Instanz erstellt. Eigenständige Datenträger weisen einen nicht zugeordneten Status auf, bis Sie den Datenträger zu einer Instanz zuordnen. Wenn Sie einen sekundären Datenträger bei der Instanzbereitstellung erstellen, wird der Datenträger der Instanz automatisch zugeordnet.  
 
@@ -47,7 +47,7 @@ Sekundäre Blockspeicherdatenträger können einer beliebigen verfügbaren Insta
 
 Sekundäre Datenträger werden standardmäßig mit von IBM verwalteter Verschlüsselung verschlüsselt. Bei Bedarf können Sie sekundäre Datenträger auch mit Ihrem [eigenen Verschlüsselungsschlüssel](#about-customer-managed-encrytion) verschlüsseln.
 
-## Verschlüsselung für ruhende Daten
+## Block Storage-Verschlüsselung für ruhende Daten
 {: #encryption}
 
 Bei {{site.data.keyword.cloud_notm}} wird dem Bedürfnis nach Sicherheit und der Bedeutung von Verschlüsselungsfunktionalität für die Datensicherheit Rechnung getragen. Wenn Sie einen eigenständigen Datenträger erstellen oder einen Datenträger beim Erstellen einer Instanz erstellen, können Sie auswählen, ob Ihre Daten mit von IBM verwalteter Verschlüsselung (vom Provider verwalteter Verschlüsselung) oder über Ihre eigenen Verschlüsselungsschlüssel geschützt werden sollen.  
@@ -76,4 +76,5 @@ Weitere Informationen zum Erstellen und Verwalten von Instanzen in VPC finden Si
 
 Einstiegsinformationen zum Erstellen von Blockspeicher für VPC finden Sie unter [Blockspeicherdatenträger erstellen](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage#creating-block-storage).
 
-{{site.data.keyword.block_storage_is_short}} stellt Features bereit, die VPC auszeichnen, und ist nicht mit Speicher der klassischen Infrastruktur kompatibel. Wenn Sie sich für {{site.data.keyword.blockstoragefull}} in der klassischen Infrastruktur interessieren, lesen Sie den Abschnitt [{{site.data.keyword.blockstoragefull}}](/docs/infrastructure/BlockStorage?topic=BlockStorage-About).{:note}
+{{site.data.keyword.block_storage_is_short}} stellt Features bereit, die VPC auszeichnen, und ist nicht mit Speicher der klassischen Infrastruktur kompatibel. Wenn Sie sich für {{site.data.keyword.blockstoragefull}} in der klassischen Infrastruktur interessieren, lesen Sie den Abschnitt [{{site.data.keyword.blockstoragefull}}](/docs/infrastructure/BlockStorage?topic=BlockStorage-About).
+{:note}

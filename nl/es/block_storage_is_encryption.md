@@ -2,9 +2,9 @@
 
 Copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-23"
 
-keywords: block storage, IBM Cloud, VPC, virtual private cloud, Key Protect, encryption, key management, Hyper Protect Crypto Services, HPCS, volume, data storage, virtual server instance, instance
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, Key Protect, encryption, key management, Hyper Protect Crypto Services, HPCS, volume, data storage, virtual server instance, instance, customer-managed encryption
 
 subcollection: vpc-on-classic-block-storage
 
@@ -18,11 +18,11 @@ subcollection: vpc-on-classic-block-storage
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 
-
 # Creación de volúmenes de almacenamiento en bloque con cifrado gestionado por el cliente
 {: #block-storage-encryption}
 
-De forma predeterminada, los volúmenes de datos y de arranque de {{site.data.keyword.block_storage_is_short}} se cifran con cifrado gestionado por IBM. También puede crear volúmenes cifrados gestionados por el cliente utilizando un servicio de gestión de claves soportado para crear o importar la clave raíz del cliente. El cifrado gestionado por el cliente es una opción para los volúmenes de arranque y de datos que se crean durante el suministro de la instancia.  También puede especificar el cifrado gestionado por el cliente cuando cree un volumen de datos autónomo.  
+De forma predeterminada, los volúmenes de datos y de arranque de {{site.data.keyword.block_storage_is_short}} se cifran con cifrado gestionado por IBM. También puede crear volúmenes cifrados gestionados por el cliente utilizando un servicio de gestión de claves soportado para crear o importar la clave raíz del cliente. El cifrado gestionado por el cliente es una opción para los volúmenes de arranque y de datos que se crean durante el suministro de la instancia.  También puede especificar el cifrado gestionado por el cliente cuando cree un volumen de datos autónomo.
+{:shortdesc}
 
 ## Servicios de gestión de claves para volúmenes de almacenamiento en bloque
 {: #key-mgt-services-for-storage}
@@ -33,6 +33,7 @@ Hay dos servicios de gestión de claves disponibles: {{site.data.keyword.keymana
 | ----- | ----- |
 | [{{site.data.keyword.keymanagementserviceshort}}](/docs/services/key-protect/concepts?topic=key-protect-getting-started-tutorial#getting-started-tutorial) | Conformidad con FIPS 140-2 *Nivel 2* |
 | [{{site.data.keyword.hscrypto}}](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started) | Conformidad con FIPS 140-2 *Nivel 4* |
+{: caption="Tabla 1. Servicios de gestión de claves para {{site.data.keyword.block_storage_is_short}}" caption-side="top"}
 
 ## Requisitos previos
 {: #custom-managed-vol-prereqs}
@@ -62,12 +63,12 @@ Para especificar el cifrado gestionado por el cliente cuando cree un volumen aut
 
 1. En la consola de {{site.data.keyword.cloud_notm}}, vaya a **icono de menú ![icono de menú](../../icons/icon_hamburger.svg) > Infraestructura VPC > Almacenamiento > Volúmenes de almacenamiento en bloque**.
 Se mostrará una lista de todos los volúmenes de almacenamiento en bloque.
-1. Seleccione **Nuevo volumen**. En la página Nuevo volumen de almacenamiento en bloque, actualice los campos de la sección Cifrado.
+1. Seleccione **Nuevo volumen**.
 1. En la página **Nuevo volumen de almacenamiento en bloque**, actualice los campos de la sección **Cifrado**. Consulte la tabla siguiente para obtener más información. Cuando termine de hacer cambios, pulse **Crear volumen**.
 
 | Campo | Valor |
 | ----- | ----- |
-| Cifrado | _Gestionado por el proveedor_ es la modalidad de cifrado predeterminada. Para utilizar el cifrado gestionado por el cliente, seleccione un servicio de gestión de claves ({{site.data.keyword.keymanagementserviceshort}} o {{site.data.keyword.hscrypto}}). La instancia del servicio de gestión de claves debe incluir la clave raíz del cliente que desea utilizar para el cifrado gestionado por el cliente. |
+| Cifrado | _Gestionado por el proveedor_ es la modalidad de cifrado predeterminada. Para utilizar el cifrado gestionado por el cliente, seleccione un servicio de gestión de claves ({{site.data.keyword.keymanagementserviceshort}} o {{site.data.keyword.hscrypto}}). Si tiene varias instancias de servicio de gestión de claves suministradas en la cuenta, seleccione la que incluye la clave raíz del cliente que desea utilizar para el cifrado gestionado por el cliente. |
 | Instancia servicio de cifrado | Si tiene varias instancias de servicio de gestión de claves suministradas en la cuenta, seleccione la que incluye la clave raíz del cliente que desea utilizar para el cifrado gestionado por el cliente. |
 | Nombre de clave | Seleccione la clave de cifrado de datos en la instancia de {{site.data.keyword.keymanagementserviceshort}} que desea utilizar para cifrar el volumen. |
 | ID de clave | Muestra el ID de clave que está asociado con la clave de cifrado de datos que ha seleccionado. |
@@ -108,4 +109,4 @@ También puede crear volúmenes con cifrado gestionado por el cliente cuando sum
 
 ## Edición de volúmenes de arranque para que utilicen el cifrado gestionado por el cliente mediante la interfaz de usuario
 
-Cuando cree una instancia desde la interfaz de usuario, puede especificar el cifrado gestionado por el cliente editando las propiedades del volumen de arranque. Para obtener información, consulte [Suministro de instancias de servidor virtual con volúmenes que utilizan cifrado gestionado por el cliente](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-storage#provision-byok-ui).
+Cuando cree una instancia desde la interfaz de usuario, puede especificar el cifrado gestionado por el cliente editando las propiedades del volumen de arranque. Para obtener información, consulte [Suministro de instancias de servidor virtual con volúmenes que utilizan cifrado gestionado por el cliente](docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-instances-byok#provision-byok-ui).

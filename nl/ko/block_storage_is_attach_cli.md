@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-01"
 
-keywords: block storage, IBM Cloud, VPC, CLI, block storage volume, volume, volume attachment, virtual server instance, instance
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, CLI, block storage volume, volume, volume attachment, virtual server instance, instance
 
 subcollection: vpc-on-classic-block-storage
 
@@ -18,40 +18,44 @@ subcollection: vpc-on-classic-block-storage
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-
 # CLI를 사용하여 블록 스토리지 볼륨 연결
 {: #attaching-block-storage-cli}
 
-볼륨 연결은 블록 스토리지 볼륨을 가상 서버 인스턴스에 연결합니다. 각 인스턴스에 [많은 볼륨 연결](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits)이 있을 수 있지만, 단일 볼륨 연결은 하나의 볼륨을 하나의 인스턴스에 연결합니다. 
+볼륨 연결은 {{site.data.keyword.block_storage_is_short}} 볼륨을 가상 서버 인스턴스에 연결합니다. 각 인스턴스에 [많은 볼륨 연결](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits)이 있을 수 있지만, 단일 볼륨 연결은 하나의 볼륨을 하나의 인스턴스에 연결합니다.
+{:shortdesc}
 
 ## 시작하기 전에
 {: #before-attaching-block-storage-cli}
 
-다음의 CLI 플러그인을 다운로드, 설치 및 초기화했는지 확인하십시오. 
+1. 다음의 CLI 플러그인을 다운로드, 설치 및 초기화했는지 확인하십시오.
+    * {{site.data.keyword.cloud_notm}} CLI
+    * infrastructure-service 플러그인
 
-* {{site.data.keyword.cloud_notm}} CLI
-* {{site.data.keyword.cloud_notm}} 지역 API CLI
-
-자세한 정보는 [VPC용 IBM Cloud CLI 참조서](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)의 전제조건을 참조하십시오.
+   자세한 정보는 [VPC용 {{site.data.keyword.cloud_notm}} CLI 참조](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)의 내용을 참조하십시오.
+   
+   vpc 인프라 플러그인을 처음 설치할 때 대상 세대를 1 세대로 설정해야 합니다(`ibmcloud is target --gen 1`).
+   {:important}
+   
+2. 이미 [{{site.data.keyword.vpc_short}}를 작성](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started)했는지 확인하십시오.
 
 ## CLI를 사용하여 블록 스토리지 볼륨 연결
 {: #attach-block-storage-cli}
 
-현재 리소스 그룹의 가상 서버 인스턴스에 볼륨을 연결하려면 다음 명령을 실행하십시오. 
+현재 리소스 그룹의 가상 서버 인스턴스에 볼륨을 연결하려면 다음 명령을 실행하십시오.
 
 ```bash
 ibmcloud is instance-volume-attachment-add NAME INSTANCE_ID VOLUME_ID [--auto-delete true | false] [--json]
 ```
 
-`NAME`은 볼륨 연결을 위해 제공되는 이름이며, INSTANCE_ID는 VSI의 ID입니다. 
+`NAME`은 볼륨 연결을 위해 제공되는 이름이며, INSTANCE_ID는 VSI의 ID입니다.
 
-`VOLUME_ID`는 연결 중인 볼륨을 지정합니다. 
+`VOLUME_ID`는 연결 중인 볼륨을 지정합니다.
 
-VSI 삭제 시에 볼륨이 자동으로 삭제되도록 하려면 `--auto-delete true`를 지정하십시오. 
+VSI 삭제 시에 볼륨이 자동으로 삭제되도록 하려면 `--auto-delete true`를 지정하십시오.
 
-사용 가능한 가상 서버 인스턴스 목록을 보려면 `ibmcloud is instances` 명령을 실행하십시오. 
+사용 가능한 가상 서버 인스턴스 목록을 보려면 `ibmcloud is instances` 명령을 실행하십시오.
 
-예: 
+예:
 
 ```bash
 $ ibmcloud is instances
@@ -113,7 +117,7 @@ CLI를 사용하여 가상 서버 인스턴스를 프로비저닝하고 프로�
 ## 다음 단계
 {: #next-step-attaching-block-storage-cli}
 
-추가 볼륨을 작성하고 기존 볼륨을 관리하십시오. 다음 정보를 참조하십시오. 
+추가 볼륨을 작성하고 기존 볼륨을 관리하십시오.  다음 정보를 참조하십시오.
 
 * [CLI를 사용하여 블록 스토리지 볼륨 작성](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli#create-vol-cli)
 * [CLI를 사용하여 블록 스토리지 볼륨 관리](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)

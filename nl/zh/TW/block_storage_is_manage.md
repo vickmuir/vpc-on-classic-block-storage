@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-11"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance
 
@@ -24,6 +24,9 @@ subcollection: vpc-on-classic-block-storage
 # 利用使用者介面管理區塊儲存空間磁區
 {: #managing-block-storage}
 
+從使用者介面管理 {{site.data.keyword.block_storage_is_short}}。從虛擬伺服器實例分離磁區、將磁區從某個實例傳送至另一個實例、連接先前連接的磁區、重新命名磁區、設定自動磁區刪除、手動刪除磁區，或指派磁區存取權。
+{:shortdesc}
+
 ## 從虛擬伺服器實例分離區塊儲存空間磁區
 {: #detach}
 
@@ -31,7 +34,7 @@ subcollection: vpc-on-classic-block-storage
 
 若要分離磁區，請執行下列動作：
 
-1. 導覽至所有區塊儲存空間磁區的清單。在 Virtual Private Cloud 的 [{{site.data.keyword.cloud_notm}} 主控台](https://{DomainName}/vpc){: external}中，移至**功能表圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) > 儲存空間 > VPC 的區塊儲存空間磁區**。
+1. 導覽至所有區塊儲存空間磁區的清單。在 Virtual Private Cloud 的 [{{site.data.keyword.cloud_notm}} 主控台](https://{DomainName}/vpc){: external}中，移至**功能表圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) > 儲存空間 > 區塊儲存空間**。
 1. 找出磁區，然後按一下表格列尾端的省略符號 (...)。即會顯示快速功能表。
 1. 從功能表中，按一下**從實例分離**。
 1. 按一下蹦現畫面中的**分離實例**以確認。
@@ -44,7 +47,7 @@ subcollection: vpc-on-classic-block-storage
 若要將區塊儲存空間磁區傳送至另一個虛擬伺服器實例，請執行下列動作：
 
 1. [從虛擬伺服器實例中分離磁區](#detach)。
-1. 導覽至您要將磁區傳送至其中的虛擬伺服器實例。在 Virtual Private Cloud 的 [{{site.data.keyword.cloud_notm}} 主控台](https://{DomainName}/vpc){: external}中，移至**功能表圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) > 運算 > VPC 的虛擬伺服器實例**。
+1. 導覽至您要將磁區傳送至其中的虛擬伺服器實例。在 Virtual Private Cloud 的 [{{site.data.keyword.cloud_notm}} 主控台](https://{DomainName}/vpc){: external}中，移至**功能表圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) > 運算 > 虛擬伺服器實例**。
 1. 從清單中選取虛擬伺服器。
 1. 在「連接的儲存空間磁區」下，按一下加號以新增磁區。即會顯示所有區塊儲存空間磁區。
 1. 從磁區清單中，選取先前分離的磁區。
@@ -54,7 +57,7 @@ subcollection: vpc-on-classic-block-storage
 
 當您建立新的虛擬伺服器實例時，依預設會連接區塊儲存空間磁區。當您從實例分離磁區時，它會以未連接的磁區形式存在，且會顯示在[所有區塊儲存空間磁區](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage#viewvols)的清單中。您可以從區塊儲存空間磁區的清單中，將它連接至另一個映像檔。
 
-1. 導覽至所有區塊儲存空間磁區的清單。在 Virtual Private Cloud 的 [{{site.data.keyword.cloud_notm}} 主控台](https://{DomainName}/vpc){: external}中，導覽至**功能表圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) > 儲存空間 > VPC 的區塊儲存空間磁區**。
+1. 導覽至所有區塊儲存空間磁區的清單。在 Virtual Private Cloud 的 [{{site.data.keyword.cloud_notm}} 主控台](https://{DomainName}/vpc){: external}中，導覽至**功能表圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) > 儲存空間 > 區塊儲存空間**。
 1. 找出磁區，然後按一下表格列尾端的省略符號 (...)。即會顯示快速功能表。
 1. 從功能表中，按一下**連接至實例**。
 1. 選取可用的虛擬伺服器實例。
@@ -65,7 +68,7 @@ subcollection: vpc-on-classic-block-storage
 
 您可以變更現有磁區的名稱，讓它更有意義。
 
-1. 導覽至所有區塊儲存空間磁區的清單。在 Virtual Private Cloud 的 [{{site.data.keyword.cloud_notm}} 主控台](https://{DomainName}/vpc){: external}中，移至**功能表圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) > 儲存空間 > VPC 的區塊儲存空間磁區**。
+1. 導覽至所有區塊儲存空間磁區的清單。在 Virtual Private Cloud 的 [{{site.data.keyword.cloud_notm}} 主控台](https://{DomainName}/vpc){: external}中，移至**功能表圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) > 儲存空間 > 區塊儲存空間**。
 1. 找出磁區，然後按一下磁區的名稱，以移至「磁區詳細資料」頁面。
 1. 按一下磁區名稱之後的鉛筆圖示，然後編輯磁區名稱。
 1. 確認您的編輯。
@@ -77,7 +80,7 @@ subcollection: vpc-on-classic-block-storage
 
 您無法刪除作用中的區塊儲存空間磁區。若要刪除磁區，請先從虛擬伺服器[分離磁區](#detach)，然後遵循下列步驟：
 
-1. 導覽至所有區塊儲存空間磁區的清單。在 Virtual Private Cloud 的 [{{site.data.keyword.cloud_notm}} 主控台](https://{DomainName}/vpc){: external}中，移至**功能表圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) > 儲存空間 > VPC 的區塊儲存空間磁區**。
+1. 導覽至所有區塊儲存空間磁區的清單。在 Virtual Private Cloud 的 [{{site.data.keyword.cloud_notm}} 主控台](https://{DomainName}/vpc){: external}中，移至**功能表圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) > 儲存空間 > 區塊儲存空間**。
 1. 找出您要刪除的磁區，然後按一下表格列尾端的省略符號。即會顯示快速功能表。
 1. 從功能表中，按一下**刪除**。
 1. 確認刪除。
@@ -89,12 +92,12 @@ subcollection: vpc-on-classic-block-storage
 
 若要針對連接至實例的現有區塊儲存空間磁區啟用「自動刪除」，請遵循下列步驟：
 
-1. 找出磁區所連接的虛擬伺服器實例。在 Virtual Private Cloud 的 [{{site.data.keyword.cloud_notm}} 主控台](https://{DomainName}/vpc){: external}中，導覽至**功能表圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) > 運算 > VPC 的虛擬伺服器實例**。
+1. 找出磁區所連接的虛擬伺服器實例。在 Virtual Private Cloud 的 [{{site.data.keyword.cloud_notm}} 主控台](https://{DomainName}/vpc){: external}中，導覽至**功能表圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) > 運算 > 虛擬伺服器實例**。
 1. 在**連接的區塊儲存空間磁區**下，選取一個磁區。
 1. 在蹦現功能表上，按一下「自動刪除」按鈕以啟用。
 1. 確認您選取的項目。
 
-或者，從區塊儲存空間磁區的清單（**儲存空間 > VPC 的區塊儲存空間磁區**）中選取一個磁區以開始。
+或者，從區塊儲存空間磁區的清單（**儲存空間 > 區塊儲存空間**）中選取一個磁區以開始。
 
 若要在建立實例時對新磁區啟用「自動刪除」，請參閱[建立新實例時建立並連接區塊儲存空間磁區](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage#create-from-vsi)。
 
@@ -109,6 +112,7 @@ subcollection: vpc-on-classic-block-storage
 | 資源類型 | 選取 **Block Storage for VPC** |
 | 磁區 ID | 輸入[磁區 ID](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage#view-vol-details)，以指派特定磁區的存取權 |
 | 選取角色 | 指派平台存取角色（通常是「操作員」）|
+{: caption="表 1. IAM 的資訊" caption-side="top"}
 
 如需相關資訊，請參閱[指派存取權的最佳作法](/docs/iam?topic=iam-account_setup#account_setup)。如需完整的 IAM 處理程序（包括邀請使用者加入您的帳戶，及指派 Cloud IAM 存取權），請參閱 [IAM 入門指導教學](/docs/iam?topic=iam-getstarted#getstarted)。
 
@@ -131,6 +135,7 @@ subcollection: vpc-on-classic-block-storage
 | 擱置中 | 正在建立磁區 |
 | | 磁區正在連接至實例 |
 | 刪除擱置中 | 正在刪除磁區 |
+{: caption="表 2. 區塊儲存空間狀態" caption-side="top"}
 
 您偏好使用 CLI 來管理區塊儲存空間磁區嗎？如需相關資訊，請參閱[管理區塊儲存空間磁區 (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)。
 {: tip}

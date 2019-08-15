@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-01"
 
-keywords: block storage, IBM Cloud, VPC, CLI, block storage volume, volume, volume attachment, virtual server instance, instance
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, CLI, block storage volume, volume, volume attachment, virtual server instance, instance
 
 subcollection: vpc-on-classic-block-storage
 
@@ -18,26 +18,30 @@ subcollection: vpc-on-classic-block-storage
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-
-# Connexion d'un volume de stockage par blocs à l'aide de la CLI 
+# Connexion d'un volume de stockage par blocs à l'aide de la CLI
 {: #attaching-block-storage-cli}
 
-Une connexion à un volume relie un volume de stockage par blocs à une instance de serveur virtuel. Chaque instance peut comporter [plusieurs connexions de volume](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits), mais une seule connexion relie un volume à une instance.
+Une connexion à un volume relie un volume {{site.data.keyword.block_storage_is_short}} à une instance de serveur virtuel. Chaque instance peut comporter [plusieurs connexions de volume](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits), mais une seule connexion relie un volume à une instance.
+{:shortdesc}
 
 ## Avant de commencer
 {: #before-attaching-block-storage-cli}
 
-Assurez-vous d'avoir téléchargé, installé et initialisé les plug-ins CLI suivants : 
+1. Assurez-vous d'avoir téléchargé, installé et initialisé les plug-ins CLI suivants :
+    * Interface CLI d'{{site.data.keyword.cloud_notm}}
+    * Plug-in infrastructure-service
 
-* Interface CLI d'{{site.data.keyword.cloud_notm}}
-* Interface CLI de l'API d'{{site.data.keyword.cloud_notm}} Regional 
+   Pour plus d'informations, voir [{{site.data.keyword.cloud_notm}} CLI for VPC Reference](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   
+   Lorsque vous installez le plug-in vpc-infrastructure pour la première fois, vous devez définir la génération cible sur gen 1, `ibmcloud is target --gen 1`.
+   {:important}
+   
+2. Assurez-vous que vous avez déjà [créé une instance {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 
-Pour plus d'informations, voir les conditions préalables requises dans [Référence CLI IBM Cloud for VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
-
-## Connexion d'un volume de stockage par blocs à l'aide de la CLI 
+## Connexion d'un volume de stockage par blocs à l'aide de la CLI
 {: #attach-block-storage-cli}
 
-Pour connecter un volume à une instance de serveur virtuel du groupe de ressources en cours, exécutez la commande suivante. 
+Pour connecter un volume à une instance de serveur virtuel du groupe de ressources en cours, exécutez la commande suivante.
 
 ```bash
 ibmcloud is instance-volume-attachment-add NAME INSTANCE_ID VOLUME_ID [--auto-delete true | false] [--json]
@@ -65,7 +69,7 @@ e6353eba-c407-4406-b9f6-c50ee1da8d83   vsi-09201             192.xxx.xxx.xxx  - 
 ```
 {: screen}
 
-## Affichage des détails d'un volume connecté à une instance de serveur virtuel 
+## Affichage des détails d'un volume connecté à une instance de serveur virtuel
 {: #show-details-attached-vol}
 
 Après avoir connecté un volume, vous pouvez afficher les détails en spécifiant l'ID d'instance et l'ID de la connexion de volume dans la commande `instance-volume-attachment`.
@@ -74,7 +78,7 @@ Après avoir connecté un volume, vous pouvez afficher les détails en spécifia
 ibmcloud is instance-volume-attachment INSTANCE_ID VOLUME_ATTACHMENT_ID [--json]
 ```
 
-## Affichage de toutes les connexions de volume d'une instance de serveur 
+## Affichage de toutes les connexions de volume d'une instance de serveur
 
 Utilisez la commande `instance-volume-attachments` et spécifiez l'ID d'instance pour afficher toutes les connexions de volumes à une instance.
 
@@ -85,12 +89,12 @@ ibmcloud is instance-volume-attachments INSTANCE_ID [--json]
 Vous préférez utiliser la console {{site.data.keyword.cloud}} ? Pour plus d'informations sur la manière dont les volumes sont connectés à partir de la console, voir [Connexion de volumes de stockage par blocs](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage).
 {:tip}
 
-## Création d'un fichier JSON de connexion de volume 
+## Création d'un fichier JSON de connexion de volume
 {: #volume_attachment_json}
 
 Lorsque vous mettez à disposition une instance de serveur virtuel à l'aide de la CLI et créez un volume de stockage par blocs dans le cadre du processus, vous devez spécifier un fichier JSON de connexion de volume. Le fichier JSON de connexion de volume, spécifié dans la commande ou sous forme de fichier, définit les paramètres de volume. Lorsque vous [créez une instance](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-virtual-servers-cli) et spécifiez le paramètre `--volume-attach`, vous spécifiez le fichier JSON du volume. Par exemple, `--volume-attach @/Users/myname/myvolume-attachment_create.json`.
 
-Voici un exemple de fichier JSON de connexion de volume qui définit un volume personnalisé : 
+Voici un exemple de fichier JSON de connexion de volume qui définit un volume personnalisé :
 
 ```
 [
@@ -113,7 +117,7 @@ Voici un exemple de fichier JSON de connexion de volume qui définit un volume p
 ## Etapes suivantes
 {: #next-step-attaching-block-storage-cli}
 
-Créez des volumes supplémentaires et gérez les volumes existants. Voir les informations suivantes.
+Créez des volumes supplémentaires et gérez les volumes existants.  Voir les informations suivantes.
 
 * [Création d'un volume de stockage par blocs à l'aide de la CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli#create-vol-cli)
 * [Gestion de volumes de stockage par blocs à l'aide de la CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)

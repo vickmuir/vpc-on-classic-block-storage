@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-22"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance, IOPS, HPCS, Key Protect
 
@@ -17,7 +17,7 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 {:note: .note}
 
-# 关于 Block Storage for VPC
+# 有关 {{site.data.keyword.block_storage_is_short}}
 {: #block-storage-about}
 [comment]: # (链接的帮助主题)
 
@@ -47,7 +47,7 @@ subcollection: vpc-on-classic-block-storage
 
 缺省情况下，数据卷会使用 IBM 管理的加密进行加密。（可选）可以使用[您自己的加密密钥](#about-customer-managed-encrytion)来加密数据卷。
 
-## 加密静态数据
+## 静态数据的 Block Storage 加密
 {: #encryption}
 
 {{site.data.keyword.cloud_notm}} 十分重视安全需求，并认识到能够加密数据来确保数据安全的重要性。创建独立卷或在实例创建过程中创建卷时，可以选择使用 IBM 提供者管理的加密或使用您自己的加密密钥来保护数据。  

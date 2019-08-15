@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-13"
+lastupdated: "2019-07-01"
 
-keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
+keywords: block storage, IBM CLoud, VPC, virtual private cloud, CLI, block storage volume, volume, IOPS
 
 subcollection: vpc-on-classic-block-storage
 
@@ -21,18 +21,22 @@ subcollection: vpc-on-classic-block-storage
 # 使用 CLI 建立區塊儲存空間磁區
 {: #creating-block-storage-cli}
 
-您可以使用指令行介面 (CLI) 來建立 {{site.data.keyword.block_storage_is_full}} 磁區。
+您可以使用指令行介面 (CLI) 來建立 {{site.data.keyword.block_storage_is_short}} 磁區。
 {:shortdesc}
 
 ## 在開始之前
 {: #before-creating-block-storage-cli}
 
-請確保您已下載、安裝及起始設定下列 CLI 外掛程式：
+1. 請確保您已下載、安裝及起始設定下列 CLI 外掛程式：
+    * {{site.data.keyword.cloud_notm}} CLI
+    * 基礎架構服務外掛程式
 
-* {{site.data.keyword.cloud_notm}} CLI
-* 基礎架構服務外掛程式
-
-如需相關資訊，請參閱 [IBM Cloud CLI for VPC 參考資料](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)中的必要條件。
+   如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} CLI for VPC 參考資料](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference)。
+   
+   當您第一次安裝 vpc-infrastructure 外掛程式時，必須將目標世代設為 gen 1：`ibmcloud is target --gen 1`。
+   {:important}
+   
+2. 確定您已[建立 {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started)。
 
 ## 使用 CLI 建立區塊儲存空間磁區
 {: #create-vol-cli}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-01"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, volume attachment, data storage, virtual server instance, instance
 
@@ -18,22 +18,25 @@ subcollection: vpc-on-classic-block-storage
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-
 # Gestión de volúmenes de almacenamiento en bloque mediante la CLI
 {: #managing-block-storage-cli}
 
-Esta información se aplica a {{site.data.keyword.cloud}} Virtual Private Cloud en el entorno de la infraestructura clásica.
-{: important}
+Gestione {{site.data.keyword.block_storage_is_short}} desde la interfaz de línea de mandatos (CLI). Puede actualizar un nombre de volumen, actualizar una conexión de volumen, desconectar un volumen o suprimir un volumen.
+{:shortdesc}
 
 ## Antes de empezar
 {: #before-managing-block-storage-cli}
 
-Asegúrese de que ha descargado, instalado e inicializado los siguientes plugins de la CLI:
+1. Asegúrese de que ha descargado, instalado e inicializado los siguientes plugins de la CLI:
+    * CLI de {{site.data.keyword.cloud_notm}}
+    * El plugin de servicio de la infraestructura
 
-* CLI de {{site.data.keyword.cloud_notm}}
-* CLI de API regional de {{site.data.keyword.cloud_notm}}
-
-Para obtener más información, revise los requisitos previos en la [Consulta de CLI de IBM Cloud para VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   Para obtener más información, consulte [Consulta de CLI de {{site.data.keyword.cloud_notm}} para VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   
+   Al instalar el plugin vpc-infrastructure por primera vez, debe establecer la generación del destino en gen 1, `ibmcloud is target --gen 1`.
+   {:important}
+   
+2. Asegúrese de que ya haya [creado una {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 
 ## Actualización del nombre de un volumen
 {: #update-vol-name}

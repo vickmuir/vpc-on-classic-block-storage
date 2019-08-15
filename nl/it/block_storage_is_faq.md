@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-03"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance, IOPS
 
@@ -13,8 +13,11 @@ subcollection: vpc-on-classic-block-storage
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# FAQ (frequently asked question) di Block Storage per VPC 
+# FAQ (frequently asked question) di {{site.data.keyword.block_storage_is_short}} 
 {: #block-storage-vpc-faq}
+
+Benvenuti nella pagina delle FAQ per {{site.data.keyword.block_storage_is_short}}.  Questo argomento risponde a molte delle tue domande sulla creazione e gestione dei tuoi volumi di archiviazione blocchi.  Se hai ulteriori domande a cui vorresti venisse data una risposta in questo argomento, fornisci il feedback utilizzando i link **Issues** o **Edit topic**.
+{:shortdesc}
 
 ## Come assegno l'archiviazione per le mie istanze?
 {: faq}
@@ -36,12 +39,12 @@ Le istanze con 4 o più CPU virtuali possono collegare fino a 12 volumi secondar
 ## Quando eseguo il provisioning degli IOPS, tali IOPS assegnati vengono applicati all'istanza o al volume?
 {: faq}
 
-Gli IOPS vengono applicati al livello del volume. 
+Gli IOPS vengono applicati al livello del volume.
 
 ## Come vengono misurati gli IOPS?
 {: faq}
 
-Gli IOPS vengono misurati in base a un profilo di caricamento di blocchi da 16 KB con 50% di letture e 50% di scritture casuali. I carichi di lavoro che differiscono da questo profilo potrebbero riscontrare delle prestazioni inferiori. 
+Gli IOPS vengono misurati in base a un profilo di caricamento di blocchi da 16 KB con 50% di letture e 50% di scritture casuali. I carichi di lavoro che differiscono da questo profilo potrebbero riscontrare delle prestazioni inferiori.
 
 ## Cosa sono i profili IOPS?
 {: faq}
@@ -53,10 +56,10 @@ I profili IOPS definiscono le prestazioni di IOPS/GB per volumi di varie capacit
 
 Il numero massimo di IOPS per i volumi di dati varia in base alla dimensione del volume e al profilo di livello IOPS che hai selezionato. Ad esempio, il numero massimo di IOPS per un volume di ambito generale fino a 1 TB è di 3.000 IOPS. Per informazioni, vedi [Profili IOPS a livelli](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#tiers). Se scegli un [Profilo IOPS personalizzato](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom), definisci anche un intervallo minimo e massimo per una specifica dimensione del volume.
 
-## Cosa succede se uso una dimensione blocco più piccola quando misuro le prestazioni? 
+## Cosa succede se uso una dimensione blocco più piccola quando misuro le prestazioni?
 {: faq}
 
-Quando si utilizzano delle dimensioni blocco più piccole, è comunque possibile ottenere l'IOPS massimo; tuttavia, la velocità effettiva sarà inferiore. Ad esempio, un volume con 6000 IOPS avrà la seguente velocità effettiva alle varie dimensioni blocco: 
+Quando si utilizzano delle dimensioni blocco più piccole, è comunque possibile ottenere l'IOPS massimo; tuttavia, la velocità effettiva sarà inferiore. Ad esempio, un volume con 6000 IOPS avrà la seguente velocità effettiva alle varie dimensioni blocco:
 
 * 16 KB * 6000 IOPS == ~93.75 MB/sec
 * 8 KB * 6000 IOPS == ~46.88 MB/sec
@@ -71,7 +74,7 @@ Per ulteriori informazioni sulle quote e sui limiti per il tuo {{site.data.keywo
 ## Dopo aver creato un volume, posso incrementarne la capacità in un secondo momento?
 {: faq}
 
-No, non puoi incrementare la capacità di un volume.  Ti consigliamo di stimare una capacità sufficiente per la crescita prevista prima di eseguire il provisioning di un volume di archiviazione blocchi.
+No, non puoi incrementare la capacità di un volume. Ti consigliamo di stimare una capacità sufficiente per la crescita prevista prima di eseguire il provisioning di un volume di archiviazione blocchi. Inoltre, considera di quanti volumi hai bisogno e la capacità di tali volumi. Per ulteriori informazioni, vedi [Gestione del numero di volumi e dei limiti di capacità](/docs/vpc-on-classic?topic=vpc-on-classic-managingstoragelimits).
 
 ## Occorre preriscaldare il volume per ottenere la velocità effettiva prevista?
 {: faq}
@@ -81,7 +84,7 @@ Non devi preriscaldare un volume. Puoi vedere la velocità effettiva specificata
 ## Posso creare dei volumi crittografati?
 {: faq}
 
-Tutti i volumi di archiviazione blocchi sono crittografati, tramite la crittografia gestita da IBM (valore predefinito) oppure tramite il servizio Key Protect utilizzando le tue chiavi di crittografia.  Per informazioni, vedi [Creazione dei volumi di archiviazione blocchi con la crittografia gestita dal cliente](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).
+Tutti i volumi di archiviazione blocchi sono crittografati, tramite la crittografia gestita da IBM (valore predefinito) oppure tramite il servizio Key Protect utilizzando le tue chiavi di crittografia. Per informazioni, vedi [Creazione dei volumi di archiviazione blocchi con la crittografia gestita dal cliente](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).
 
 ## Come posso conoscere qual è il tipo di crittografia di un volume?
 {: faq}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-03"
 
 Keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
 
@@ -24,17 +24,22 @@ subcollection: vpc-on-classic-block-storage
 # Visualización de volúmenes de almacenamiento en bloque mediante la CLI
 {: #viewing-block-storage-cli}
 
-Vea detalles sobre un volumen de almacenamiento en bloque o información de resumen acerca de todos los volúmenes desde la CLI.
+Vea detalles sobre un volumen de {{site.data.keyword.block_storage_is_short}} o información de resumen acerca de todos los volúmenes desde la CLI.
+{:shortdesc}
 
 ## Antes de empezar
 {: #before-viewing-block-storage-cli}
 
-Asegúrese de que ha descargado, instalado e inicializado los siguientes plugins de la CLI:
+1. Asegúrese de que ha descargado, instalado e inicializado los siguientes plugins de la CLI:
+    * CLI de {{site.data.keyword.cloud_notm}}
+    * El plugin de servicio de la infraestructura
 
-* CLI de {{site.data.keyword.cloud_notm}}
-* CLI de API regional de {{site.data.keyword.cloud_notm}}
-
-Para obtener más información, revise los requisitos previos en la [Consulta de CLI de {{site.data.keyword.cloud_notm}} para VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   Para obtener más información, consulte [Consulta de CLI de {{site.data.keyword.cloud_notm}} para VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   
+   Al instalar el plugin vpc-infrastructure por primera vez, debe establecer la generación del destino en gen 1, `ibmcloud is target --gen 1`.
+   {:important}
+   
+2. Asegúrese de que ya haya [creado una {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 
 ## Visualización de detalles sobre un volumen de almacenamiento en bloque mediante la CLI
 {: #viewvol-cli}
@@ -168,5 +173,5 @@ Crn      crn:v1:public:globalcatalog::::volume.profile:generalpurpose
 
 Cree más volúmenes o gestione los volúmenes de almacenamiento en bloque existentes.
 
-* [Creación de volúmenes de almacenamiento en bloque (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli)
-* [Gestión de volúmenes de almacenamiento en bloque (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)
+* [Creación de volúmenes de almacenamiento en bloque mediante la CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli)
+* [Gestión de volúmenes de almacenamiento en bloque mediante la CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)

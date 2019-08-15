@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-03"
 
-keywords: block storage, IBM Cloud, VPC, block storage volume, volume, volume attachment, virtual server instance, instance
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, block storage volume, volume, volume attachment, virtual server instance, instance
 
 subcollection: vpc-on-classic-block-storage
 
@@ -24,7 +24,7 @@ subcollection: vpc-on-classic-block-storage
 # Conexión de un volumen de almacenamiento en bloque mediante la IU
 {: #attaching-block-storage}
 
-Cuando se crea un volumen de almacenamiento en bloque para una instancia de servidor virtual desde la interfaz de usuario, el volumen se conecta a la instancia de forma predeterminada. Cuando desconecta un volumen, existe como un volumen desconectado que puede volver a conectar posteriormente.  Estos volúmenes disponibles se muestran en la lista de [todos los volúmenes de almacenamiento en bloque](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage#viewvols). Puede conectar el volumen a otra instancia desde la lista de todos los volúmenes de almacenamiento en bloque o cuando visualice detalles acerca de una instancia determinada.
+Cuando se crea un volumen de {{site.data.keyword.block_storage_is_short}} para una instancia de servidor virtual desde la interfaz de usuario, el volumen se conecta a la instancia de forma predeterminada. Cuando desconecta un volumen, existe como un volumen desconectado que puede volver a conectar posteriormente. Estos volúmenes disponibles se muestran en la lista de [todos los volúmenes de almacenamiento en bloque](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage#viewvols). Puede conectar el volumen a otra instancia desde la lista de todos los volúmenes de almacenamiento en bloque o cuando visualice detalles acerca de una instancia determinada.
 {:shortdesc}
 
 ## Límites de conexión de volúmenes
@@ -40,7 +40,7 @@ Aunque solo puede conectar un volumen de almacenamiento en bloque a una instanci
 
 En la lista de todos los volúmenes de almacenamiento en bloque, siga estos pasos.
 
-1. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} correspondiente a Virtual Private Cloud, vaya a **icono de menú ![icono de menú](../../icons/icon_hamburger.svg) > Almacenamiento> Volúmenes de almacenamiento en bloque para VPC**.
+1. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} correspondiente a Virtual Private Cloud, vaya a **icono de menú ![icono de menú](../../icons/icon_hamburger.svg) > Almacenamiento> Almacenamiento en bloque**.
 1. En la lista de volúmenes, pulse los puntos suspensivos que hay al final de una fila para obtener un volumen desconectado disponible.  Se visualiza un menú de acciones específico del contexto.
 1. Seleccione **Conectar a instancia**.
 1. Seleccione un recurso de cálculo (instancia de servidor virtual) en la lista de recursos disponibles y luego pulse **Conectar**.
@@ -48,7 +48,7 @@ En la lista de todos los volúmenes de almacenamiento en bloque, siga estos paso
 
 También puede adjuntar un volumen de almacenamiento en bloque desde la página de detalles de la instancia de servidor virtual.
 
-1. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} correspondiente a Virtual Private Cloud, vaya a **icono de menú ![icono de menú](../../icons/icon_hamburger.svg) > Cálculo > Instancias de servidor virtual para VPC**.
+1. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}/vpc){: external} correspondiente a Virtual Private Cloud, vaya a **icono de menú ![icono de menú](../../icons/icon_hamburger.svg) > Cálculo > Instancias de servidor virtual**.
 1. Seleccione una instancia en la lista de todas las instancias de servidor virtual. Si hay algún volumen de almacenamiento en bloque conectado, lo verá en la lista de **Volúmenes de almacenamiento en bloque conectados**.
 1. Seleccione **Conectar volumen**.
 1. Seleccione un volumen en la lista de recursos disponibles y pulse **Conectar**. Se muestran mensajes en la página de detalles de la instancia que indican que el volumen se está conectando.  Cuando finaliza el proceso, la lista **Volúmenes de almacenamiento en bloque conectados** se actualiza para incluir el nuevo volumen.

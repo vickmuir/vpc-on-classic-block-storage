@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-13"
+lastupdated: "2019-07-01"
 
-keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
+keywords: block storage, IBM CLoud, VPC, virtual private cloud, CLI, block storage volume, volume, IOPS
 
 subcollection: vpc-on-classic-block-storage
 
@@ -18,23 +18,27 @@ subcollection: vpc-on-classic-block-storage
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-# Création de volumes de stockage par blocs à l'aide de la CLI 
+# Création de volumes de stockage par blocs à l'aide de la CLI
 {: #creating-block-storage-cli}
 
-Vous pouvez créer des volumes {{site.data.keyword.block_storage_is_full}} à l'aide de l'interface de ligne de commande (CLI).
+Vous pouvez créer des volumes {{site.data.keyword.block_storage_is_short}} à l'aide de l'interface de ligne de commande (CLI).
 {:shortdesc}
 
 ## Avant de commencer
 {: #before-creating-block-storage-cli}
 
-Assurez-vous d'avoir téléchargé, installé et initialisé les plug-ins CLI suivants : 
+1. Assurez-vous d'avoir téléchargé, installé et initialisé les plug-ins CLI suivants :
+    * Interface CLI d'{{site.data.keyword.cloud_notm}}
+    * Plug-in infrastructure-service
 
-* Interface CLI d'{{site.data.keyword.cloud_notm}}
-* Plug-in infrastructure-service 
+   Pour plus d'informations, voir [{{site.data.keyword.cloud_notm}} CLI for VPC Reference](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   
+   Lorsque vous installez le plug-in vpc-infrastructure pour la première fois, vous devez définir la génération cible sur gen 1, `ibmcloud is target --gen 1`.
+   {:important}
+   
+2. Assurez-vous que vous avez déjà [créé une instance {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 
-Pour plus d'informations, voir les conditions préalables requises dans [Référence CLI IBM Cloud for VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
-
-## Création d'un volume de stockage par blocs à l'aide de la CLI 
+## Création d'un volume de stockage par blocs à l'aide de la CLI
 {: #create-vol-cli}
 
 Exécutez la commande suivante.
@@ -63,9 +67,9 @@ Volume Attachment Instance Reference    none
 ```
 {:screen}
 
-La capacité, indiquée en mégaoctets, peut aller de 10 à 2 000 Go. Les valeurs d'IOPS peuvent aller de 1 000 à 20 000 IOPS, en fonction de la taille du volume. Si vous ne spécifiez pas de valeur IOPS, la configuration valide par profil de volume est utilisée par défaut. Pour plus d'informations, voir le tableau [Plages d'IOPS en fonction de la taille de volume](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom).
+La capacité, indiquée en mégaoctets, peut aller de 10 à 2 000 Go.  Les valeurs d'IOPS peuvent aller de 1 000 à 20 000 IOPS, en fonction de la taille du volume. Si vous ne spécifiez pas de valeur IOPS, la configuration valide par profil de volume est utilisée par défaut. Pour plus d'informations, voir le tableau [Plages d'IOPS en fonction de la taille de volume](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom).
 
-L'ID de volume dans l'exemple ci-dessus est utilisé lors de la connexion d'un volume de stockage par blocs à une instance de serveur virtuel, de l'affichage des détails du volume de stockage par blocs et de la suppression de volumes. 
+L'ID de volume dans l'exemple ci-dessus est utilisé lors de la connexion d'un volume de stockage par blocs à une instance de serveur virtuel, de l'affichage des détails du volume de stockage par blocs et de la suppression de volumes.
 
 Vous préférez créer des volumes de stockage par blocs à l'aide de la console {{site.data.keyword.cloud}} ? Pour plus d'informations, voir [Création de volumes de stockage par blocs ](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage).
 {: tip}

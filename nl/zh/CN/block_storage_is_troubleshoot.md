@@ -2,10 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2018-06-17"
+lastupdated: "2018-07-03"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, data storage, troubleshooting, troubleshoot
-
 
 subcollection: vpc-on-classic-block-storage
 
@@ -24,10 +23,10 @@ subcollection: vpc-on-classic-block-storage
 {:DomainName: data-hd-keyref="APPDomain"}
 {:DomainName: data-hd-keyref="DomainName"}
 
-# 有关块存储器的故障诊断
+# {{site.data.keyword.block_storage_is_short}} 故障诊断
 {: #troubleshoot}
 
-创建或管理块存储器时，可能会遇到问题。通常，通过执行一些简单的步骤就可以恢复。以下各部分中描述了问题、症状、可能的原因和解决方法。
+创建或管理 {{site.data.keyword.block_storage_is_short}} 时，可能会遇到问题。通常，通过执行一些简单的步骤就可以恢复。以下各部分中描述了问题、症状、可能的原因和解决方法。
 {:shortdesc}
 
 ## 检索不到指定区域中的卷

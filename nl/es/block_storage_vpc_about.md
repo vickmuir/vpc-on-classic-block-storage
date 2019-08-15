@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-22"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance, IOPS, HPCS, Key Protect
 
@@ -17,7 +17,7 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 {:note: .note}
 
-# Acerca de Block Storage for VPC
+# Acerca de {{site.data.keyword.block_storage_is_short}}
 {: #block-storage-about}
 [comment]: # (tema de ayuda enlazado)
 
@@ -47,7 +47,7 @@ Los volúmenes de datos de almacenamiento en bloque se pueden conectar a cualqui
 
 Los volúmenes de datos se cifran de forma predeterminada con el cifrado gestionado por IBM. Si lo desea, puede cifrar los volúmenes de datos utilizando [su propia clave de cifrado](#about-customer-managed-encrytion).
 
-## Cifrado de datos en reposo
+## Cifrado de almacenamiento en bloque para datos en reposo
 {: #encryption}
 
 {{site.data.keyword.cloud_notm}} se toma en serio la seguridad y comprende la importancia de poder cifrar los datos para mantenerlos protegidos. Cuando cree un volumen autónomo o cuando cree un volumen como parte de la creación de una instancia, puede elegir entre proteger los datos con el cifrado gestionado por el proveedor de IBM o utilizar claves de cifrado propias.  

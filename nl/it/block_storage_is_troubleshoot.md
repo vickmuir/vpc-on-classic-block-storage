@@ -2,10 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2018-06-17"
+lastupdated: "2018-07-03"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, data storage, troubleshooting, troubleshoot
-
 
 subcollection: vpc-on-classic-block-storage
 
@@ -24,10 +23,10 @@ subcollection: vpc-on-classic-block-storage
 {:DomainName: data-hd-keyref="APPDomain"}
 {:DomainName: data-hd-keyref="DomainName"}
 
-# Risoluzione dei problemi per l'archiviazione blocchi 
+# Risoluzione dei problemi con {{site.data.keyword.block_storage_is_short}}
 {: #troubleshoot}
 
-Quando crei o gestisci l'archiviazione blocchi, potresti riscontrare dei problemi. Spesso, puoi risolvere seguendo pochi facili passi. Problemi, sintomi, cause probabili e risoluzioni sono descritti nelle seguenti sezioni.
+Quando crei o gestisci {{site.data.keyword.block_storage_is_short}}, potresti riscontrare dei problemi. Spesso, puoi risolvere seguendo pochi facili passi. Problemi, sintomi, cause probabili e risoluzioni sono descritti nelle seguenti sezioni.
 {:shortdesc}
 
 ## Impossibile richiamare un volume in una regione specificata
@@ -51,7 +50,7 @@ Verifica che il volume non sia stato scollegato da un'istanza del server virtual
 
 Se il volume non è collegato come previsto e non viene visualizzato nell'elenco dei volumi, probabilmente è stato eliminato.  Poiché l'eliminazione di un volume ne rimuove completamente i dati, non può essere ripristinato.  
 
-Se utilizzi la CLI, verifica di aver immesso la sintassi corretta per la visualizzazione dei volumi.  Vedi [Visualizza tutti i volumi di archiviazione blocchi dalla CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage-cli).  Verifica di aver specificato la zona o il gruppo di risorse corretti.
+Se utilizzi la CLI, verifica di aver immesso la sintassi corretta per la visualizzazione dei volumi. Vedi [Visualizza tutti i volumi di archiviazione blocchi dalla CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage-cli). Verifica di aver specificato la zona o il gruppo di risorse corretti.
 {: tsResolve}
 
 ## Impossibile eliminare un nome in base al nome o all'ID
@@ -63,5 +62,5 @@ Non puoi eliminare un volume di archiviazione blocchi in base al nome o all'ID.
 Il nome e l'ID del volume non sono accettati.
 {: tsCauses}
 
-Verifica che il nome o l'identificativo del volume siano corretti e che il volume non sia collegato a un'istanza del server virtuale.  Inoltre, verifica che il volume non sia in uno stato in sospeso.
+Verifica che il nome o l'identificativo del volume siano corretti e che il volume non sia collegato a un'istanza del server virtuale. Inoltre, verifica che il volume non sia in uno stato in sospeso.
 {: tsResolve}

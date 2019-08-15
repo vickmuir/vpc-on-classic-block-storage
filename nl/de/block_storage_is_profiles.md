@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-01"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, profile, volume profile, data storage, storage profile, virtual server instance, instance
 
@@ -19,11 +19,11 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 {:note: .note}
 
-
-# Profile
+# {{site.data.keyword.block_storage_is_short}}-Profile
 {: #block-storage-profiles}
 
-Wenn Sie sekundäre {{site.data.keyword.block_storage_is_short}}-Datenträger über die {{site.data.keyword.cloud_notm}}-Konsole, -Befehlszeilenschnittstelle oder -API bereitstellen, geben Sie ein IOPS-Profil an, das am besten für Ihre Speicheranforderungen geeignet ist. Die Profile stehen in Form von drei vordefinierten IOPS-Tier-Profilen und einem angepassten IOPS-Profil zur Verfügung. IOPS-Tiers bieten eine garantierte IOPS/GB-Leistung für Datenträger mit bis zu 2 TB an Kapazität. Sie können auch ein angepasstes IOPS-Profil angeben und Datenträgerkapazität und E/A-Operationen pro Sekunde in einem Bereich definieren.
+Wenn Sie sekundäre {{site.data.keyword.block_storage_is_short}}-Datenträger über die {{site.data.keyword.cloud_notm}}-Konsole, -Befehlszeilenschnittstelle oder -API bereitstellen, geben Sie ein IOPS-Profil an, das am besten für Ihre Speicheranforderungen geeignet ist. Die Profile stehen in Form von drei vordefinierten IOPS-Tier-Profilen und einem angepassten IOPS-Profil zur Verfügung.  IOPS-Tiers bieten eine garantierte IOPS/GB-Leistung für Datenträger mit bis zu 2 TB an Kapazität. Sie können auch ein angepasstes IOPS-Profil angeben und Datenträgerkapazität und E/A-Operationen pro Sekunde in einem Bereich definieren.
+{:shortdesc}
 
 ## Profile mit IOPS-Tiers
 {: #tiers}
@@ -34,11 +34,11 @@ Beim Blockspeicher stehen drei vordefinierte IOPS-Tiers zur Auswahl, mit denen S
 |-----------|----------|-------------|----------|
 | 3 IOPS/GB | Allgemeine Workloads - Workloads, bei denen kleine Datenbanken für Webanwendungen gehostet oder VM-Plattenimages für einen Hypervisor gespeichert werden | 10 GB bis 1 TB | Bis zu 3.000 IOPS |
 | | | Über 1 TB bis 2 TB | 3 IOPS/GB bis zu 6.000 IOPS |
-| 5 IOPS/GB | Workloads mit hoher Ein-/Ausgabeintensität - Workloads, die sich durch einen hohen Prozentsatz aktiver Daten auszeichnen, z. B. transaktions- und andere leistungsorientierte Datenbanken | 10 GB bis 600 GB | Bis zu 3.000 IOPS |
+| 5 IOPS/GB | Workloads mit hoher Ein-/Ausgabeintensität - Workloads, die sich durch einen hohen Prozentsatz aktiver Daten auszeichnen, z. B. transaktions- und andere leistungsorientierte Datenbanken| 10 GB bis 600 GB | Bis zu 3.000 IOPS |
 | | | Über 600 GB bis 2 TB | 5 IOPS/GB bis zu 10.000 IOPS|
 | 10 IOPS/GB | Anspruchsvolle Speicherworkloads - datenintensive Workloads, die von NoSQL-Datenbanken erstellt werden, Datenverarbeitung für Video, maschinelles Lernen und Analysen | 10 GB bis 300 GB | Bis zu 3.000 IOPS |
 | | | Über 300 GB bis 2 TB | 10 IOPS/GB bis zu 20.000 IOPS |
-{: caption="Tabelle 1. IOPS-Tiers und Leistung" caption-side="top"}
+{: caption="Tabelle 1. IOPS-Tierprofile und Leistungsstufen für die einzelnen Tiers" caption-side="top"}
 
 Der maximale Durchsatz für alle für Blockspeicher verfügbaren IOPS-Tiers beträgt ausgerichtet an einer Blockgröße von 16 KB 750 MB/s.
 
@@ -62,19 +62,20 @@ Die folgende Tabelle enthält die verfügbaren IOPS-Bereiche für die verschiede
 ## Zusammenhang zwischen Profilen virtueller Server und Speicherprofilen
 {: #vsi-profiles-relate-to-storage}
 
-Bei Profilen für virtuelle Server handelt es sich um eine Kombination von vCPU und RAM, die umgehend zum Starten einer virtuellen Serverinstanz instanziiert werden kann. Sie können ein Profil aus einer von [drei Profilfamilien](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles),
-auswählen, das für Ihre Workloadanforderungen geeignet ist. Die Anforderungen können sich von allgemeinen Workloads bis hin zu CPU- und speicherintensive Workloads erstrecken.  
+Bei Profilen für virtuelle Server handelt es sich um eine Kombination von vCPU und RAM, die umgehend zum Starten einer virtuellen Serverinstanz instanziiert werden kann.  Sie können ein Profil aus einer von [drei Profilfamilien](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles),
+auswählen, das für Ihre Workloadanforderungen geeignet ist.  Die Anforderungen können sich von allgemeinen Workloads bis hin zu CPU- und speicherintensive Workloads erstrecken.  
 
-Speicherprofile (IOPS-Tiers wie angepasste Speicherprofile) stellen ebenso einen Kapazitäts- und Leistungsbereich für sekundäre Datenträger bereit. Standardmäßig wird beim Erstellen
-einer virtuellen Serverinstanz ein primärer Bootdatenträger mit 100 GB erstellt. Sie können auch sekundäre Datenträger erstellen und zuordnen.  
+Speicherprofile (IOPS-Tiers wie angepasste Speicherprofile) stellen ebenso einen Kapazitäts- und Leistungsbereich für sekundäre Datenträger bereit.  Standardmäßig wird beim Erstellen
+einer virtuellen Serverinstanz ein primärer Bootdatenträger mit 100 GB erstellt.  Sie können auch sekundäre Datenträger erstellen und zuordnen.  
 Wenn Sie bei der Instanzerstellung einen sekundären Datenträger erstellen, wählen Sie ein Speicherprofil aus, das dem Speicherbedarf für Ihre Datenverarbeitungsworkloads
-am besten entspricht. Im Allgemeinen wachsen mit zunehmendem Speicherbedarf für Datenverarbeitungsworkloads auch die Anforderungen an die IOPS-Leistung. Die folgende Tabelle verdeutlicht diesen Zusammenhang.
+am besten entspricht. Im Allgemeinen wachsen mit zunehmendem Speicherbedarf für Datenverarbeitungsworkloads auch die Anforderungen an die IOPS-Leistung.  Die folgende Tabelle verdeutlicht diesen Zusammenhang.
 
 | IOPS-Tier-Speicherprofil | Profil des virtuellen Servers |
 |-----------------|------------------------|
 | 3 IOPS/GB       | [Ausgewogen](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles#balanced) für allgemeine Workloads |
 | 5 IOPS/GB       | [Datenverarbeitung](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles#compute) für intensive CPU-Anforderungen |
 | 10 IOPS/GB      | [Hauptspeicher](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles#memory) für speicherintensive Workloads |
+{: caption="Tabelle 3. Beziehung zwischen Blockspeicherprofilen und Profilen virtueller Server" caption-side="top"}
 
 ## IOPS-Profile anzeigen
 {: #view-iops-profiles}

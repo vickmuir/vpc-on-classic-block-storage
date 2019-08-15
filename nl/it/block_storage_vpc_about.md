@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-22"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance, IOPS, HPCS, Key Protect
 
@@ -17,7 +17,7 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 {:note: .note}
 
-# Informazioni su Block Storage per VPC
+# Informazioni su {{site.data.keyword.block_storage_is_short}}
 {: #block-storage-about}
 [comment]: # (argomento della guida collegato)
 
@@ -47,7 +47,7 @@ I volumi di dati di archiviazione blocchi possono essere collegati a qualsiasi i
 
 I volumi di dati vengono crittografati per impostazione predefinita con la crittografia gestita da IBM. Facoltativamente, puoi crittografare i volumi di dati utilizzando la [tua chiave di crittografia](#about-customer-managed-encrytion).
 
-## Crittografia dei dati inattivi
+## Crittografia di Block Storage per i dati inattivi
 {: #encryption}
 
 {{site.data.keyword.cloud_notm}} prende sul serio la sicurezza e comprende l'importanza di poter crittografare i dati per tenerli al sicuro. Quando crei un volume autonomo o un volume come parte della creazione di un'istanza, puoi scegliere di proteggere i tuoi dati con la crittografia gestita dal provider IBM o di utilizzare le tue chiavi di crittografia.  
@@ -58,7 +58,7 @@ I volumi di dati vengono crittografati per impostazione predefinita con la critt
 Per impostazione predefinita, tutti i volumi di avvio e di dati vengono crittografati con la crittografia gestita dal provider IBM. Non ci sono costi aggiuntivi per questo servizio o impatto sulle prestazioni. La crittografia gestita dal provider utilizza i seguenti protocolli standard del settore.
 
 * Crittografia AES-256
-* Le chiavi sono gestite internamente con il KMIP (Key Management Interoperability Protocol)  
+* Le chiavi sono gestite internamente con il KMIP (Key Management Interoperability Protocol)
 * L'archiviazione è convalidata per FIPS PUB (Federal Information Processing Standard Publication) 140-2, FISMA (Federal Information Security Management Act) e HIPAA (Health Insurance Portability and Accountability Act). L'archiviazione viene anche convalidata per la conformità a PCI (Payment Card Industry), Basel II, California Security Breach Information Act (SB 1386) e alla direttiva sulla protezione dei dati dell'Unione europea 95/46/EC.
 
 ### Crittografia gestita dal cliente

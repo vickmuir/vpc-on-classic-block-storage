@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-01"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, profile, volume profile, data storage, storage profile, virtual server instance, instance
 
@@ -19,11 +19,11 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 {:note: .note}
 
-
-# Profiles
+# Perfis do {{site.data.keyword.block_storage_is_short}}
 {: #block-storage-profiles}
 
-Quando você provisiona volumes secundários do {{site.data.keyword.block_storage_is_short}} usando o console, a CLI ou a API do {{site.data.keyword.cloud_notm}}, você especifica um perfil IOPS que melhor atende aos seus requisitos de armazenamento. Os perfis estão disponíveis como três camadas IOPS predefinidas ou como IOPS customizado. As camadas de IOPS fornecem desempenho de IOPS/GB garantido para volumes de até 2 TB de capacidade. Também é possível especificar um perfil de IOPS customizado e definir a capacidade de volume e o IOPS dentro de um intervalo.
+Quando você provisiona volumes secundários do {{site.data.keyword.block_storage_is_short}} usando o console, a CLI ou a API do {{site.data.keyword.cloud_notm}}, você especifica um perfil IOPS que melhor atende aos seus requisitos de armazenamento. Os perfis estão disponíveis como três camadas IOPS predefinidas ou como IOPS customizado.  As camadas de IOPS fornecem desempenho de IOPS/GB garantido para volumes de até 2 TB de capacidade. Também é possível especificar um perfil de IOPS customizado e definir a capacidade de volume e o IOPS dentro de um intervalo.
+{:shortdesc}
 
 ## Perfis de IOPs em camadas
 {: #tiers}
@@ -38,7 +38,7 @@ O armazenamento de bloco fornece três camadas de IOPS predefinidos que é poss�
 | | | Acima de 600 GB a 2 TB | 5 IOPS/GB de até 10.000 IOPS|
 | 10 IOPS/GB | Cargas de trabalho de armazenamento exigentes - Cargas de trabalho com intenso uso de dados criadas por bancos de dados NoSQL, processamento de dados para vídeo, aprendizado de máquina e analítica | 10 GB a 300 GB | Até 3.000 IOPS |
 | | | Acima de 300 GB a 2 TB | 10 IOPS/GB de até 20.000 IOPS |
-{: caption="Tabela 1. Camadas e desempenho de IOPS" caption-side="top"}
+{: caption="Tabela 1. Perfis de camada do IOPS e níveis de desempenho para cada camada" caption-side="top"}
 
 O rendimento máximo de todas as camadas de IOPS de armazenamento de bloco é de 750 MB/s com base em um tamanho de bloco de 16K
 
@@ -62,19 +62,20 @@ A tabela a seguir mostra os intervalos de IOPS disponíveis com base no tamanho 
 ## Como os perfis de servidor virtual se relacionam aos perfis de armazenamento
 {: #vsi-profiles-relate-to-storage}
 
-Perfis de servidor virtual são uma combinação de vCPU e RAM que podem ser instanciados rapidamente para iniciar uma instância de servidor virtual. Você seleciona entre [três famílias de perfis](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles)
-com base em seus requisitos de carga de trabalho. Esses requisitos podem variar de cargas de trabalho comuns a cargas de trabalho com uso intenso de CPU ou memória.  
+Perfis de servidor virtual são uma combinação de vCPU e RAM que podem ser instanciados rapidamente para iniciar uma instância de servidor virtual.  Você seleciona entre [três famílias de perfis](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles)
+com base em seus requisitos de carga de trabalho.  Esses requisitos podem variar de cargas de trabalho comuns a cargas de trabalho com uso intenso de CPU ou memória.  
 
-Da mesma forma, os perfis de armazenamento (camadas de IOPS ou customizado) fornecem um intervalo de capacidade e desempenho para volumes secundários. Por padrão,
-um volume de inicialização primário de 100 GB é criado quando você cria uma instância de servidor virtual. Também é possível criar e anexar volumes secundários.  
+Da mesma forma, os perfis de armazenamento (camadas de IOPS ou customizado) fornecem um intervalo de capacidade e desempenho para volumes secundários.  Por padrão,
+um volume de inicialização primário de 100 GB é criado quando você cria uma instância de servidor virtual.  Também é possível criar e anexar volumes secundários.  
 Ao criar um volume de dados secundário como parte da criação da instância, você seleciona um perfil de armazenamento que melhor atenda aos seus
-requisitos de armazenamento para suas cargas de trabalho de cálculo. Em geral, à medida que seus requisitos de cálculo aumentam, é necessário um desempenho mais alto de IOPS. A tabela a seguir mostra esse relacionamento.
+requisitos de armazenamento para suas cargas de trabalho de cálculo. Em geral, à medida que seus requisitos de cálculo aumentam, é necessário um desempenho mais alto de IOPS.  A tabela a seguir mostra esse relacionamento.
 
 | Perfil de armazenamento da camada de IOPS | Perfil do servidor virtual |
 |-----------------|------------------------|
 | 3 IOPS/GB       | [Balanceado](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles#balanced) para cargas de trabalho comuns |
 | 5 IOPS/GB       | [Cálculo](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles#compute) para demandas intensivas de CPU |
 | 10 IOPS/GB      | [Memória](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles#memory) para cargas de trabalho de uso intenso de memória |
+{: caption="Tabela 3. Relacionamento de perfis de armazenamento de bloco com perfis de servidor virtual" caption-side="top"}
 
 ## Visualizando perfis de IOPS
 {: #view-iops-profiles}

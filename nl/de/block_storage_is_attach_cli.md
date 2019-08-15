@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-01"
 
-keywords: block storage, IBM Cloud, VPC, CLI, block storage volume, volume, volume attachment, virtual server instance, instance
+keywords: block storage, IBM Cloud, VPC, virtual private cloud, CLI, block storage volume, volume, volume attachment, virtual server instance, instance
 
 subcollection: vpc-on-classic-block-storage
 
@@ -18,21 +18,25 @@ subcollection: vpc-on-classic-block-storage
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-
 # Blockspeicherdatenträger über die Befehlszeilenschnittstelle zuordnen
 {: #attaching-block-storage-cli}
 
-Beim Zuordnen von Datenträgern wird ein Blockspeicherdatenträger mit einer virtuellen Serverinstanz verbunden. Jede Instanz kann mehrere [Datenträgerzuordnungen](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits) aufweisen, bei einer Datenträgerzuordnung wird jedoch jeweils nur ein einziger Datenträger zu einer einzelnen Instanz zugeordnet.
+Beim Zuordnen von Datenträgern wird ein {{site.data.keyword.block_storage_is_short}}-Datenträger mit einer virtuellen Serverinstanz verbunden. Jede Instanz kann mehrere [Datenträgerzuordnungen](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits) aufweisen, bei einer Datenträgerzuordnung wird jedoch jeweils nur ein einziger Datenträger zu einer einzelnen Instanz zugeordnet.
+{:shortdesc}
 
 ## Vorbereitungen
 {: #before-attaching-block-storage-cli}
 
-Stellen Sie sicher, dass Sie die folgenden Plug-ins für die Befehlszeilenschnittstelle heruntergeladen, installiert und initialisiert haben:
+1. Stellen Sie sicher, dass Sie die folgenden Plug-ins für die Befehlszeilenschnittstelle heruntergeladen, installiert und initialisiert haben:
+    * {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle
+    * Infrastrukturservice-Plug-in
 
-* {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle
-* {{site.data.keyword.cloud_notm}} Regional API-Befehlszeilenschnittstelle
-
-Weitere Informationen finden Sie im Abschnitt zu den Voraussetzungen in der [Referenz zu IBM Cloud CLI for VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   Weitere Informationen finden Sie in den [Referenzinformationen zur {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle für VPC](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference). 
+   
+   Wenn Sie das VPC-Infrastruktur-Plug-in zum ersten Mal installieren, müssen Sie für die Zielgeneration 'gen 1' festlegen: `ibmcloud is target --gen 1`.
+   {:important}
+   
+2. Stellen Sie sicher, dass bereits eine [{{site.data.keyword.vpc_short}}-Instanz erstellt](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started) wurde. 
 
 ## Blockspeicherdatenträger über die Befehlszeilenschnittstelle zuordnen
 {: #attach-block-storage-cli}
@@ -113,7 +117,7 @@ Im Folgenden finden Sie eine JSON-Beispieldatei für Datenträgerzuordnung, übe
 ## Weitere Schritte
 {: #next-step-attaching-block-storage-cli}
 
-Erstellen Sie zusätzliche Datenträger und verwalten Sie vorhandene Datenträger. Siehe dazu die folgenden Informationen.
+Erstellen Sie zusätzliche Datenträger und verwalten Sie vorhandene Datenträger.  Siehe dazu die folgenden Informationen.
 
 * [Blockspeicherdatenträger über die Befehlszeilenschnittstelle erstellen](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli#create-vol-cli)
 * [Blockspeicherdatenträger über die Befehlszeilenschnittstelle verwalten](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)
