@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-07-01"
+lastupdated: "2019-10-11"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, volume attachment, data storage, virtual server instance, instance
 
@@ -41,7 +41,7 @@ Manage {{site.data.keyword.block_storage_is_short}} from the command line interf
 ## Update the name of a volume
 {: #update-vol-name}
 
-To change a volume name, specify either the volume name or ID and then indicate the new name.
+To change a volume name, specify either the volume name or ID and then indicate the new name. The volume name can be up to 63 alpha-numeric characters and include special characters. Follow [these volume name conventions](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage#volume-name-conventions).
 
 ```bash
 ibmcloud is volume-update VOLUME_ID [--name NEW_NAME] [--json]

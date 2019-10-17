@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-07-24"
+lastupdated: "2019-09-27"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance
 
@@ -30,7 +30,7 @@ View details about a {{site.data.keyword.block_storage_is_short}} volume or summ
 ## View information about all block storage volumes
 {: #viewvols}
 
-Navigate to the list of block storage volumes. In [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc){: external} for the Virtual Private Cloud, go to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Storage > Block storage**.
+Navigate to the list of block storage volumes. In [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/vpc), go to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > VPC Infrastructure > Storage > Block storage volumes**.
 
 By default, block storage volumes display for all resource groups in your region.  In the list of all **Block storage for VPC volumes**, you'll see the following information.
 
@@ -78,7 +78,7 @@ For a volume attached to an instance, you can also navigate to information about
 
 You can view information about an attached block storage volume from the **Virtual server instance details** page:
 
-1. In the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc){: external}, go to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Compute > Virtual server instances** and select an instance.
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/vpc), go to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > VPC Infrastructure > Compute > Virtual server instances** and select an instance.
 1. Under **Attached block storage volumes**, click on the name of a volume to go to the volume details page.
 
 Do you prefer to viewing block storage volumes using the CLI? For information, see [Viewing block storage volumes (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage-cli).

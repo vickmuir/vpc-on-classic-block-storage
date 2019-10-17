@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-07-03"
+lastupdated: "2019-10-14"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance, IOPS
 
@@ -44,7 +44,7 @@ IOPS are enforced at the volume level.
 ## How are IOPS measured?
 {: faq}
 
-IOPS are measured based on a load profile of 16 KB blocks with random 50% read and 50% writes. Workloads that differ from this profile might experience lower performance.
+IOPS are measured based on a load profile of 16 KB blocks with random 50% read and 50% writes. Workloads that differ from this profile might experience reduced performance.
 
 ## What are IOPS profiles?
 {: faq}
@@ -59,17 +59,19 @@ Maximum IOPS for data volumes vary based on volume size and the IOPS tier profil
 ## What happens if I use a smaller block size when measuring performance?
 {: faq}
 
-Maximum IOPS can still be obtained when using smaller block sizes, however throughput will be lower. For example, a volume with 6000 IOPS would have the following throughput at various block sizes:
+Maximum IOPS can still be obtained when using smaller block sizes, however throughput will be less. For example, a volume with 6000 IOPS would have the following throughput at various block sizes:
 
 * 16 KB * 6000 IOPS == ~93.75 MB/sec
 * 8 KB * 6000 IOPS == ~46.88 MB/sec
 * 4 KB * 6000 IOPS == ~23.44 MB/sec
 
-## Will I be charged for usage and are there quota limits?
+## How will I be charged for usage?
 {: faq}
+For information on how you are charged for usage, see [Pricing for Block Storage for VPC](/docs/vpc-on-classic?topic=vpc-on-classic-pricing-for-vpc#pricing-for-block-storage-for-vpc).
 
-For more information on how you are billed, see [Pricing for Block Storage for VPC](/docs/vpc-on-classic?topic=vpc-on-classic-block-storage-pricing). Certain limits apply.
-For more information about quotas and limits for your {{site.data.keyword.cloud}} Virtual Private Cloud and the resources available within it, see [Quotas](/docs/vpc-on-classic?topic=vpc-on-classic-quotas#quotas).
+## Are there quota limits?
+{: faq}
+For information about quotas and limits for your {{site.data.keyword.cloud}} Virtual Private Cloud and the resources available within it, see [Quotas](/docs/vpc-on-classic?topic=vpc-on-classic-quotas#quotas).
 
 ## After creating a volume, can I increase its capacity later?
 {: faq}
@@ -84,7 +86,7 @@ You do not have to pre-warm a volume. You can see the specified throughput immed
 ## Can I create encrypted volumes?
 {: faq}
 
-All block storage volumes are encrypted, either by IBM-managed encryption (default) or through the Key Protect service using your own encryption keys. For information, see [Creating block storage volumes with customer managed encryption](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).
+All block storage volumes are encrypted, either with IBM-managed encryption (default) or through the Key Protect service using your own encryption keys. For information, see [Creating block storage volumes with customer managed encryption](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).
 
 ## How can I tell the type of encryption a volume has?
 {: faq}
@@ -100,17 +102,17 @@ ibmcloud is volume (VOLUME_NAME | VOLUME_ID)
 ## How secure is my data?
 {: faq}
 
-All block storage volumes are encrypted at rest by IBM-managed encryption or using your own encryption keys. IBM-managed keys are generated and securely stored in a block storage vault backed by Consul, and then maintained by the system. Customer-managed keys are safely managed using the IBM Key Protect service.
+All block storage volumes are encrypted at rest with IBM-managed encryption or using your own encryption keys. IBM-managed keys are generated and securely stored in a block storage vault backed by Consul, and then maintained by the system. Customer-managed keys are safely managed using the IBM Key Protect service.
 
 ## What should I do about data backups for disaster recovery?
 {: faq}
 
-Block Storage for VPC secures your data across redundant fault zones in your region. We also encourage you to independently backup your data. You might also consider using [{{site.data.keyword.blockstoragefull}}](/docs/infrastructure/BlockStorage?topic=BlockStorage-getting-started), which provides disaster recovery features such as volume cloning, snapshots, and replication.
+Block Storage for VPC secures your data across redundant fault zones in your region. We also encourage you to independently backup your data. You might also consider using [{{site.data.keyword.blockstoragefull}}](/docs/BlockStorage?topic=BlockStorage-getting-started), which provides disaster recovery features such as volume cloning, snapshots, and replication.
 
 ## How many volumes can I provision?
 {: faq}
 
-You can provision up to 1,000 block storage volumes per region.
+You can provision up to 1,000 block storage volumes per account in a region.
 
 ## What strategy should I use to manage my volumes?
 {: faq}
@@ -121,11 +123,6 @@ Determine the capacity you need based on anticipated growth. Volume size cannot 
 {: faq}
 
 The boot disk, also called a boot volume, is created when you provision a virtual server instance. The boot disk of an instance is a cloned image of the virtual machine image. The boot volume is deleted when you delete the instance to which it's attached.
-
-## Do firewalls or security groups impact performance?
-{: faq}
-
-As best practice, it is recommended to run storage traffic on a VLAN that bypasses the firewall. Running storage traffic through software firewalls increases latency and adversely affects storage performance.
 
 ## When can I delete a block storage data volume?
 {: faq}

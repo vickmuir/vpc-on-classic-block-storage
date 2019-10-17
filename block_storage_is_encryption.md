@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2019
-lastupdated: "2019-07-23"
+lastupdated: "2019-09-27"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, Key Protect, encryption, key management, Hyper Protect Crypto Services, HPCS, volume, data storage, virtual server instance, instance, customer-managed encryption
 
@@ -59,11 +59,11 @@ The following steps are specific to {{site.data.keyword.keymanagementserviceshor
 
 You can specify customer-managed encryption when you create a new block storage volume during instance provisioning or as a standalone volume.
 
-To create an encrypted volume when you create a virtual server instance, see [Creating virtual server instances with customer-managed encryption](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-instance-creating-instances-byok).
+To create an encrypted volume when you create a virtual server instance, see [Creating virtual server instances with customer-managed encryption](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-instances-byok).
 
 To specify customer-managed encryption when creating a standalone volume, follow these steps:
 
-1. In {{site.data.keyword.cloud_notm}} console, navigate to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > VPC Infrastructure > Storage > Block storage volumes**.
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/vpc), go to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > VPC Infrastructure > Storage > Block storage volumes**.
 A list of all block storage volumes displays.
 1. Select **New volume**.
 1. On the **New block storage volume** page, update the fields in the **Encryption** section. See the following table for more information. When your changes are complete, click **Create Volume**.
@@ -111,4 +111,4 @@ You can also create volumes with customer-managed encryption during instance pro
 
 ## Editing boot volumes to use customer-managed encryption using the UI
 
-When you create an instance from the UI, you can specify customer-managed encryption by editing the boot volume properties. For information, see [Provisioning virtual server instances with volumes that use customer-managed encryption](docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-instances-byok#provision-byok-ui).
+When you create an instance from the UI, you can specify customer-managed encryption by editing the boot volume properties. For information, see [Provisioning virtual server instances with volumes that use customer-managed encryption](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-instances-byok#provision-byok-ui).

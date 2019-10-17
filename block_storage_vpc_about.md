@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-07-22"
+lastupdated: "2019-10-01"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance, IOPS, HPCS, Key Protect
 
@@ -29,21 +29,21 @@ subcollection: vpc-on-classic-block-storage
 ## Block storage for VPC volumes
 {: #block-storage-vpc-volumes}
 
-{{site.data.keyword.block_storage_is_short}} offers block-level data storage volumes that can be attached to a instance as either a boot volume or as a data volume. You can configure up to 750 block storage volumes per region. You can attach several block storage data volumes to a single instance for extra capacity. The number of volumes you can attach to an instance depends on how many vCPUs that instance contains. For more information, see [Volume attachment limits](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits).
+{{site.data.keyword.block_storage_is_short}} offers block-level volumes that can be attached to a instance as either a boot volume or as a data volume. You can configure up to 1000 block storage volumes per account in a region. You can attach several block storage data volumes to a single instance for extra capacity. The number of volumes you can attach to an instance depends on how many vCPUs that instance contains. For more information, see [Volume attachment limits](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits).
 
 ### Boot volumes
 {: #block-storage-vpc-boot-volumes}
 
-When you create an instance, a 100 GB boot volume is automatically created and attached to the instance. The boot volume has a maximum IOPS of 3,000 IOPS. You can encrypt the boot volume by using [your own encryption keys](#about-customer-managed-encrytion) or use the default [provider-managed encryption](#about-provider-managed-encryption). A boot volume can't be manually detached and deleted but it is deleted when you delete the instance.
+When you create an instance, a 100 GB boot volume is created and attached to the instance by default. The boot volume has a maximum IOPS of 3,000 IOPS. You can encrypt the boot volume by using [your own encryption keys](#about-customer-managed-encrytion) or use the default [provider-managed encryption](#about-provider-managed-encryption). A boot volume can't be manually detached and deleted. Boot volumes are always deleted when you when you delete the instance.
 
 ### Secondary data volumes
 {: #secondary-data-volumes}
 
-Block storage data volumes are secondary volumes with total capacity range of 10 GB to 2000 GB. Maximum IOPS for data volumes vary based on volume size and the IOPS tier profile that you selected. For example, the max IOPS for a general purpose volume up to 1 TB is 3,000 IOPS. For more information, see [Tiered IOPS profiles](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#tiers).
+Block storage data volumes are secondary volumes with total capacity range of 10 GB to 2000 GB. Maximum IOPS for data volumes vary based on volume size and the IOPS tier profile that you selected. For example, the max IOPS for a 5 IOPS/GB volume up to 2 TBs is 10,000 IOPS. For more information, see [Tiered IOPS profiles](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#tiers).
 
 You create data volumes as standalone volumes or when you provision an instance. Standalone volumes exist in an unattached state until you attach the volume to an instance. When you create a data volume as part of instance provisioning, the volume is automatically attached to the instance.  
 
-Block storage data volumes can be attached to any available instance within your region, within [certain limits](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits). These volumes are detached by default when the instance is deleted. Detaching by default allows your data to persist beyond the virtual server instance life cycle. It only removes the volume's association with the instance. You can delete data volumes manually after they are detached or, when creating a volume, you can specify that they be [automatically detached and deleted](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage#auto-delete) when the instance is deleted.
+Block storage data volumes can be attached to any available instance within your region, based on your  customer account and permissions, and within [certain limits](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits). These volumes are detached by default when the instance is deleted. Detaching by default allows your data to persist beyond the virtual server instance life cycle. It only removes the volume's association with the instance. You can delete data volumes manually after they are detached. Also, when you create data volumes, you can specify that they be [automatically deleted](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage#auto-delete) when the instance is deleted.
 
 Data volumes are encrypted by default with IBM-managed encryption. Optionally, you can encrypt data volumes by using [your own encryption key](#about-customer-managed-encrytion).
 
