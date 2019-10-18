@@ -6,7 +6,7 @@ IBM Cloud Block Storage for VPC (Gen 1 compute)
 
     {: .navgroup id="learn"}
     block_storage_vpc_getting_started.md 
-    [Learn about IBM Cloud Virtual Private Cloud](https://{DomainName}/cloud/vpc){: external}
+    [Learn about IBM Cloud Virtual Private Cloud](https://www.ibm.com/cloud/vpc){: external}
     block_storage_vpc_about.md
     block_storage_vpc_capacity_performance.md
     block_storage_is_profiles.md
