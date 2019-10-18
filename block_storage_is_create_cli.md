@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-10-11"
+lastupdated: "2019-10-18"
 
 keywords: block storage, IBM CLoud, VPC, virtual private cloud, CLI, block storage volume, volume, IOPS
 
@@ -31,7 +31,7 @@ You can create {{site.data.keyword.block_storage_is_short}} volumes by using the
     * {{site.data.keyword.cloud_notm}} CLI
     * The infrastructure-service plugin
 
-   For more information, see [{{site.data.keyword.cloud_notm}} CLI for VPC Reference](/docs/vpc-infrastructure-cli-plugin?topic=vpc-infrastructure-cli-plugin-vpc-reference).
+   For more information, see [IBM Cloud CLI for VPC Reference](/docs/vpc-on-classic?topic=vpc-on-classic-vpc-reference).
    
    When you install the vpc-infrastructure plugin for the first time, you must set the target generation to gen 1, `ibmcloud is target --gen 1`.
    {:important}
