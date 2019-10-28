@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-10-22"
+lastupdated: "2019-10-25"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance
 
@@ -76,7 +76,7 @@ You can change the name of an existing volume to make it more meaningful.
 ## Guidelines for naming volumes
 {: #volume-name-conventions}
 
-Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the minus sign (-), up to 63 characters.
+Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the minus sign (-), up to 63 characters.  Volume names must begin with an alpha character.
 
 **Note:** Volumes created prior to 2019-10-15 allowed a combination of lowercase and uppercase alpha-numeric characters (A-Z, a-z, 0-9), the minus sign (-), and underscore (_). When you rename such a volume, the newer rules apply.
 
