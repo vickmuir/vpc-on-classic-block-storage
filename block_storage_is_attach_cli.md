@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-07-01"
+lastupdated: "2019-11-06"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, CLI, block storage volume, volume, volume attachment, virtual server instance, instance
 
@@ -18,38 +18,38 @@ subcollection: vpc-on-classic-block-storage
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-# Attaching a block storage volume using the CLI
+# Attaching a block storage volume by using the CLI
 {: #attaching-block-storage-cli}
 
-A volume attachment connects a {{site.data.keyword.block_storage_is_short}} volume to a virtual server instance. Each instance can have [many volume attachments](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits), but a single volume attachment connects one volume to one instance.
+A {{site.data.keyword.block_storage_is_short}} volume attachment connects a {{site.data.keyword.block_storage_is_short}} volume to a virtual server instance. Each instance can have [many volume attachments](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits), but a single volume attachment connects one volume to one instance.
 {:shortdesc}
 
 ## Before you begin
 {: #before-attaching-block-storage-cli}
 
-1. Ensure you have downloaded, installed, and initialized the following CLI plug-ins:
+1. Make sure that you downloaded, installed, and initialized the following CLI plug-ins:
     * {{site.data.keyword.cloud_notm}} CLI
-    * The infrastructure-service plugin
+    * The infrastructure-service plug-in
 
    For more information, [IBM Cloud CLI for VPC Reference](/docs/vpc-on-classic?topic=vpc-on-classic-vpc-reference).
    
-   When you install the vpc-infrastructure plugin for the first time, you must set the target generation to gen 1, `ibmcloud is target --gen 1`.
+   After you install the vpc-infrastructure plug-in, set the target to generation 1 by running the command `ibmcloud is target --gen 1`.
    {:important}
    
-2. Make sure you have already [created an {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
+2. Make sure that you already [created an {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 
-## Attach a block storage volume using the CLI
+## Attach a block storage volume by using the CLI
 {: #attach-block-storage-cli}
 
-To attach a volume to a virutal server instance in the current resource group, run this command.
+To attach a volume to a virtual server instance in the current resource group, run this command.
 
 ```bash
 ibmcloud is instance-volume-attachment-add NAME INSTANCE_ID VOLUME_ID [--auto-delete true | false] [--json]
 ```
 
-`NAME` is the name you provide for the volume attachment and INSTANCE_ID is the ID of the VSI.
+`NAME` is the name that you provide for the volume attachment and INSTANCE_ID is the ID of the VSI.
 
-The `VOLUME_ID `specifies the volume you are attaching.
+The `VOLUME_ID `specifies the volume that you are attaching.
 
 Specify `--auto-delete true` if you want the volume to be automatically deleted when the VSI is deleted.
 
@@ -61,15 +61,15 @@ Example:
 $ ibmcloud is instances
 Listing instances under account my-account-01 as user rtuser1@mycompany.com...
 ID                                     Name                  Address          Profile   Image                            Created        Status     VPC                               Zone         Resource Group
-916e3ccf-b3af-47a5-b549-c9a3b9815559   instance-test2        192.xxx.xx.xx    -         ubuntu-16.04-amd64(7eb4e35b-.)   4 hours ago    running    function-test-vpc1(974e258e-.)    us-south-1   -
-b762f064-26a6-4ffe-bfe4-4a21d92effaf   instance-test1        192.xxx.xx.x     -         ubuntu-16.04-amd64(7eb4e35b-.)   4 hours ago    running    function-test-vpc2(974e258e-.)    us-south-1   -
-ad0ade52-0533-4dc6-a145-f1ad6d5bee2c   vsi-09202             192.xxx.xxx.xx   -         ubuntu-16.04-amd64(7eb4e35b-.)   5 hours ago    running    vpnaas-test1(2467b0fa-.)          us-south-1   -
-e6353eba-c407-4406-b9f6-c50ee1da8d83   vsi-09201             192.xxx.xxx.xxx  -         ubuntu-16.04-amd64(7eb4e35b-.)   5 hours ago    running    vpnaas-test1(2467b0fa-.)          us-south-1   -
+0738-916e3ccf-b3af-47a5-b549-c9a3b9815559   instance-test2        192.0.2.1        -         ubuntu-16.04-amd64(7eb4e35b-.)   4 hours ago    running    function-test-vpc1(974e258e-.)    us-south-1   -
+0738-b762f064-26a6-4ffe-bfe4-4a21d92effaf   instance-test1        192.0.2.2        -         ubuntu-16.04-amd64(7eb4e35b-.)   4 hours ago    running    function-test-vpc2(974e258e-.)    us-south-1   -
+0738-ad0ade52-0533-4dc6-a145-f1ad6d5bee2c   vsi-09202             198.51.100.1     -         ubuntu-16.04-amd64(7eb4e35b-.)   5 hours ago    running    vpnaas-test1(2467b0fa-.)          us-south-1   -
+0738-e6353eba-c407-4406-b9f6-c50ee1da8d83   vsi-09201             198.51.100.3     -         ubuntu-16.04-amd64(7eb4e35b-.)   5 hours ago    running    vpnaas-test1(2467b0fa-.)          us-south-1   -
 
 ```
 {: screen}
 
-## Show details of a volume attached to a virtual server instance
+## Show details of a volume that is attached to a virtual server instance
 {: #show-details-attached-vol}
 
 After you attach a volume, you can display details by specifying the instance ID and volume attachment ID in the `instance-volume-attachment` command.
@@ -86,13 +86,13 @@ Use the `instance-volume-attachments` command and specify the instance ID to see
 ibmcloud is instance-volume-attachments INSTANCE_ID [--json]
 ```
 
-Do you prefer to use the {{site.data.keyword.cloud}} console? For information about how volumes are attached in the console, see [Attaching block storage volumes](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage).
+Do you prefer to use the {{site.data.keyword.cloud}} console? For more information, see [Attaching block storage volumes](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage).
 {:tip}
 
 ## Create a volume attachment JSON
 {: #volume_attachment_json}
 
-When you provision a virtual server instance using the CLI and create a block storage volume as part of the process, you must specify a volume attachment JSON. The volume attachment JSON, specified in the command or as a file, defines the volume parameters. When you [create an instance](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-virtual-servers-cli) and specify the `--volume-attach` parameter, you specify the volume JSON. For example, `--volume-attach @/Users/myname/myvolume-attachment_create.json`.
+When you provision a virtual server instance by using the CLI and create a block storage volume as part of the process, you must specify a volume attachment JSON. The volume attachment JSON, specified in the command or as a file, defines the volume parameters. When you [create an instance](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-virtual-servers-cli) and specify the `--volume-attach` parameter, you specify the volume JSON. For example, `--volume-attach @/Users/myname/myvolume-attachment_create.json`.
 
 Here is an example volume attachment JSON file that defines a custom volume:
 
@@ -119,5 +119,5 @@ Here is an example volume attachment JSON file that defines a custom volume:
 
 Create additional volumes and manage existing ones.  See the following information.
 
-* [Create a block storage volume using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli#create-vol-cli)
-* [Managing block storage volumes using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)
+* [Create a block storage volume by using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli#create-vol-cli)
+* [Managing block storage volumes by using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)
