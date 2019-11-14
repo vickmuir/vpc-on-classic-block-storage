@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-10-14"
+lastupdated: "2019-11-11"
 
 keywords: vpc, cli, command line interface, block storage, IBM Cloud, virtual private cloud, block storage, volume
 subcollection: vpc-on-classic
@@ -23,10 +23,10 @@ subcollection: vpc-on-classic
 # Using your block storage data volume (CLI)
 {: #start-using-your-block-storage-data-volume}
 
-After creating a {{site.data.keyword.block_storage_is_short}} volume and attaching it to an instance, to use your block storage volume as a filesystem, you'll need to partition the volume, format the volume, and then mount it as a filesystem.
+After you create a {{site.data.keyword.block_storage_is_short}} volume and attach it to an instance, to use your block storage volume as a file system, you need to partition the volume, format the volume, and then mount it as a file system.
 {:shortdesc}
 
-Use the following procedure to complete steps for using your block storage volume on a Linux system.
+Follow this procedure to use your block storage volume on a Linux&reg; system.
 
 **Note**: Depending on your Linux distribution, devices show up with different paths. For example, Ubuntu block devices show up as `xvda`, `xvdb`, and so on, as in the following examples.
 
@@ -40,7 +40,7 @@ lsblk
 ```
 {:pre}
 
-You should see output like this:
+You will see output like this:
 
 ```
 NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
@@ -73,7 +73,7 @@ Select (default p): p
 ```
 {:pre}
 
-Complete the prompts to define the partition's first cylinder number and last cylinder number.  Ater creating a new partition, run the `w` command to save changes to the partition table. Reboot your system to verify newly created partition.
+Complete the prompts to define the partition's first cylinder number and last cylinder number.  After creating a new partition, run the `w` command to save changes to the partition table. Reboot your system to verify the newly created partition.
 
 ## Step 3 - Format the volume partition
 {: #linux-procedure-format-volume}
@@ -90,7 +90,7 @@ fdisk -s /dev/xvdb
 ```
 {:pre}
 
-## Step 4 - Create the directory and mount the volume as a filesystem
+## Step 4 - Create the directory and mount the volume as a file system
 {: #linux-procedure-mount-volume}
 
 ```
@@ -99,20 +99,20 @@ mount /dev/xvdb /myvolumedir
 ```
 {: codeblock}
 
-## Step 5 - Access and use the new filesystem
-{: #linux-procedure-use-filesystem}
+## Step 5 - Access and use the new file system
+{: #linux-procedure-use-file system}
 
-To see your new filesystem, run the following command:
+To see your new file system, run the following command:
 
 ```
 df -k
 ```
 {:pre}
 
-You should see output like this:
+You will see output like this:
 
 ```
-Filesystem     1K-blocks    Used Available Use% Mounted on
+file system     1K-blocks    Used Available Use% Mounted on
 udev             4075344       0   4075344   0% /dev
 tmpfs             816936    8844    808092   2% /run
 /dev/xvda2     101330012 1261048 100052580   2% /
@@ -125,7 +125,7 @@ tmpfs             817040       0    817040   0% /run/user/0
 ```
 {:screen}
 
-Go to the directory in your new filesystem and create a file:
+Go to the directory in your new file system and create a file:
 
 ```
 cd /myvolumedir

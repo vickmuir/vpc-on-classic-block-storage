@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-11-06"
+lastupdated: "2019-11-14"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, CLI, block storage volume, volume, volume attachment, virtual server instance, instance
 
@@ -31,7 +31,7 @@ A {{site.data.keyword.block_storage_is_short}} volume attachment connects a {{si
     * {{site.data.keyword.cloud_notm}} CLI
     * The infrastructure-service plug-in
 
-   For more information, [IBM Cloud CLI for VPC Reference](/docs/vpc-on-classic?topic=vpc-on-classic-vpc-reference).
+   For more information, see [IBM Cloud CLI for VPC Reference](/docs/vpc-on-classic?topic=vpc-on-classic-vpc-reference).
    
    After you install the vpc-infrastructure plug-in, set the target to generation 1 by running the command `ibmcloud is target --gen 1`.
    {:important}

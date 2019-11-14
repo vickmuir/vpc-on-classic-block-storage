@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2018-07-03"
+lastupdated: "2018-11-11"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, data storage, troubleshooting, troubleshoot
 
@@ -32,7 +32,7 @@ When you create or manage {{site.data.keyword.block_storage_is_short}}, you migh
 ## Cannot retrieve a volume in a specified region
 {: #troubleshoot-topic-1}
 
-Information about a block storage volume or volumes could not be retrieved for a given region.
+Information about a block storage volume or volumes could not be retrieved for a region.
 {: tsSymptoms}
 
 Any of the following causes might apply:
@@ -42,13 +42,13 @@ Any of the following causes might apply:
 * You might be trying to access a generation 2 volume.
 {: tsCauses}
 
-Verify that the volume has not been detached from a virtual server instance and deleted. Search for the instance to which you last attached the volume from the list of all virtual server instances:
+Verify that the volume wasn't detached from a virtual server instance and deleted. Search for the instance to which you last attached the volume from the list of all virtual server instances:
 
-1. In [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc){: external}, navigate to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Compute > Virtual server instances**.
+1. In [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc){: external}, go to **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Compute > Virtual server instances**.
 
 1. Select a virtual server instance from the list of all virtual servers.
 
-If the volume is not attached as expected and does not appear in the list of volumes, it has likely been deleted.  Because deleting a volume completely removes its data, it cannot be restored.  
+If the volume is not attached as expected and does not appear in the list of volumes, it was probably deleted.  Because deleting a volume completely removes its data, it cannot be restored.  
 
 If you use the CLI, verify that you entered the correct syntax for viewing volumes. See [View all block storage volumes from the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage-cli). Verify that you specified the correct resource group or zone.
 {: tsResolve}

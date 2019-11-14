@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-07-03"
+lastupdated: "2019-11-13"
 
 Keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
 
@@ -21,7 +21,7 @@ subcollection: vpc-on-classic-block-storage
 {:DomainName: data-hd-keyref="APPDomain"}
 {:DomainName: data-hd-keyref="DomainName"}
 
-# Viewing block storage volumes using the CLI
+# Viewing block storage volumes by using the CLI
 {: #viewing-block-storage-cli}
 
 View details about a {{site.data.keyword.block_storage_is_short}} volume or summary information about all volumes from the CLI.
@@ -30,18 +30,18 @@ View details about a {{site.data.keyword.block_storage_is_short}} volume or summ
 ## Before you begin
 {: #before-viewing-block-storage-cli}
 
-1. Ensure you have downloaded, installed, and initialized the following CLI plug-ins:
+1. Make sure that you downloaded, installed, and initialized the following CLI plug-ins:
     * {{site.data.keyword.cloud_notm}} CLI
-    * The infrastructure-service plugin
+    * The infrastructure-service plug-in
 
    For more information, see [IBM Cloud CLI for VPC Reference](/docs/vpc-on-classic?topic=vpc-on-classic-vpc-reference).
    
-   When you install the vpc-infrastructure plugin for the first time, you must set the target generation to gen 1, `ibmcloud is target --gen 1`.
+   When you install the vpc-infrastructure plug-in for the first time, you must set the target generation to gen 1, `ibmcloud is target --gen 1`.
    {:important}
    
-2. Make sure you have already [created an {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
+2. Make sure that you created an {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 
-## View details about a block storage volume using the CLI
+## View details about a block storage volume by using the CLI
 {: #viewvol-cli}
 
 Specify this command to show details about a volume.
@@ -75,7 +75,7 @@ Volume Attachment Instance Reference    none
 
 If your volume is attached to a virtual server instance, the name and ID of the volume attachment and instance is also displayed.
 
-## View all block storage volumes using the CLI
+## View all block storage volumes by using the CLI
 {: #viewall-vol-cli}
 
 Run this command to list summary information about all volumes:
@@ -102,7 +102,7 @@ Specifying the resource group ID or name filters the list to volumes that belong
 
 By default, the first 25 volumes are displayed per page.
 
-## View details about a volume attachment using the CLI
+## View details about a volume attachment by using the CLI
 {: #viewvol-attachment-cli}
 
 Run this command to view details of a volume attachment to a virtual server instance:
@@ -111,9 +111,9 @@ Run this command to view details of a volume attachment to a virtual server inst
 ibmcloud is instance-volume-attachment INSTANCE_ID VOLUME_ATTACHMENT_ID [--json]
 ```
 
-Specify an instance ID and a volume attachment ID.  Optionally, export the details in JSON format.
+Specify an instance ID and a volume attachment ID. Optionally, export the details in JSON format.
 
-## View details about all volume attachments using the CLI
+## View details about all volume attachments by using the CLI
 
 Run this command to view all volume attachments for a virtual server instance.
 
@@ -121,7 +121,7 @@ Run this command to view all volume attachments for a virtual server instance.
 ibmcloud is instance-volume-attachments INSTANCE_ID [--json]
 ```
 
-## View volume profiles using the CLI
+## View volume profiles by using the CLI
 {: #viewvol-profiles-cli}
 
 Run this command to list all volume profiles available in your region.
@@ -143,7 +143,7 @@ generalpurpose3  tiered   crn:v1:public:globalcatalog::::volume.profile:generalp
 ```
 {: screen}
 
-## View a specific volume profile using the CLI
+## View a specific volume profile by using the CLI
 {: #viewvol-profile-cli}
 
 Run this command to view a specific volume profile in your region.
@@ -165,7 +165,7 @@ Crn      crn:v1:public:globalcatalog::::volume.profile:generalpurpose
 ```
 {: screen}
 
-Do you prefer using the {{site.data.keyword.cloud}} console to view your block storage volumes? For information, see [Viewing block storage volumes](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage).
+Do you prefer by using the {{site.data.keyword.cloud}} console to view your block storage volumes? For more information, see [Viewing block storage volumes](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage).
 {: tip}
 
 ## Next steps
@@ -173,5 +173,5 @@ Do you prefer using the {{site.data.keyword.cloud}} console to view your block s
 
 Create more volumes or manage your existing block storage volumes.
 
-* [Creating block storage volumes using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli)
-* [Managing block storage volumes using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)
+* [Creating block storage volumes by using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli)
+* [Managing block storage volumes by using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)

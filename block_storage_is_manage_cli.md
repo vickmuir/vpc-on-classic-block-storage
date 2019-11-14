@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-10-30"
+lastupdated: "2019-11-12"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, volume attachment, data storage, virtual server instance, instance
 
@@ -18,7 +18,7 @@ subcollection: vpc-on-classic-block-storage
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-# Managing block storage volumes using the CLI
+# Managing block storage volumes by using the CLI
 {: #managing-block-storage-cli}
 
 Manage {{site.data.keyword.block_storage_is_short}} from the command line interface (CLI). Update a volume name, update a volume attachment, detach a volume, or delete a volume.
@@ -27,16 +27,16 @@ Manage {{site.data.keyword.block_storage_is_short}} from the command line interf
 ## Before you begin
 {: #before-managing-block-storage-cli}
 
-1. Ensure you have downloaded, installed, and initialized the following CLI plug-ins:
+1. Ensure you downloaded, installed, and initialized the following CLI plug-ins:
     * {{site.data.keyword.cloud_notm}} CLI
-    * The infrastructure-service plugin
+    * The infrastructure-service plug-in
 
    For more information, see [IBM Cloud CLI for VPC Reference](/docs/vpc-on-classic?topic=vpc-on-classic-vpc-reference).
    
-   When you install the vpc-infrastructure plugin for the first time, you must set the target generation to gen 1, `ibmcloud is target --gen 1`.
+   When you install the vpc-infrastructure plug-in for the first time, you must set the target generation to gen 1, `ibmcloud is target --gen 1`.
    {:important}
    
-2. Make sure you have already [created an {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
+2. Make sure that you created an {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 
 ## Update the name of a volume
 {: #update-vol-name}
@@ -68,7 +68,7 @@ Volume Attachment Instance Reference    none
 ```
 {: screen}
 
-## Update a volume attachment using the CLI
+## Update a volume attachment by using the CLI
 {: #update-vol-name-cli}
 
 You can update the volume attachment name and change the default auto delete setting with the `instance-volume-attachment-update` command.
@@ -79,7 +79,7 @@ ibmcloud is instance-volume-attachment-update INSTANCE_ID VOLUME_ATTACHMENT_ID [
 
 Use the `--name` parameter and specify a new name for the volume attachment.
 
-Specify`--auto-delete true` to automatically delete the volume when you delete the instance to which it's attached.
+Specify`--auto-delete true` to automatically delete a volume that is attached to an instance, when you delete the instance.
 
 Example showing details for `Volume Attachment Instance Reference`:
 
@@ -89,7 +89,7 @@ Vdisk-data1   fd146b1f-e1bb-4eab-ba78-3109e6bc3a2d   data         true          
 ```
 {: screen}
 
-## Detach a volume using the CLI
+## Detach a volume by using the CLI
 {: #detach-vol-attachment-cli}
 
 Use the `instance-volume-attachment-detach` command to detach a volume from an instance and delete the volume attachment. The block storage volume is not deleted; you can later [attach it to another instance](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage-cli).
@@ -98,7 +98,7 @@ Use the `instance-volume-attachment-detach` command to detach a volume from an i
 ibmcloud is instance-volume-attachment-detach INSTANCE_ID VOLUME_ATTACHMENT_ID [-f, --force]
 ```
 
-## Delete a block storage volume using the CLI
+## Delete a block storage volume by using the CLI
 {: #delete-vol-cli}
 
 Use the `volume-delete` command and specify the volume ID to delete a block storage volume.
@@ -120,13 +120,13 @@ Volume ID 64d85f0f-6c08-4188-9e9a-0057b3aa1b69 is deleted.
 ```
 {: screen}
 
-Do you prefer to manage block storage volumes using the {{site.data.keyword.cloud}} console? For more information, see [Managing block storage volumes](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage).
+Do you prefer to manage block storage volumes by using the {{site.data.keyword.cloud}} console? For more information, see [Managing block storage volumes](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage).
 {:tip}
 
 ## Next steps
 {: #next-step-managing-block-storage-cli}
 
-[Create more volumes using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli).
+[Create more volumes by using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli).
 
 For issues with existing block storage volumes, you might be able to troubleshoot and fix the problems yourself. For more information, see
-[Troubleshooting for block storage](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-troubleshoot).
+[troubleshooting for block storage](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-troubleshoot).

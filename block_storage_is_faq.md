@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-11-07"
+lastupdated: "2019-11-14"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance, IOPS
 
@@ -69,7 +69,7 @@ There are quota limits for your block storage volumes based on the number of vCP
 
 No, you cannot increase the capacity of a volume. Estimate sufficient capacity for projected growth before you provision a block storage volume.
 
-Also, consider how many volumes you need and the capacity of these volumes. For more informaton, see [Managing volume count and capacity limits](/docs/vpc-on-classic?topic=vpc-on-classic-managingstoragelimits).
+Also, consider how many volumes you need and the capacity of these volumes. For more informaton, see [Managing volume count and capacity limits](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managingstoragelimits).
 
 ## Does the volume need to be pre-warmed to achieve expected throughput?
 {: faq}
