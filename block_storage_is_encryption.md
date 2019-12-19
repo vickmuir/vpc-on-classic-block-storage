@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2019
-lastupdated: "2019-11-06"
+lastupdated: "2019-12-19"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, Key Protect, encryption, key management, Hyper Protect Crypto Services, HPCS, volume, data storage, virtual server instance, instance, customer-managed encryption
 
@@ -52,7 +52,7 @@ The following steps are specific to {{site.data.keyword.keymanagementserviceshor
 2. [Create](/docs/services/key-protect?topic=key-protect-create-root-keys#create-root-keys) or
 [import](/docs/services/key-protect?topic=key-protect-import-root-keys#import-root-keys) a customer root key (CRK) in
 {{site.data.keyword.keymanagementservicelong_notm}}.
-3. From IBM {{site.data.keyword.iamshort}} (IAM), [authorize access](/docs/iam?topic=iam-serviceauth#serviceauth) between **Cloud Block Storage** (source service) and **{{site.data.keyword.keymanagementserviceshort}}** (target service).
+3. 3. From IBM {{site.data.keyword.iamshort}} (IAM), authorize access between **Cloud Block Storage** (source service) and **{{site.data.keyword.keymanagementserviceshort}}** (target service). For steps, see [Managing access to resources](/docs/iam?topic=iam-iammanidaccser).
 
 ## Creating customer-managed encrypted data volumes by using the UI
 {: #data-vol-encryption-ui}
