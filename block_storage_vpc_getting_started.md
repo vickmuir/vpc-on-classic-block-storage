@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-10-03"
+  years: 2019, 2020
+lastupdated: "2020-03-19"
 
 keywords: block storage, getting started, IBM Cloud, VPC, virtual private cloud, IBM CLoud, volume, data storage, classic, virtual server
 
@@ -36,7 +36,7 @@ New! Check out block storage for generation 2 virtual server instances. For more
 
 You can create as many block storage volumes as you need to support your compute resources, available in an improved IBM Cloud console. The console is built to provide you with quick and easy access to provision your storage resources for your changing workload requirements. Let's get started!
 
-{{site.data.keyword.block_storage_is_short}} provides features unique to the VPC and is not compatible with earlier IBM Cloud block storage. If you're interested in this infrastructure, see [{{site.data.keyword.blockstoragefull}}](/docs/infrastructure/BlockStorage?topic=BlockStorage-About).
+{{site.data.keyword.block_storage_is_short}} provides features unique to the VPC and is not compatible with earlier IBM Cloud block storage. If you're interested in this infrastructure, see [{{site.data.keyword.blockstoragefull}}](/docs/BlockStorage?topic=BlockStorage-About).
 {:note}
 
 ## Before you begin

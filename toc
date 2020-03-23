@@ -1,12 +1,12 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="vpc-on-classic-block-storage" audience="service" href="/docs/vpc-on-classic-block-storage/vpc-on-classic-block-storage-block-storage-getting-started" path="vpc-on-classic-block-storage"}
-IBM Cloud Block Storage for VPC (Gen 1 compute)
+{: .toc subcollection="vpc-on-classic-block-storage" category="vpc,storage" audience="service" href="/docs/vpc-on-classic-block-storage/vpc-on-classic-block-storage-block-storage-getting-started" console-page="/vpc-ext/overview" path="vpc-on-classic-block-storage"}
+Block Storage for VPC (Gen 1 compute)
 
     {: .navgroup id="learn"}
     block_storage_vpc_getting_started.md 
-    [Learn about IBM Cloud Virtual Private Cloud](https://www.ibm.com/cloud/vpc){: external}
+    [What is Virtual Private Cloud?](https://www.ibm.com/cloud/learn/vpc)
     block_storage_vpc_about.md
     block_storage_vpc_capacity_performance.md
     block_storage_is_profiles.md
@@ -47,7 +47,7 @@ IBM Cloud Block Storage for VPC (Gen 1 compute)
     {: .navgroup id="reference"}
     {: .topicgroup}
     [API reference for VPC](https://{DomainName}/apidocs/vpc-on-classic)
-    [Storage CLI Reference for VPC](/vpc-on-classic/vpc-on-classic-vpc-reference#storage)
+    [Storage CLI Reference for VPC](/docs/vpc-on-classic?topic=vpc-on-classic-vpc-reference#storage-cli-section)
     {: .navgroup-end}
 
     {: .navgroup id="help"}

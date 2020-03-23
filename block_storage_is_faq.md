@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-11-14"
+  years: 2019, 2020
+lastupdated: "2020-03-23"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance, IOPS
 
@@ -12,7 +12,6 @@ subcollection: vpc-on-classic-block-storage
 {:faq: data-hd-content-type='faq'}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:support: data-reuse='support'}
 
 # FAQs
 {: #block-storage-vpc-faq}
@@ -22,7 +21,6 @@ The following questions often arise about {{site.data.keyword.block_storage_is_s
 
 ## How are volumes created and attached to an instance?
 {: faq}
-{: support}
 
 When you create a virtual server instance, you can [create a block storage secondary volume](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage#create-from-vsi) that is attached to that instance.  ou can also [create a stand-alone volume](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage#create-standalone-vol) and later attach it to your instance. You can attach several block storage data volumes to a single instance.
 
@@ -45,7 +43,6 @@ IOPS is enforced at the volume level.
 
 ## What are IOPS profiles and how do they affect volume performance?
 {: faq}
-{: support}
 
 IOPS profiles define IOPS/GB performance for volumes of various capacities. There are three predefined [IOPS tiers](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#tiers) that you can select that offer reliable IOPS performance for your workload requirements. You can also define [custom IOPS](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom) and specify a range of IOPS for a volume size you choose. Custom IOPS is a good option when you have well-defined performance requirements that do not fall within a predefined IOPS tier. If you choose a custom IOPS profile, also define a minimum and maximum range for the volume size.
 
@@ -55,21 +52,27 @@ IOPS is measured based on a load profile of 16 KB blocks with random 50% read an
 
 ## How am I charged for usage?
 {: faq}
-{: support}
 
 Block Storage for VPC is calculated hourly. The calculation is based on the total number of hours that the block storage volume exists on the account. It exists on the account until you delete the volume or you reach the end of a billing cycle, whichever comes first. For more information, see [Pricing for Block Storage for VPC](/docs/vpc-on-classic?topic=vpc-on-classic-pricing-for-vpc#pricing-for-block-storage-for-vpc).
 
 ## Are there quota limits?
 {: faq}
+
 There are quota limits for your block storage volumes based on the number of vCPUs per instance. For more information about quotas and limits for your {{site.data.keyword.cloud}} Virtual Private Cloud and the resources available within it, see [Quotas](/docs/vpc-on-classic?topic=vpc-on-classic-quotas#quotas).
 
 ## After creating a volume with specific capacity, can the capacity later be increased?
 {: faq}
-{: support}
 
 No, you cannot increase the capacity of a volume. Estimate sufficient capacity for projected growth before you provision a block storage volume.
 
 Also, consider how many volumes you need and the capacity of these volumes. For more informaton, see [Managing volume count and capacity limits](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managingstoragelimits).
+
+## What rules apply to volume names and can I rename a volume later on?
+{: faq}
+
+Valid volume names can include a combination of lowercase alphanumeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters.  Volume names must begin with a lowercase letter and be unique across the entire VPC infrastructure.
+
+You can change the name of an existing volume using the UI. See [this information](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage#rename) for details.
 
 ## Does the volume need to be pre-warmed to achieve expected throughput?
 {: faq}
@@ -78,7 +81,6 @@ You do not have to pre-warm a volume. You can see the specified throughput immed
 
 ## How secure is data in a {{site.data.keyword.block_storage_is_short}} volume?
 {: faq}
-{: support}
 
 All block storage volumes are encrypted at rest with IBM-managed encryption or using your own encryption keys. IBM-managed keys are generated and securely stored in a block storage vault that is backed by Consul and then maintained by the system. Customer-managed keys are safely managed that uses the IBM Key Protect service or Hyper Protect Crypto Services. For information, see [Creating block storage volumes with customer-managed encryption](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).
 
@@ -128,7 +130,6 @@ Target latency within the storage is less than 1 millisecond. Block storage is c
 
 ## Can I set up shared storage in a multizone cluster?
 {: faq}
-{: support}
 
 In the IBM Cloud, storage options are limited to an availability zone. We do not recommend managing shared storage across multiple zones.
 
@@ -136,6 +137,5 @@ Instead, use an IBM Cloud data classic service option such as {{site.data.keywor
 
 ## I have volumes on the Classic infrastructure. Can I port them to the VPC?
 {: faq}
-{: support}
 
 No. The VPC provides access to new availability zones in multi-zone regions. Compute, network, and storage resources are specifically designed to function in the VPC.
