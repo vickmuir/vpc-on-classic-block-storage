@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-11-06"
+  years: 2019, 2020
+lastupdated: "2020-03-20"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, boot volume, data volume, volume, data storage, virtual server instance, instance
 
@@ -47,7 +47,7 @@ By default, block storage volumes display for all resource groups in your region
 | Actions (...) | Click the ellipsis to display a menu of context-specific actions you can take.  For example, an available, unattached volume would have menu options for attaching to an instance or deleting the volume. |
 {: caption="Table 1. Details about all volumes" caption-side="top"}
 
-By default, 10 volumes are shown in the list of all block storage volumes. Change this default by clicking the down arrow and increase the list to 20 or 50 volumes. Use the arrows in the lower-right corner to navigate to the next page and back again.
+By default, 10 volumes are shown in the list of all block storage volumes. Change this default by clicking the down arrow and increase the list to 20 or 50 volumes. Use the page control arrows after the list to go to the next page or return to the current page.
 
 ## View details about a block storage volume
 {: #view-vol-details}
@@ -56,7 +56,7 @@ To view details about a block storage volume, navigate to the list of all block 
 
 | Field | Description |
 |-------|-------------|
-| Name  | Name of the volume you specified when you created the volume. Click the pencil icon to edit the volume name. The volume name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. |
+| Name  | Name of the volume you specified when you created the volume. Click the pencil icon to edit the volume name. The volume name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. Volume names must be unique across the entire VPC infrastructure. |
 | Resource group | Resource group defined when you set up your VPC. Resource groups manage access to resources but do not affect billing or monitoring. |
 | Attachment type | Data, for a secondary volume attached to an instance, boot when attached as a boot volume, or blank for an unattached volume. |
 | ID | System-generated volume ID. |
