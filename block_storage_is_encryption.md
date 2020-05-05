@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2019
-lastupdated: "2019-12-19"
+lastupdated: "2020-05-05"
 
 keywords: block storage, IBM Cloud, VPC, virtual private cloud, Key Protect, encryption, key management, Hyper Protect Crypto Services, HPCS, volume, data storage, virtual server instance, instance, customer-managed encryption
 
@@ -21,7 +21,7 @@ subcollection: vpc-on-classic-block-storage
 # Creating block storage volumes with customer-managed encryption
 {: #block-storage-encryption}
 
-By default, {{site.data.keyword.block_storage_is_short}} boot and data volumes are encrypted with IBM-managed encryption. You can also create customer-managed encrypted volumes by using a supported key management service to create or import your customer root key. Customer-managed encryption is an option for boot and data volumes that are created during instance provisioning. You can also specify customer-managed encryption when you create a stand-alone data volume.
+By default, {{site.data.keyword.block_storage_is_short}} boot and data volumes are encrypted with IBM-managed encryption. You can also create customer-managed encrypted volumes by using a supported key management service to create or import your customer root key. Your data is protected while in transit and while at rest. Customer-managed encryption is an option for boot and data volumes that are created during instance provisioning. You can also specify customer-managed encryption when you create a stand-alone data volume.
 {:shortdesc}
 
 ## Key management services for block storage volumes
