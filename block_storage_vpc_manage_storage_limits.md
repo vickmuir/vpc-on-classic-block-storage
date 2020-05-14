@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-11-14"
+  years: 2019, 2020
+lastupdated: "2020-05-14"
 
 keywords: Block storage, IBM Cloud, VPC, virtual private cloud, volume, data storage, volume capacity, limit increase, global quota, quota increase
 
@@ -18,7 +18,7 @@ subcollection: vpc-on-classic-block-storage
 # Managing volume count and capacity limits
 {: #managingstoragelimits}
 
-{{site.data.keyword.block_storage_is_short}} offers block-level data storage volumes that can be attached to an instance as either a boot volume or as a data volume. You can configure up to 750 block storage volumes per region. You can attach several block storage data volumes to a single instance for extra capacity. Capacity for secondary volumes ranges 10 - 2000 GB.
+{{site.data.keyword.block_storage_is_short}} offers block-level data storage volumes that can be attached to an instance as either a boot volume or as a data volume. You can configure up to 300 block storage volumes per account per region. You can attach several block storage data volumes to a single instance for extra capacity. Capacity for secondary volumes ranges 10 - 2000 GB.
 {:shortdesc}
 
 Request more volumes by submitting a support case in the [portal](https://{DomainName}/unifiedsupport/cases/add){: external}.
