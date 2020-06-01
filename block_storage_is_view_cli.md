@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-11-13"
+  years: 2019, 2020
+lastupdated: "2020-06-01-20"
 
-Keywords: block storage, IBM CLoud, VPC, CLI, block storage volume, volume, IOPS
+Keywords:
 
 subcollection: vpc-on-classic-block-storage
 
@@ -22,13 +22,13 @@ subcollection: vpc-on-classic-block-storage
 {:DomainName: data-hd-keyref="DomainName"}
 
 # Viewing block storage volumes by using the CLI
-{: #viewing-block-storage-cli}
+{: #viewing-block-storage-cli-gen1}
 
-View details about a {{site.data.keyword.block_storage_is_short}} volume or summary information about all volumes from the CLI.
+View details about a block storagee volume or summary information about all volumes from the CLI.
 {:shortdesc}
 
 ## Before you begin
-{: #before-viewing-block-storage-cli}
+{: #before-viewing-block-storage-cli-gen1}
 
 1. Make sure that you downloaded, installed, and initialized the following CLI plug-ins:
     * {{site.data.keyword.cloud_notm}} CLI
@@ -42,7 +42,7 @@ View details about a {{site.data.keyword.block_storage_is_short}} volume or summ
 2. Make sure that you created an {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 
 ## View details about a block storage volume by using the CLI
-{: #viewvol-cli}
+{: #viewvol-cli-gen1}
 
 Specify this command to show details about a volume.
 
@@ -76,7 +76,7 @@ Volume Attachment Instance Reference    none
 If your volume is attached to a virtual server instance, the name and ID of the volume attachment and instance is also displayed.
 
 ## View all block storage volumes by using the CLI
-{: #viewall-vol-cli}
+{: #viewall-vol-cli-gen1}
 
 Run this command to list summary information about all volumes:
 
@@ -103,7 +103,7 @@ Specifying the resource group ID or name filters the list to volumes that belong
 By default, the first 25 volumes are displayed per page.
 
 ## View details about a volume attachment by using the CLI
-{: #viewvol-attachment-cli}
+{: #viewvol-attachment-cli-gen1}
 
 Run this command to view details of a volume attachment to a virtual server instance:
 
@@ -114,6 +114,7 @@ ibmcloud is instance-volume-attachment INSTANCE_ID VOLUME_ATTACHMENT_ID [--json]
 Specify an instance ID and a volume attachment ID. Optionally, export the details in JSON format.
 
 ## View details about all volume attachments by using the CLI
+{: #view-all-volume-attachments-cli-gen1}
 
 Run this command to view all volume attachments for a virtual server instance.
 
@@ -122,7 +123,7 @@ ibmcloud is instance-volume-attachments INSTANCE_ID [--json]
 ```
 
 ## View volume profiles by using the CLI
-{: #viewvol-profiles-cli}
+{: #viewvol-profiles-cli-gen1}
 
 Run this command to list all volume profiles available in your region.
 
@@ -144,7 +145,7 @@ generalpurpose3  tiered   crn:v1:public:globalcatalog::::volume.profile:generalp
 {: screen}
 
 ## View a specific volume profile by using the CLI
-{: #viewvol-profile-cli}
+{: #viewvol-profile-cli-gen1}
 
 Run this command to view a specific volume profile in your region.
 
@@ -165,13 +166,13 @@ Crn      crn:v1:public:globalcatalog::::volume.profile:generalpurpose
 ```
 {: screen}
 
-Do you prefer by using the {{site.data.keyword.cloud}} console to view your block storage volumes? For more information, see [Viewing block storage volumes](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage).
+Do you prefer by using the {{site.data.keyword.cloud}} console to view your block storage volumes? For more information, see [Viewing block storage volumes](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage-gen1).
 {: tip}
 
 ## Next steps
-{: #next-step-viewing-block-storage-cli}
+{: #next-step-viewing-block-storage-cli-gen1}
 
 Create more volumes or manage your existing block storage volumes.
 
-* [Creating block storage volumes by using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli)
+* [Creating block storage volumes by using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli-gen1)
 * [Managing block storage volumes by using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)

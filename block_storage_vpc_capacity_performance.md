@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-12-19"
+  years: 2019, 2020
+lastupdated: "2020-05-29"
 
-keywords: block storage, IBM Cloud, VPC, virtual private cloud, IBM CLoud, volume, data storage, volume capacity, classic, virtual server
+keywords:
 
 subcollection: vpc-on-classic-block-storage
 
@@ -25,23 +25,23 @@ subcollection: vpc-on-classic-block-storage
 {:external: target="_blank" .external}
 
 # {{site.data.keyword.block_storage_is_short}} capacity and performance
-{: #capacity-performance}
+{: #capacity-performance-gen1}
 
-Choosing the optimal block storage volume size and performance level for your workloads is important. When you provision {{site.data.keyword.block_storage_is_short}}, you can specify the capacity of your volume and performance level you require.
+Choosing the optimal block storage volume size and performance level for your workloads is important. When you provision your block storage, you can specify the capacity of your volume and performance level you require.
 {:shortdesc}
 
 ## Capacity
-{: #block-storage-vpc-capacity}
+{: #block-storage-vpc-capacity-gen1}
 
-{{site.data.keyword.block_storage_is_short}} offers a range of storage capacities to meet your requirements. You can specify 10 - 2000 GB (2 TB) of capacity per block storage data volume in 1 GB increments. This capacity depends on the [block storage IOPS profile](#iops-profiles) you're using. Boot volumes are always 100 GB.
+{{site.data.keyword.block_storage_is_short}} offers a range of storage capacities to meet your requirements. You can specify 10 - 2000 GB (2 TB) of capacity per block storage data volume in 1 GB increments. This capacity depends on the block storage IOPS profile you're using. Boot volumes are always 100 GB.
 
 ## Block storage IOPS profiles
 {: #iops-profiles}
 
-When you provision block storage data volumes, you specify a [block storage IOPS profile](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles) that best meets your storage performance requirements. Three predefined tiered profiles are available, or you can choose a custom profile. [IOPS tiered profiles](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#tiers) provide dependable IOPS/GB performance for volumes up to 2 TB capacity. [Custom IOPS profiles](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom) define custom volume capacity/IOPS combinations,within permitted ranges.
+When you provision block storage data volumes, you specify a [block storage IOPS profile](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles-gen1) that best meets your storage performance requirements. Three predefined tiered profiles are available, or you can choose a custom profile. [IOPS tiered profiles](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles-gen1#tiers-gen1) provide dependable IOPS/GB performance for volumes up to 2 TB capacity. [Custom IOPS profiles](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles-gen1#custom-gen1) define custom volume capacity/IOPS combinations,within permitted ranges.
 
 ## How block size affects performance
-{: #how-block-size-affects-performance}
+{: #how-block-size-affects-performance-gen1}
 
 IOPS is based on a 16 KB block size with a 50-50 read/write 50% random workload. Each 16 KB of data read/written counts as one read/write operation; a single write of less than 16 KB counts as a single write operation.
 

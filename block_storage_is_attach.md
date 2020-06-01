@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-11-06"
+  years: 2019, 2020
+lastupdated: "2020-05-12"
 
-keywords: block storage, IBM Cloud, VPC, virtual private cloud, block storage volume, volume, volume attachment, virtual server instance, instance
+keywords:
 
 subcollection: vpc-on-classic-block-storage
 
@@ -21,14 +21,14 @@ subcollection: vpc-on-classic-block-storage
 {:DomainName: data-hd-keyref="APPDomain"}
 {:DomainName: data-hd-keyref="DomainName"}
 
-# Attaching a block storage volume that uses the UI
-{: #attaching-block-storage}
+# Attaching a block storage volume by using the UI
+{: #attaching-block-storage-gen1}
 
-When you create a {{site.data.keyword.block_storage_is_short}} volume for a virtual server instance from the UI, the volume is attached to the instance by default. When you detach a volume, it exists as an unattached volume that you can later reattach. These available volumes are displayed in the list of [all block storage volumes](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage#viewvols). You can attach the volume to another instance from the list of all block storage volumes, or when you view details about an instance.
+When you create a block storage volume for a virtual server instance from the UI, the volume is attached to the instance by default. When you detach a volume, it exists as an unattached volume that you can later reattach. These available volumes are displayed in the list of [all block storage volumes](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage-gen1#viewvols-gen1). You can attach the volume to another instance from the list of all block storage volumes, or when you view details about an instance.
 {:shortdesc}
 
 ## Volume attachment limits
-{: #vol-attach-limits}
+{: #vol-attach-limits-gen1}
 
 Although you can attach only one block storage volume to a virtual server instance at a time, you can attach several different block storage volumes to a single instance. The following limits apply:
 
@@ -36,7 +36,7 @@ Although you can attach only one block storage volume to a virtual server instan
 * Instances with 4 or more virtual CPUs can attach up to 12 block storage secondary volumes, plus the boot volume.
 
 ## Attach a block storage volume to a virtual server instance
-{: #attach}
+{: #attach-gen1}
 
 From the list of all block storage volumes, follow these steps.
 
@@ -53,13 +53,13 @@ You can also attach a block storage volume from the virtual server instance deta
 1. Select **Attach volume**.
 1. Select a volume from the list of available resources and click **Attach**. Messages display on the instance details page to indicate that the volume is being attached. When it completes, the **Attached block storage volumes** list is updated to include the new volume.
 
-You can also manually attach block storage volumes by using the CLI. For more information, see [Attaching block storage volumes (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage-cli).
+You can also manually attach block storage volumes by using the CLI. For more information, see [Attaching block storage volumes (CLI)](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage-cli-gen1).
 {: tip}
 
 ## Next steps
-{: #next-step-attaching-block-storage}
+{: #next-step-attaching-block-storage-gen1}
 
 Create more volumes and manage existing ones. See the following information.
 
 * [Creating block storage volumes by using the UI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage)
-* [Managing block storage volumes by using the UI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage)
+* [Managing block storage volumes by using the UI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-gen1)

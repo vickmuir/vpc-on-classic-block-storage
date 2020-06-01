@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2018-11-11"
+  years: 2019, 2020
+lastupdated: "2020-05-29"
 
-keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, data storage, troubleshooting, troubleshoot
+keywords:
 
 subcollection: vpc-on-classic-block-storage
 
@@ -14,6 +14,7 @@ subcollection: vpc-on-classic-block-storage
 {:tsSymptoms: .tsSymptoms}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
+{:troubleshoot: data-hd-content-type='troubleshoot'}
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -24,13 +25,14 @@ subcollection: vpc-on-classic-block-storage
 {:DomainName: data-hd-keyref="DomainName"}
 
 # Troubleshooting {{site.data.keyword.block_storage_is_short}}
-{: #troubleshoot}
+{: #troubleshoot-gen1}
 
-When you create or manage {{site.data.keyword.block_storage_is_short}}, you might encounter issues. Often, you can recover by following a few easy steps. Issues, symptoms, likely causes, and resolutions are described in the following sections.
+When you create or manage block storage volumes, you might encounter issues. Often, you can recover by following a few easy steps. Issues, symptoms, likely causes, and resolutions are described in the following sections.
 {:shortdesc}
 
 ## Cannot retrieve a volume in a specified region
-{: #troubleshoot-topic-1}
+{: #troubleshoot-topic1-gen1}
+{: troubleshoot}
 
 Information about a block storage volume or volumes could not be retrieved for a region.
 {: tsSymptoms}
@@ -50,11 +52,12 @@ Verify that the volume wasn't detached from a virtual server instance and delete
 
 If the volume is not attached as expected and does not appear in the list of volumes, it was probably deleted.  Because deleting a volume completely removes its data, it cannot be restored.  
 
-If you use the CLI, verify that you entered the correct syntax for viewing volumes. See [View all block storage volumes from the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage-cli). Verify that you specified the correct resource group or zone.
+If you use the CLI, verify that you entered the correct syntax for viewing volumes. See [View all block storage volumes from the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-viewing-block-storage-gen1#viewvols-gen1). Verify that you specified the correct resource group or zone.
 {: tsResolve}
 
 ## Cannot delete a volume by name or ID
-{: #troubleshoot-topic-2}
+{: #troubleshoot-topic2-gen1}
+{: troubleshoot}
 
 You can't delete a block storage volume by name or ID.
 {: tsSymptoms}

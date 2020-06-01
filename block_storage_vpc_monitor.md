@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-12-19"
+  years: 2019, 2020
+lastupdated: "2020-05-14"
 
-keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, data storage, monitor volume, monitor storage
+keywords:
 
 subcollection: vpc-on-classic-block-storage
 
@@ -23,13 +23,13 @@ subcollection: vpc-on-classic-block-storage
 {:DomainName: data-hd-keyref="DomainName"}
 
 # Monitoring block storage volumes
-{: #monitor-block-storage-vpc}
+{: #monitor-block-storage-vpc-gen1}
 
-To make sure you're always aware of any issues with your {{site.data.keyword.block_storage_is_short}}, you can monitor IOPS, latency, and throughput for your block storage volumes over time.
+To make sure you're always aware of any issues with your block storage volumes, you can monitor IOPS, latency, and throughput for your block storage volumes over time.
 {:shortdesc}
 
 ## Procedure
-{: monitor-volume-procedure}
+{: monitor-volume-procedure-gen1}
 
 To monitor your block storage volume in the {{site.data.keyword.cloud_notm}} console, follow these steps:
 
@@ -49,7 +49,7 @@ The monitoring page for the volume is displayed, where you specify the type of m
 {: caption="Table 1. Block storage volume monitoring settings" caption-side="top"}
 
 ## IOPS, Latency, and Throughput Graphs
-{: monitor-volume-metrics}
+{: monitor-volume-metrics-gen1}
 
 By default, all **reads** from the volume are shown in the resulting graphs. Under **Available metrics**, you can change the view by selecting the type of metric per graph (read, write, or total):
 

@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-11-06"
+  years: 2019, 2020
+lastupdated: "2020-05-12"
 
-keywords: block storage, IBM CLoud, VPC, virtual private cloud, CLI, block storage volume, volume, IOPS
+keywords:
 
 subcollection: vpc-on-classic-block-storage
 
@@ -19,13 +19,13 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 
 # Creating block storage volumes by using the CLI
-{: #creating-block-storage-cli}
+{: #creating-block-storage-cli-gen1}
 
-You can create {{site.data.keyword.block_storage_is_short}} volumes by using the command line interface (CLI).
+You can create block storage volumes by using the command line interface (CLI).
 {:shortdesc}
 
 ## Before you begin
-{: #before-creating-block-storage-cli}
+{: #before-creating-block-storage-cli-gen1}
 
 1. Make sure that you downloaded, installed, and initialized the following CLI plug-ins:
     * {{site.data.keyword.cloud_notm}} CLI
@@ -39,9 +39,9 @@ You can create {{site.data.keyword.block_storage_is_short}} volumes by using the
 2. Make sure that you already [created an {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 
 ## Create a block storage volume that uses the CLI
-{: #create-vol-cli}
+{: #create-vol-cli-gen1}
 
-Run the following command to create a block storage volume. Provide a volume name, profile, and the name of the availability zone in your region. For more information about block storage profiles, see [Profiles](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles). Optional parameters are shown in brackets.
+Run the following command to create a block storage volume. Provide a volume name, profile, and the name of the availability zone in your region. For more information about block storage profiles, see [Profiles](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles-gen1). Optional parameters are shown in brackets.
 
 ```bash
 ibmcloud is volume-create VOLUME_NAME PROFILE_NAME ZONE_NAME [--capacity CAPACITY] [--encryption-key ENCRYPTION_KEY] [--iops IOPS] [--resource-group-id RESOURCE_GROUP_ID | --resource-group-name RESOURCE_GROUP_NAME] [--json]
@@ -67,9 +67,9 @@ Volume Attachment Instance Reference    none
 ```
 {:screen}
 
-Capacity, indicated in megabytes, can range 10 - 2,000 GBs. If not specified, the default capacity is 100 GBs. IOPS values can be 1,000 - 20,000 IOPS, depending on volume size. If not specified, the IOPS value defaults to the valid configuration per volume profile. For more information, see the table of [IOPS ranges based on volume size](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom).
+Capacity, indicated in megabytes, can range 10 - 2,000 GBs. If not specified, the default capacity is 100 GBs. IOPS values can be 1,000 - 20,000 IOPS, depending on volume size. If not specified, the IOPS value defaults to the valid configuration per volume profile. For more information, see the table of [IOPS ranges based on volume size](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles-gen1#custom-gen1).
 
-The volume name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter.
+The volume name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. Volume names must be unique across the entire VPC infrastructure.
 
 Note the volume ID. You need to specify the ID when you attach block storage to a virtual server instance, view block storage volume details, or delete volumes.
 
@@ -77,6 +77,6 @@ Do you prefer to create block storage volumes from the {{site.data.keyword.cloud
 {: tip}
 
 ## Next steps
-{: #next-step-creating-block-storage-cli}
+{: #next-step-creating-block-storage-cli-gen1}
 
-[Attach a block storage volume by using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage-cli).
+[Attach a block storage volume by using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage-cli-gen1).

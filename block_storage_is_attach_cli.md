@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-11-14"
+  years: 2019, 2020
+lastupdated: "2020-06-01-20"
 
-keywords: block storage, IBM Cloud, VPC, virtual private cloud, CLI, block storage volume, volume, volume attachment, virtual server instance, instance
+keywords:
 
 subcollection: vpc-on-classic-block-storage
 
@@ -19,13 +19,13 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 
 # Attaching a block storage volume by using the CLI
-{: #attaching-block-storage-cli}
+{: #attaching-block-storage-cli-gen1}
 
-A {{site.data.keyword.block_storage_is_short}} volume attachment connects a {{site.data.keyword.block_storage_is_short}} volume to a virtual server instance. Each instance can have [many volume attachments](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage#vol-attach-limits), but a single volume attachment connects one volume to one instance.
+A block storage volume attachment connects a volume to a virtual server instance. Each instance can have [many volume attachments](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage-gen1#vol-attach-limits-gen1), but a single volume attachment connects one volume to one instance.
 {:shortdesc}
 
 ## Before you begin
-{: #before-attaching-block-storage-cli}
+{: #before-attaching-block-storage-cli-gen1}
 
 1. Make sure that you downloaded, installed, and initialized the following CLI plug-ins:
     * {{site.data.keyword.cloud_notm}} CLI
@@ -39,7 +39,7 @@ A {{site.data.keyword.block_storage_is_short}} volume attachment connects a {{si
 2. Make sure that you already [created an {{site.data.keyword.vpc_short}}](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 
 ## Attach a block storage volume by using the CLI
-{: #attach-block-storage-cli}
+{: #attach-block-storage-cli-gen1}
 
 To attach a volume to a virtual server instance in the current resource group, run this command.
 
@@ -70,7 +70,7 @@ ID                                     Name                  Address          Pr
 {: screen}
 
 ## Show details of a volume that is attached to a virtual server instance
-{: #show-details-attached-vol}
+{: #show-details-attached-vol-gen1}
 
 After you attach a volume, you can display details by specifying the instance ID and volume attachment ID in the `instance-volume-attachment` command.
 
@@ -79,6 +79,7 @@ ibmcloud is instance-volume-attachment INSTANCE_ID VOLUME_ATTACHMENT_ID [--json]
 ```
 
 ## List all volume attachments of a server instance
+{: #list-all-vol-attachments-gen1}
 
 Use the `instance-volume-attachments` command and specify the instance ID to see all volume attachments for an instance.
 
@@ -86,11 +87,11 @@ Use the `instance-volume-attachments` command and specify the instance ID to see
 ibmcloud is instance-volume-attachments INSTANCE_ID [--json]
 ```
 
-Do you prefer to use the {{site.data.keyword.cloud}} console? For more information, see [Attaching block storage volumes](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage).
+Do you prefer to use the {{site.data.keyword.cloud}} console? For more information, see [Attaching block storage volumes](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage-gen1).
 {:tip}
 
 ## Create a volume attachment JSON
-{: #volume_attachment_json}
+{: #volume_attachment_json-gen1}
 
 When you provision a virtual server instance by using the CLI and create a block storage volume as part of the process, you must specify a volume attachment JSON. The volume attachment JSON, specified in the command or as a file, defines the volume parameters. When you [create an instance](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-virtual-servers-cli) and specify the `--volume-attach` parameter, you specify the volume JSON. For example, `--volume-attach @/Users/myname/myvolume-attachment_create.json`.
 
@@ -115,9 +116,9 @@ Here is an example volume attachment JSON file that defines a custom volume:
 {: screen}
 
 ## Next steps
-{: #next-step-attaching-block-storage-cli}
+{: #next-step-attaching-block-storage-cli-gen1}
 
 Create additional volumes and manage existing ones.  See the following information.
 
-* [Create a block storage volume by using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli#create-vol-cli)
+* [Create a block storage volume by using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage-cli-gen1#create-vol-cli-gen1)
 * [Managing block storage volumes by using the CLI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-cli)

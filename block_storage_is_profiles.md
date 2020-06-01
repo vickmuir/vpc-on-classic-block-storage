@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-03-24"
+lastupdated: "2020-05-14"
 
-keywords: block storage, IBM Cloud, VPC, virtual private cloud, volume, profile, volume profile, data storage, storage profile, virtual server instance, instance
+keywords:
 
 subcollection: vpc-on-classic-block-storage
 
@@ -20,13 +20,16 @@ subcollection: vpc-on-classic-block-storage
 {:note: .note}
 
 # {{site.data.keyword.block_storage_is_short}} profiles
-{: #block-storage-profiles}
+{: #block-storage-profiles-gen1}
 
-When you provision {{site.data.keyword.block_storage_is_short}} secondary volumes by using the {{site.data.keyword.cloud_notm}} console, CLI, or API, you specify an IOPS profile that best meets your storage requirements. Profiles are available as three predefined IOPS tiers or as custom IOPS. IOPS tiers provide reliable IOPS/GB performance for volumes up to 2 TB capacity. You can also specify a custom IOPS profile and define volume capacity and IOPS within a range.
+When you provision block storage secondary volumes by using the {{site.data.keyword.cloud_notm}} console, CLI, or API, you specify an IOPS profile that best meets your storage requirements. Profiles are available as three predefined IOPS tiers or as custom IOPS. IOPS tiers provide reliable IOPS/GB performance for volumes up to 2 TB capacity. You can also specify a custom IOPS profile and define volume capacity and IOPS within a range.
 {:shortdesc}
 
+Newer generation available. For more information, see [Profiles](/docs/vpc?topic=vpc-block-storage-profiles) for generation 2 compute resources.
+{:important}
+
 ## Tiered IOPs profiles
-{: #tiers}
+{: #tiers-gen1}
 
 Block storage provides three predefined IOPS tiers you can select to specify optimal performance for your compute workloads and help avoid bottlenecks. Table 1 describes the IOPS performance that you can expect when create volumes in your availability zone.
 
@@ -41,7 +44,7 @@ Block storage provides three predefined IOPS tiers you can select to specify opt
 {: caption="Table 1. IOPS tier profiles and performance levels for each tier" caption-side="top"}
 
 ## Custom IOPS profile
-{: #custom}
+{: #custom-gen1}
 
 Custom IOPS is a good option when you have well-defined performance requirements that do not fall within a predefined IOPS tier. You can customize the IOPS by specifying the total IOPS for the volume within the range for its volume size. You can provision volumes with 100 IOPS to 20,000 IOPS.
 
@@ -58,7 +61,7 @@ Table 2 shows the available IOPS ranges based on volume size.
 {: caption="Table 2. Available IOPS based on volume size" caption-side="top"}
 
 ## How virtual server profiles relate to storage profiles
-{: #vsi-profiles-relate-to-storage}
+{: #vsi-profiles-relate-to-storage-gen1}
 
 Virtual server profiles are a combination of vCPU and RAM that can be instantiated quickly to start a virtual server instance. You select from [three families of profiles](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles)
 based on your workload requirements.  These requirements can range from common workloads to CPU-intensive or memory-intensive workloads.
@@ -76,19 +79,19 @@ requirements for your compute workloads. In general, as your compute requirement
 {: caption="Table 3. Relationship of block storage profiles to virtual server profiles" caption-side="top"}
 
 ## Viewing IOPS profiles
-{: #view-iops-profiles}
+{: #view-iops-profiles-gen1}
 
 You can view available IOPS profiles the {{site.data.keyword.cloud_notm}} console, CLI, or API.
 
 ### Using the IBM Cloud console
-{: using-console-iops-profile}
+{: using-console-iops-profile-gen1}
 
- When you [create a block storage volume from the {{site.data.keyword.cloud_notm}} console](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage), select **Tiers** from the drop-down menu.
+ When you [create a block storage volume from the UI](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-creating-block-storage), select **Tiers** from the drop-down menu.
 
  Alternately, select **Custom** and then select an IOPS value within the range for that volume size. Click the storage size link to see a table of size and IOPS ranges.
 
  ### Using the CLI
- {: using-cli-iops-profiles}
+ {: using-cli-iops-profiles-gen1}
 
  To view the list of available profiles by using the CLI, run the following command:
 ```
@@ -97,7 +100,7 @@ $ ibmcloud is volume-profiles
 {:codeblock}
 
 ### Using the API
-{: using-api-iops-profiles}
+{: using-api-iops-profiles-gen1}
 
 The following cURL API request retrieves all volume profiles.
 
@@ -109,5 +112,6 @@ $rias_endpoint/v1/volume/profiles?version=2019-05-31&generation=1 \
 {:codeblock}
 
 ## Related Information
+{: #related-information-gen1}
 
 For information about Balanced, Compute, and Memory profiles for {{site.data.keyword.vsi_is_short}}, see [Profiles](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-profiles).
