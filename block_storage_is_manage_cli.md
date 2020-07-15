@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-01-20"
+lastupdated: "2020-07-15"
 
 keywords:
 
@@ -17,6 +17,7 @@ subcollection: vpc-on-classic-block-storage
 {:pre: .pre}
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
+{:important: .important}
 
 # Managing block storage volumes by using the CLI
 {: #managing-block-storage-cli}
@@ -93,6 +94,9 @@ Vdisk-data1   fd146b1f-e1bb-4eab-ba78-3109e6bc3a2d   data         true          
 {: #detach-vol-attachment-cli-gen1}
 
 Use the `instance-volume-attachment-detach` command to detach a volume from an instance and delete the volume attachment. The block storage volume is not deleted; you can later [attach it to another instance](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-attaching-block-storage-cli-gen1).
+
+Hot-detach is not supported for Gen 1 instances, which causes a reboot of the instance when the volume is detached. Shut down the instance before detaching the volume.
+{: important}
 
 ```bash
 ibmcloud is instance-volume-attachment-detach INSTANCE_ID VOLUME_ATTACHMENT_ID [-f, --force]

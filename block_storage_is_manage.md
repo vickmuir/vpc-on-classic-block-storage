@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-05-29"
+lastupdated: "2020-07-15"
 
 keywords:
 
@@ -20,6 +20,7 @@ subcollection: vpc-on-classic-block-storage
 {:table: .aria-labeledby="caption"}
 {:DomainName: data-hd-keyref="APPDomain"}
 {:DomainName: data-hd-keyref="DomainName"}
+{:important: .important}
 
 # Managing block storage volumes using the UI
 {: #managing-block-storage-gen1}
@@ -31,6 +32,9 @@ Manage your block storage volumes by using the UI. You can detach a volume from 
 {: #detach-gen1}
 
 You can detach a block storage volume that is currently attached to a virtual server instance.  Detaching frees the volume for use by another instance.
+
+Hot-detach is not supported for Gen 1 instances, which causes a reboot of the instance when the volume is detached. Shut down the instance before detaching the volume.
+{: important}
 
 To detach a volume:
 
