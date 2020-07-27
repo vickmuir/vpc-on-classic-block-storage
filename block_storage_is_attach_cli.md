@@ -2,12 +2,11 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-01-20"
+lastupdated: "2020-06-01"
 
 keywords:
 
 subcollection: vpc-on-classic-block-storage
-
 
 ---
 
